@@ -1,9 +1,9 @@
-# Dev Tosin Portfolio
+# My Portfolio
 
 *Automatically synced with your [v0.dev](https://v0.dev) deployments*
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/ravedevs-projects/v0-dev-tosin-portfolio)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/RKRWbWHZcEM)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/ai-bots-projects-73273408/v0-my-portfolio)
+[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/pQf5Jkkv07B)
 
 ## Overview
 
@@ -14,13 +14,13 @@ Any changes you make to your deployed app will be automatically pushed to this r
 
 Your project is live at:
 
-**[https://vercel.com/ravedevs-projects/v0-dev-tosin-portfolio](https://vercel.com/ravedevs-projects/v0-dev-tosin-portfolio)**
+**[https://vercel.com/ai-bots-projects-73273408/v0-my-portfolio](https://vercel.com/ai-bots-projects-73273408/v0-my-portfolio)**
 
 ## Build your app
 
 Continue building your app on:
 
-**[https://v0.dev/chat/projects/RKRWbWHZcEM](https://v0.dev/chat/projects/RKRWbWHZcEM)**
+**[https://v0.dev/chat/projects/pQf5Jkkv07B](https://v0.dev/chat/projects/pQf5Jkkv07B)**
 
 ## How It Works
 
