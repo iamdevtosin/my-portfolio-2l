@@ -132,6 +132,7 @@ export default function TerminalPage() {
                   <li>Docker</li>
                   <li>AWS</li>
                   <li>Vercel</li>
+                  <li>cPanel Hosting</li>
                 </ul>
               </div>
               <div className="bg-black/30 p-2 rounded border border-[#0ff]/20">
@@ -368,7 +369,7 @@ export default function TerminalPage() {
                 <p className="text-[#0ff] font-bold">Freelance Web Developer & Digital Specialist</p>
                 <p className="text-gray-400 text-sm">2018 - Present</p>
                 <ul className="text-gray-300 text-sm list-disc pl-5 mt-1">
-                  <li>Developed and maintained over 50 websites for clients across various industries</li>
+                  <li>Developed and maintained over 100 websites for clients across various industries</li>
                   <li>Specialized in WordPress, Shopify, and custom web development</li>
                   <li>Provided SEO optimization, website management, and digital marketing services</li>
                 </ul>
@@ -400,19 +401,26 @@ export default function TerminalPage() {
             <p className="text-green-400 font-bold">Education:</p>
             <div className="space-y-3 mt-2">
               <div className="bg-black/30 p-3 rounded border border-[#0ff]/20">
-                <p className="text-[#0ff] font-bold">BSc Computer Science</p>
-                <p className="text-gray-400 text-sm">University of Lagos • 2014 - 2018</p>
+                <p className="text-[#0ff] font-bold">BSc Geography and Planning Science</p>
+                <p className="text-gray-400 text-sm">Ekiti State University • 2014 - 2018</p>
                 <p className="text-gray-300 text-sm mt-1">
-                  Graduated with honors. Specialized in software development and web technologies.
+                  Graduated with a solid foundation in analytical thinking and problem-solving skills.
+                </p>
+              </div>
+              <div className="bg-black/30 p-3 rounded border border-[#0ff]/20">
+                <p className="text-[#0ff] font-bold">Secondary School Certificate</p>
+                <p className="text-gray-400 text-sm">Christ School Secondary Ado Ekiti</p>
+                <p className="text-gray-300 text-sm mt-1">
+                  Received a well-rounded education with focus on sciences and mathematics.
                 </p>
               </div>
               <div className="bg-black/30 p-3 rounded border border-[#0ff]/20">
                 <p className="text-[#0ff] font-bold">Professional Certifications</p>
                 <ul className="text-gray-300 text-sm list-disc pl-5 mt-1">
-                  <li>Google Professional Web Developer Certification</li>
+                  <li>Cloud Computing - Utiva</li>
+                  <li>Software Engineering - ALT School Africa</li>
                   <li>WordPress Developer Certification</li>
                   <li>Shopify Partner Certification</li>
-                  <li>SEO Specialist Certification</li>
                 </ul>
               </div>
             </div>

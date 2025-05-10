@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { AlertCircle, CheckCircle2 } from "lucide-react"
 
 export default function ContactPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -21,6 +23,8 @@ export default function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [submitError, setSubmitError] = useState(false)
+  const [errorMessage, setErrorMessage] = useState("")
 
   useEffect(() => {
     const checkMobile = () => {
@@ -39,17 +43,40 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitError(false)
+    setSubmitSuccess(false)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
 
-    // Reset form and show success message
-    setFormData({ name: "", email: "", subject: "", message: "" })
-    setIsSubmitting(false)
-    setSubmitSuccess(true)
+      if (response.ok) {
+        setFormData({ name: "", email: "", subject: "", message: "" })
+        setSubmitSuccess(true)
+        setErrorMessage("")
+      } else {
+        const errorData = await response.json()
+        setSubmitError(true)
+        setErrorMessage(errorData.message || "An error occurred. Please try again.")
+      }
+    } catch (error: any) {
+      setSubmitError(true)
+      setErrorMessage(error.message || "An unexpected error occurred. Please try again later.")
+    } finally {
+      setIsSubmitting(false)
+    }
 
-    // Hide success message after 5 seconds
-    setTimeout(() => setSubmitSuccess(false), 5000)
+    // Hide messages after 5 seconds
+    setTimeout(() => {
+      setSubmitSuccess(false)
+      setSubmitError(false)
+      setErrorMessage("")
+    }, 5000)
   }
 
   return (
@@ -162,9 +189,19 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold mb-6">Send Me a Message</h2>
 
             {submitSuccess && (
-              <div className="mb-6 p-4 bg-[#0ff]/10 border border-[#0ff]/30 rounded-lg text-[#0ff]">
-                Thank you for your message! I'll get back to you as soon as possible.
-              </div>
+              <Alert variant="success">
+                <CheckCircle2 className="h-4 w-4" />
+                <AlertDescription>
+                  Thank you for your message! I'll get back to you as soon as possible.
+                </AlertDescription>
+              </Alert>
+            )}
+
+            {submitError && (
+              <Alert variant="destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>{errorMessage}</AlertDescription>
+              </Alert>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">

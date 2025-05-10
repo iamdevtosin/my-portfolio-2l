@@ -27,9 +27,9 @@ export default function AboutPage() {
     { category: "Frontend", items: ["HTML/CSS", "JavaScript", "React", "Next.js", "Tailwind CSS", "TypeScript"] },
     { category: "Backend", items: ["Node.js", "PHP", "Laravel", "Express.js", "RESTful APIs", "GraphQL"] },
     { category: "CMS", items: ["WordPress", "Shopify", "WooCommerce", "Custom CMS", "Headless CMS"] },
-    { category: "Cloud", items: ["Microsoft Azure", "AWS", "Vercel", "Netlify", "Docker", "CI/CD"] },
+    { category: "Cloud", items: ["Microsoft Azure", "AWS", "Vercel", "Netlify", "Docker", "cPanel Hosting", "CI/CD"] },
     { category: "Design", items: ["UI/UX Design", "Figma", "Adobe XD", "Responsive Design", "Wireframing"] },
-    { category: "Other", items: ["SEO", "Performance Optimization", "Web Security", "Git", "Agile Methodology"] },
+    { category: "Other", items: ["SEO", "Performance Optimization", "Web Security", "Git"] },
   ]
 
   const experiences = [
@@ -223,7 +223,7 @@ export default function AboutPage() {
                   <Award className="h-8 w-8 text-[#0ff]" />
                 </div>
                 <h3 className="text-[#0ff] font-mono text-sm mb-2">Experience</h3>
-                <p className="text-white font-bold text-3xl">5+ Years</p>
+                <p className="text-white font-bold text-3xl">9+ Years</p>
               </CardContent>
             </Card>
           </ScrollReveal>
@@ -235,7 +235,7 @@ export default function AboutPage() {
                   <Briefcase className="h-8 w-8 text-[#0ff]" />
                 </div>
                 <h3 className="text-[#0ff] font-mono text-sm mb-2">Projects</h3>
-                <p className="text-white font-bold text-3xl">50+</p>
+                <p className="text-white font-bold text-3xl">100+</p>
               </CardContent>
             </Card>
           </ScrollReveal>
@@ -247,7 +247,7 @@ export default function AboutPage() {
                   <Users className="h-8 w-8 text-[#0ff]" />
                 </div>
                 <h3 className="text-[#0ff] font-mono text-sm mb-2">Clients</h3>
-                <p className="text-white font-bold text-3xl">30+</p>
+                <p className="text-white font-bold text-3xl">67+</p>
               </CardContent>
             </Card>
           </ScrollReveal>
@@ -325,6 +325,75 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Education Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">Education</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              My educational background and professional certifications that have equipped me with the knowledge and
+              skills to excel in the digital space.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            <div className="bg-black/60 border border-[#0ff]/20 rounded-lg p-6 relative">
+              <div className="absolute top-6 left-6 w-3 h-3 bg-[#0ff] rounded-full" />
+              <div className="ml-8">
+                <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 px-4 py-1 mb-2">2014 - 2018</Badge>
+                <h3 className="text-xl font-bold mb-1">BSc Geography and Planning Science</h3>
+                <p className="text-[#f0f] mb-4">Ekiti State University</p>
+                <p className="text-gray-400">
+                  Graduated with a solid foundation in analytical thinking and problem-solving skills.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-black/60 border border-[#0ff]/20 rounded-lg p-6 relative">
+              <div className="absolute top-6 left-6 w-3 h-3 bg-[#0ff] rounded-full" />
+              <div className="ml-8">
+                <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 px-4 py-1 mb-2">
+                  Secondary Education
+                </Badge>
+                <h3 className="text-xl font-bold mb-1">Secondary School Certificate</h3>
+                <p className="text-[#f0f] mb-4">Christ School Secondary Ado Ekiti</p>
+                <p className="text-gray-400">
+                  Received a well-rounded education with focus on sciences and mathematics.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-black/60 border border-[#0ff]/20 rounded-lg p-6 relative">
+              <div className="absolute top-6 left-6 w-3 h-3 bg-[#0ff] rounded-full" />
+              <div className="ml-8">
+                <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 px-4 py-1 mb-2">
+                  Professional Development
+                </Badge>
+                <h3 className="text-xl font-bold mb-1">Cloud Computing</h3>
+                <p className="text-[#f0f] mb-4">Utiva</p>
+                <p className="text-gray-400">
+                  Specialized training in cloud infrastructure, deployment, and management.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-black/60 border border-[#0ff]/20 rounded-lg p-6 relative">
+              <div className="absolute top-6 left-6 w-3 h-3 bg-[#0ff] rounded-full" />
+              <div className="ml-8">
+                <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 px-4 py-1 mb-2">
+                  Professional Development
+                </Badge>
+                <h3 className="text-xl font-bold mb-1">Software Engineering</h3>
+                <p className="text-[#f0f] mb-4">ALT School Africa</p>
+                <p className="text-gray-400">
+                  Comprehensive training in modern software development practices and technologies.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 

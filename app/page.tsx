@@ -19,6 +19,8 @@ import {
   Menu,
   X,
   Cloud,
+  Phone,
+  MapPin,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -28,12 +30,13 @@ import ProjectCard from "@/components/project-card"
 import ServiceCard from "@/components/service-card"
 import ChatBot from "@/components/chat-bot"
 import { useState, useEffect } from "react"
-import ScrollReveal from "@/components/scroll-reveal"
 import ScrollToTop from "@/components/scroll-to-top"
+import Preloader from "@/components/preloader"
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const checkMobile = () => {
@@ -41,8 +44,21 @@ export default function Home() {
     }
     checkMobile()
     window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
+
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 2000)
+
+    return () => {
+      window.removeEventListener("resize", checkMobile)
+      clearTimeout(timer)
+    }
   }, [])
+
+  if (isLoading) {
+    return <Preloader />
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-black text-white font-inter">
@@ -66,6 +82,12 @@ export default function Home() {
             </Link>
             <Link href="/projects" className="text-sm hover:text-[#0ff] transition-colors">
               PROJECTS
+            </Link>
+            <Link href="/blog" className="text-sm hover:text-[#0ff] transition-colors">
+              BLOG
+            </Link>
+            <Link href="/resources" className="text-sm hover:text-[#0ff] transition-colors">
+              RESOURCES
             </Link>
             <Link href="/terminal" className="text-sm hover:text-[#0ff] transition-colors">
               TERMINAL
@@ -121,6 +143,20 @@ export default function Home() {
                 PROJECTS
               </Link>
               <Link
+                href="/blog"
+                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                BLOG
+              </Link>
+              <Link
+                href="/resources"
+                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                RESOURCES
+              </Link>
+              <Link
                 href="/terminal"
                 className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
                 onClick={() => setIsMenuOpen(false)}
@@ -170,67 +206,59 @@ export default function Home() {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <ScrollReveal direction="left" delay={0.2}>
-              <div className="space-y-6">
-                <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 px-4 py-1">Oluwatosin Aladetoyinbo</Badge>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                  <span className="text-white">I Build </span>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
-                    Digital Experiences
-                  </span>
-                </h1>
-                <p className="text-gray-400 text-lg max-w-lg">
-                  WordPress Developer • Software Engineer • SEO Specialist • Shopify Expert • Website Manager • Cloud
-                  Engineer
-                </p>
-                <div className="flex flex-wrap gap-4 pt-4">
-                  <Link href="/projects">
-                    <Button className="bg-gradient-to-r from-[#0ff] to-[#f0f] text-black hover:opacity-90">
-                      View Projects <ChevronRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                  <Link href="/contact">
-                    <Button variant="outline" className="border-[#0ff] text-[#0ff] hover:bg-[#0ff]/10">
-                      Contact Me
-                    </Button>
-                  </Link>
-                </div>
-                <div className="flex gap-4 pt-4">
-                  <Link
-                    href="https://github.com/iamdevtosin"
-                    target="_blank"
-                    className="text-gray-400 hover:text-[#0ff]"
-                  >
-                    <Github className="h-6 w-6" />
-                  </Link>
-                  <Link
-                    href="https://linkedin.com/in/devtosin"
-                    target="_blank"
-                    className="text-gray-400 hover:text-[#0ff]"
-                  >
-                    <Linkedin className="h-6 w-6" />
-                  </Link>
-                  <Link href="https://twitter.com/devtosin" target="_blank" className="text-gray-400 hover:text-[#0ff]">
-                    <Twitter className="h-6 w-6" />
-                  </Link>
-                  <Link
-                    href="https://instagram.com/dev_tosin"
-                    target="_blank"
-                    className="text-gray-400 hover:text-[#0ff]"
-                  >
-                    <Instagram className="h-6 w-6" />
-                  </Link>
-                  <Link href="mailto:officialdevtosin@gmail.com" className="text-gray-400 hover:text-[#0ff]">
-                    <Mail className="h-6 w-6" />
-                  </Link>
-                </div>
+            <div className="space-y-6">
+              <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 px-4 py-1">Oluwatosin Aladetoyinbo</Badge>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                <span className="text-white">I Build </span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
+                  Digital Experiences
+                </span>
+              </h1>
+              <p className="text-gray-400 text-lg max-w-lg">
+                WordPress Developer • Software Engineer • SEO Specialist • Shopify Expert • Website Manager • Cloud
+                Engineer
+              </p>
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Link href="/projects">
+                  <Button className="bg-gradient-to-r from-[#0ff] to-[#f0f] text-black hover:opacity-90">
+                    View Projects <ChevronRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="outline" className="border-[#0ff] text-[#0ff] hover:bg-[#0ff]/10">
+                    Contact Me
+                  </Button>
+                </Link>
               </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right" delay={0.4}>
-              <div className="relative">
-                <HeroAnimation />
+              <div className="flex gap-4 pt-4">
+                <Link href="https://github.com/iamdevtosin" target="_blank" className="text-gray-400 hover:text-[#0ff]">
+                  <Github className="h-6 w-6" />
+                </Link>
+                <Link
+                  href="https://linkedin.com/in/devtosin"
+                  target="_blank"
+                  className="text-gray-400 hover:text-[#0ff]"
+                >
+                  <Linkedin className="h-6 w-6" />
+                </Link>
+                <Link href="https://twitter.com/devtosin" target="_blank" className="text-gray-400 hover:text-[#0ff]">
+                  <Twitter className="h-6 w-6" />
+                </Link>
+                <Link
+                  href="https://instagram.com/dev_tosin"
+                  target="_blank"
+                  className="text-gray-400 hover:text-[#0ff]"
+                >
+                  <Instagram className="h-6 w-6" />
+                </Link>
+                <Link href="mailto:officialdevtosin@gmail.com" className="text-gray-400 hover:text-[#0ff]">
+                  <Mail className="h-6 w-6" />
+                </Link>
               </div>
-            </ScrollReveal>
+            </div>
+            <div className="relative">
+              <HeroAnimation />
+            </div>
           </div>
         </div>
 
@@ -241,7 +269,7 @@ export default function Home() {
       <section id="about" className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-12 items-center">
-            <ScrollReveal direction="left" delay={0.2} className="md:w-1/2 relative">
+            <div className="md:w-1/2 relative">
               <div className="relative rounded-lg overflow-hidden border border-[#0ff]/20 shadow-[0_0_15px_rgba(0,255,255,0.3)]">
                 <Image
                   src="/images/dev-tosin.webp"
@@ -260,8 +288,8 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right" delay={0.4} className="md:w-1/2 space-y-6">
+            </div>
+            <div className="md:w-1/2 space-y-6">
               <div>
                 <h2 className="text-3xl font-bold mb-2">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">About Me</span>
@@ -281,22 +309,22 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div>
                   <h3 className="text-[#0ff] font-mono text-sm mb-2">Experience</h3>
-                  <p className="text-white font-bold text-2xl">5+ Years</p>
+                  <p className="text-white font-bold text-2xl">9+ Years</p>
                 </div>
                 <div>
                   <h3 className="text-[#0ff] font-mono text-sm mb-2">Projects</h3>
-                  <p className="text-white font-bold text-2xl">50+</p>
+                  <p className="text-white font-bold text-2xl">100+</p>
                 </div>
                 <div>
                   <h3 className="text-[#0ff] font-mono text-sm mb-2">Clients</h3>
-                  <p className="text-white font-bold text-2xl">30+</p>
+                  <p className="text-white font-bold text-2xl">67+</p>
                 </div>
                 <div>
                   <h3 className="text-[#0ff] font-mono text-sm mb-2">Satisfaction</h3>
                   <p className="text-white font-bold text-2xl">100%</p>
                 </div>
               </div>
-            </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>
@@ -304,21 +332,26 @@ export default function Home() {
       {/* Projects Section - MOVED BEFORE SERVICES */}
       <section id="projects" className="py-20 relative">
         <div className="container mx-auto px-4">
-          <ScrollReveal direction="up" delay={0.2}>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
-                  Featured Projects
-                </span>
-              </h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                A selection of my recent work across various industries and technologies.
-              </p>
-            </div>
-          </ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
+                Featured Projects
+              </span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              A selection of my recent work across various industries and technologies.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
+              {
+                title: "ASO Nigeria",
+                description: "Fashion e-commerce platform featuring vibrant African designs and contemporary styles.",
+                image: "/images/asonigeria.com21.png",
+                tags: ["WordPress", "E-commerce", "Custom Design"],
+                link: "https://asonigeria.com",
+              },
               {
                 title: "Tale It Media",
                 description:
@@ -326,7 +359,6 @@ export default function Home() {
                 image: "/images/taleitmedia1.webp",
                 tags: ["WordPress", "Content Strategy", "SEO"],
                 link: "https://taleitmedia.com",
-                delay: 0.1,
               },
               {
                 title: "Cetrix",
@@ -334,7 +366,13 @@ export default function Home() {
                 image: "/images/cetrix.org-landingpage-fintech11.png",
                 tags: ["React", "Fintech", "UI/UX Design"],
                 link: "https://cetrix.org",
-                delay: 0.2,
+              },
+              {
+                title: "LW Digital Z",
+                description: "Digital agency website with modern design and comprehensive digital marketing services.",
+                image: "/images/lwdigitalz.com.png",
+                tags: ["Next.js", "Digital Marketing", "UI/UX Design"],
+                link: "https://lwdigitalz.com",
               },
               {
                 title: "Vanskere",
@@ -343,40 +381,13 @@ export default function Home() {
                 image: "/images/vanskere.com.png",
                 tags: ["Shopify", "Fashion", "E-commerce"],
                 link: "https://vanskere.com",
-                delay: 0.3,
               },
               {
-                title: "Fabrique By Fabz",
-                description: "Fashion brand offering custom-made and ready-to-wear elegant designs with unique style.",
-                image: "/images/fabriquebyfabz.com.png",
-                tags: ["Shopify", "Fashion", "Custom Design"],
-                link: "https://fabriquebyfabz.com",
-                delay: 0.4,
-              },
-              {
-                title: "Freak Vault",
-                description:
-                  "Fashion e-commerce platform featuring timeless elegance in contemporary clothing designs.",
-                image: "/images/freakvault.com21.png",
-                tags: ["Shopify", "E-commerce", "Custom Theme"],
-                link: "https://freakvault.com",
-                delay: 0.5,
-              },
-              {
-                title: "ASO Nigeria",
-                description: "Fashion e-commerce platform featuring vibrant African designs and contemporary styles.",
-                image: "/images/asonigeria.com21.png",
-                tags: ["WordPress", "E-commerce", "Custom Design"],
-                link: "https://asonigeria.com",
-                delay: 0.6,
-              },
-              {
-                title: "Lanre Da Silva Ajayi",
-                description: "Fashion designer website showcasing elegant collections and timeless glamour.",
-                image: "/images/lanredasilva.com.ng21.png",
-                tags: ["WordPress", "Fashion", "Portfolio"],
-                link: "https://lanredasilvaajayi.com.ng",
-                delay: 0.7,
+                title: "Israel Dia",
+                description: "Personal brand website for a professional showcasing services and portfolio.",
+                image: "/images/israeldia.com.png",
+                tags: ["WordPress", "Personal Brand", "Portfolio"],
+                link: "https://israeldia.com",
               },
               {
                 title: "Ravehost",
@@ -384,26 +395,31 @@ export default function Home() {
                 image: "/images/ravehost.com.ng23.png",
                 tags: ["Next.js", "Web Services", "UI/UX Design"],
                 link: "https://ravehost.com.ng",
-                delay: 0.8,
               },
               {
-                title: "Emma Dube",
-                description: "Fashion brand featuring vibrant African prints and contemporary designs.",
-                image: "/images/emmadube.com-21.png",
-                tags: ["Shopify", "Fashion", "E-commerce"],
-                link: "https://emmadube.com",
-                delay: 0.9,
+                title: "Land Investigate",
+                description:
+                  "Property verification platform for investigating and validating land ownership in Nigeria.",
+                image: "/images/landinvestiga-min.png",
+                tags: ["WordPress", "Laravel", "Custom Development"],
+                link: "https://landinvestigate.com",
+              },
+              {
+                title: "Bellislux",
+                description: "Luxury real estate platform featuring high-end properties and personalized search.",
+                image: "/images/bellislux11.png",
+                tags: ["WordPress", "Real Estate", "Property Listings"],
+                link: "https://bellislux.com",
               },
             ].map((project, index) => (
-              <ScrollReveal key={index} direction="up" delay={project.delay} threshold={0.1}>
-                <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                  image={project.image}
-                  tags={project.tags}
-                  link={project.link}
-                />
-              </ScrollReveal>
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                tags={project.tags}
+                link={project.link}
+              />
             ))}
           </div>
 
@@ -421,19 +437,15 @@ export default function Home() {
       <section id="services" className="py-20 relative bg-black/50">
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-repeat opacity-10" />
         <div className="container mx-auto px-4 relative z-10">
-          <ScrollReveal direction="up" delay={0.2}>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
-                  My Services
-                </span>
-              </h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                I offer a comprehensive range of digital services to help businesses establish and enhance their online
-                presence.
-              </p>
-            </div>
-          </ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">My Services</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              I offer a comprehensive range of digital services to help businesses establish and enhance their online
+              presence.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -441,48 +453,39 @@ export default function Home() {
                 icon: <Globe className="h-10 w-10 text-[#0ff]" />,
                 title: "WordPress Development",
                 description: "Custom WordPress websites with responsive design, optimized for performance and SEO.",
-                delay: 0.1,
               },
               {
                 icon: <Code className="h-10 w-10 text-[#f0f]" />,
                 title: "Software Development",
                 description: "Bespoke software solutions tailored to your specific business requirements.",
-                delay: 0.2,
               },
               {
                 icon: <Search className="h-10 w-10 text-[#0ff]" />,
                 title: "SEO Optimization",
                 description: "Improve your search engine rankings and drive organic traffic to your website.",
-                delay: 0.3,
               },
               {
                 icon: <ShoppingBag className="h-10 w-10 text-[#f0f]" />,
                 title: "Shopify Development",
                 description: "Custom Shopify stores with seamless checkout experiences and conversion optimization.",
-                delay: 0.4,
               },
               {
                 icon: <Database className="h-10 w-10 text-[#0ff]" />,
                 title: "Website Management",
                 description: "Comprehensive website maintenance, updates, and security monitoring.",
-                delay: 0.5,
               },
               {
                 icon: <Cloud className="h-10 w-10 text-[#f0f]" />,
                 title: "Cloud Engineering",
                 description: "Microsoft Azure solutions for scalable, secure, and reliable cloud infrastructure.",
-                delay: 0.6,
               },
               {
                 icon: <Cpu className="h-10 w-10 text-[#0ff]" />,
                 title: "WordPress Plugin Development",
                 description: "Custom WordPress plugins to extend functionality and create tailored solutions.",
-                delay: 0.7,
               },
             ].map((service, index) => (
-              <ScrollReveal key={index} direction="up" delay={service.delay} threshold={0.1}>
-                <ServiceCard icon={service.icon} title={service.title} description={service.description} />
-              </ScrollReveal>
+              <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />
             ))}
           </div>
 
@@ -500,18 +503,16 @@ export default function Home() {
       <section id="pricing" className="py-20 relative bg-black/50">
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-repeat opacity-10" />
         <div className="container mx-auto px-4 relative z-10">
-          <ScrollReveal direction="up" delay={0.2}>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
-                  Web Care Packages
-                </span>
-              </h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                Comprehensive website maintenance and support packages to keep your digital presence running smoothly.
-              </p>
-            </div>
-          </ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
+                Web Care Packages
+              </span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Comprehensive website maintenance and support packages to keep your digital presence running smoothly.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Standard Plan */}
@@ -765,6 +766,245 @@ export default function Home() {
             <Link href="/contact">
               <Button variant="outline" className="border-[#0ff] text-[#0ff] hover:bg-[#0ff]/10">
                 Contact for Custom Plan
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section id="blog" className="py-20 relative">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
+                Latest Blog Posts
+              </span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Insights, tutorials, and guides to help you navigate the digital landscape.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Blog Post 1 */}
+            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0ff]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="h-48 bg-gradient-to-r from-[#0ff]/10 to-[#f0f]/10 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Globe className="h-16 w-16 text-[#0ff]" />
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 mb-3">WordPress</Badge>
+                <h3 className="text-xl font-bold mb-2">Common WordPress Errors and How to Fix Them</h3>
+                <p className="text-gray-400 mb-4">
+                  Encountering errors in WordPress can be frustrating. Learn how to troubleshoot and fix the most common
+                  WordPress errors including the white screen of death, database connection errors, and plugin
+                  conflicts.
+                </p>
+                <Link href="/blog/wordpress-errors">
+                  <Button variant="link" className="text-[#0ff] p-0 h-auto font-medium">
+                    Read More <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Blog Post 2 */}
+            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0ff]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="h-48 bg-gradient-to-r from-[#0ff]/10 to-[#f0f]/10 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Cloud className="h-16 w-16 text-[#f0f]" />
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <Badge className="bg-[#f0f]/10 text-[#f0f] hover:bg-[#f0f]/20 mb-3">Azure</Badge>
+                <h3 className="text-xl font-bold mb-2">Creating a Virtual Machine on Microsoft Azure</h3>
+                <p className="text-gray-400 mb-4">
+                  Microsoft Azure offers powerful cloud computing capabilities. This guide walks you through the process
+                  of creating and configuring a virtual machine on Azure, including selecting the right VM size and
+                  setting up networking.
+                </p>
+                <Link href="/blog/azure-vm">
+                  <Button variant="link" className="text-[#f0f] p-0 h-auto font-medium">
+                    Read More <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Blog Post 3 */}
+            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0ff]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="h-48 bg-gradient-to-r from-[#0ff]/10 to-[#f0f]/10 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <ShoppingBag className="h-16 w-16 text-[#0ff]" />
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 mb-3">WooCommerce</Badge>
+                <h3 className="text-xl font-bold mb-2">Using WCFM – Frontend Manager for WooCommerce</h3>
+                <p className="text-gray-400 mb-4">
+                  WCFM is a powerful frontend manager for WooCommerce that allows vendors to manage their products,
+                  orders, and store from the frontend. Learn how to set up and configure WCFM for your multi-vendor
+                  marketplace.
+                </p>
+                <Link href="/blog/wcfm-guide">
+                  <Button variant="link" className="text-[#0ff] p-0 h-auto font-medium">
+                    Read More <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Blog Post 4 */}
+            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0ff]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="h-48 bg-gradient-to-r from-[#0ff]/10 to-[#f0f]/10 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Code className="h-16 w-16 text-[#f0f]" />
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <Badge className="bg-[#f0f]/10 text-[#f0f] hover:bg-[#f0f]/20 mb-3">Elementor</Badge>
+                <h3 className="text-xl font-bold mb-2">How to Edit Pages in Elementor Like a Pro</h3>
+                <p className="text-gray-400 mb-4">
+                  Elementor is one of the most popular page builders for WordPress. This guide covers essential
+                  techniques for editing pages in Elementor, including using templates, creating custom sections, and
+                  optimizing for mobile.
+                </p>
+                <Link href="/blog/elementor-editing">
+                  <Button variant="link" className="text-[#f0f] p-0 h-auto font-medium">
+                    Read More <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Blog Post 5 */}
+            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0ff]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="h-48 bg-gradient-to-r from-[#0ff]/10 to-[#f0f]/10 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Cpu className="h-16 w-16 text-[#0ff]" />
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 mb-3">Tech Skills</Badge>
+                <h3 className="text-xl font-bold mb-2">Best Selling Tech Skills in 2025</h3>
+                <p className="text-gray-400 mb-4">
+                  The tech landscape is constantly evolving. Discover the most in-demand tech skills for 2025, including
+                  AI development, cloud engineering, cybersecurity, and blockchain technology, and how to position
+                  yourself for success.
+                </p>
+                <Link href="/blog/tech-skills-2025">
+                  <Button variant="link" className="text-[#0ff] p-0 h-auto font-medium">
+                    Read More <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Blog Post 6 */}
+            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0ff]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="h-48 bg-gradient-to-r from-[#0ff]/10 to-[#f0f]/10 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Globe className="h-16 w-16 text-[#f0f]" />
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <Badge className="bg-[#f0f]/10 text-[#f0f] hover:bg-[#f0f]/20 mb-3">Hosting Business</Badge>
+                <h3 className="text-xl font-bold mb-2">How to Start a Domain and Hosting Company in Nigeria</h3>
+                <p className="text-gray-400 mb-4">
+                  Starting a domain and hosting company in Nigeria can be a lucrative business opportunity. Learn about
+                  the essential steps, required investments, and strategies for success in the competitive web hosting
+                  market.
+                </p>
+                <Link href="https://ravehost.com.ng/start-your-hosting-company.php">
+                  <Button variant="link" className="text-[#f0f] p-0 h-auto font-medium">
+                    Read More & Purchase eBook <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link href="/blog">
+              <Button variant="outline" className="border-[#0ff] text-[#0ff] hover:bg-[#0ff]/10">
+                View All Articles <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 relative bg-black/60">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-repeat opacity-10" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">Get In Touch</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Have a project in mind or need assistance with your digital presence? I'm here to help.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0ff]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <CardContent className="p-6 flex flex-col items-center text-center">
+                <div className="bg-[#0ff]/10 p-4 rounded-full mb-4">
+                  <Mail className="h-6 w-6 text-[#0ff]" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Email</h3>
+                <p className="text-gray-400 mb-4">For inquiries and project discussions</p>
+                <a href="mailto:officialdevtosin@gmail.com" className="text-[#0ff] hover:underline">
+                  officialdevtosin@gmail.com
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-black/60 border border-[#f0f]/30 overflow-hidden relative group transform scale-105 shadow-[0_0_25px_rgba(255,0,255,0.2)]">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#f0f]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <CardContent className="p-6 flex flex-col items-center text-center">
+                <div className="bg-[#f0f]/10 p-4 rounded-full mb-4">
+                  <Phone className="h-6 w-6 text-[#f0f]" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Phone</h3>
+                <p className="text-gray-400 mb-4">Available for calls and WhatsApp</p>
+                <a href="tel:+2349011570271" className="text-[#f0f] hover:underline">
+                  +234 901 157 0271
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0ff]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <CardContent className="p-6 flex flex-col items-center text-center">
+                <div className="bg-[#0ff]/10 p-4 rounded-full mb-4">
+                  <MapPin className="h-6 w-6 text-[#0ff]" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Location</h3>
+                <p className="text-gray-400 mb-4">Based in</p>
+                <p className="text-white">Lagos, Nigeria</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="flex flex-col items-center justify-center">
+            <p className="text-gray-400 mb-6 text-center max-w-2xl">
+              Ready to discuss your project? Reach out through any of the channels above or use the contact form on the
+              contact page.
+            </p>
+            <Link href="/contact">
+              <Button className="bg-gradient-to-r from-[#0ff] to-[#f0f] text-black hover:opacity-90">
+                Contact Form <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </div>
