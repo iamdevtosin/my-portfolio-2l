@@ -265,7 +265,112 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#0ff]/50 to-transparent" />
       </section>
 
-      {/* About Section */}
+
+      {/* Projects Section - MOVED BEFORE SERVICES */}
+      <section id="projects" className="py-20 relative">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
+                Featured Projects
+              </span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              A selection of my recent work across various industries and technologies.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "ASO Nigeria",
+                description: "Fashion e-commerce platform featuring vibrant African designs and contemporary styles.",
+                image: "/images/asonigeria.com21.png",
+                tags: ["WordPress", "E-commerce", "Custom Design"],
+                link: "https://asonigeria.com",
+              },
+              {
+                title: "Tale It Media",
+                description:
+                  "Digital media agency focused on platform business growth with content strategy implementation.",
+                image: "/images/taleitmedia1.webp",
+                tags: ["WordPress", "Content Strategy", "SEO"],
+                link: "https://taleitmedia.com",
+              },
+              {
+                title: "Cetrix",
+                description: "Fintech platform for bill payments, airtime, data, and subscription management.",
+                image: "/images/cetrix.org-landingpage-fintech11.png",
+                tags: ["React", "Fintech", "UI/UX Design"],
+                link: "https://cetrix.org",
+              },
+              {
+                title: "LW Digital Z",
+                description: "Digital agency website with modern design and comprehensive digital marketing services.",
+                image: "/images/lwdigitalz.com.png",
+                tags: ["Next.js", "Digital Marketing", "UI/UX Design"],
+                link: "https://lwdigitalz.com",
+              },
+              {
+                title: "Vanskere",
+                description:
+                  "African luxury menswear brand featuring modern elegance and traditional-inspired designs.",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/vanskere.vom-6X9EYgJKQCHWK8TwvU53ObYI9AKg2o.png",
+                tags: ["Shopify", "Fashion", "E-commerce"],
+                link: "https://vanskere.com",
+              },
+              {
+                title: "Israel Dia",
+                description: "Personal brand website for a professional showcasing services and portfolio.",
+                image: "/images/israeldia.com.png",
+                tags: ["WordPress", "Personal Brand", "Portfolio"],
+                link: "https://israeldia.com",
+              },
+              {
+                title: "Ravehost",
+                description: "Web hosting and domain registration service with comprehensive hosting center solutions.",
+                image: "/images/ravehost.com.ng23.png",
+                tags: ["Next.js", "Web Services", "UI/UX Design"],
+                link: "https://ravehost.com.ng",
+              },
+              {
+                title: "Land Investigate",
+                description:
+                  "Property verification platform for investigating and validating land ownership in Nigeria.",
+                image: "/images/landinvestiga-min.png",
+                tags: ["WordPress", "Laravel", "Custom Development"],
+                link: "https://landinvestigate.com",
+              },
+              {
+                title: "Bellislux",
+                description: "Luxury real estate platform featuring high-end properties and personalized search.",
+                image: "/images/bellislux11.png",
+                tags: ["WordPress", "Real Estate", "Property Listings"],
+                link: "https://bellislux.com",
+              },
+            ].map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                tags={project.tags}
+                link={project.link}
+              />
+            ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <Link href="/projects">
+              <Button variant="outline" className="border-[#0ff] text-[#0ff] hover:bg-[#0ff]/10">
+                View All Projects <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+{/* About Section */}
       <section id="about" className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-12 items-center">
@@ -325,110 +430,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section - MOVED BEFORE SERVICES */}
-      <section id="projects" className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
-                Featured Projects
-              </span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              A selection of my recent work across various industries and technologies.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "ASO Nigeria",
-                description: "Fashion e-commerce platform featuring vibrant African designs and contemporary styles.",
-                image: "/images/asonigeria.com21.png",
-                tags: ["WordPress", "E-commerce", "Custom Design"],
-                link: "https://asonigeria.com",
-              },
-              {
-                title: "Tale It Media",
-                description:
-                  "Digital media agency focused on platform business growth with content strategy implementation.",
-                image: "/images/taleitmedia1.webp",
-                tags: ["WordPress", "Content Strategy", "SEO"],
-                link: "https://taleitmedia.com",
-              },
-              {
-                title: "Cetrix",
-                description: "Fintech platform for bill payments, airtime, data, and subscription management.",
-                image: "/images/cetrix.org-landingpage-fintech11.png",
-                tags: ["React", "Fintech", "UI/UX Design"],
-                link: "https://cetrix.org",
-              },
-              {
-                title: "LW Digital Z",
-                description: "Digital agency website with modern design and comprehensive digital marketing services.",
-                image: "/images/lwdigitalz.com.png",
-                tags: ["Next.js", "Digital Marketing", "UI/UX Design"],
-                link: "https://lwdigitalz.com",
-              },
-              {
-                title: "Vanskere",
-                description:
-                  "African luxury menswear brand featuring modern elegance and traditional-inspired designs.",
-                image: "/images/vanskere.com.png",
-                tags: ["Shopify", "Fashion", "E-commerce"],
-                link: "https://vanskere.com",
-              },
-              {
-                title: "Israel Dia",
-                description: "Personal brand website for a professional showcasing services and portfolio.",
-                image: "/images/israeldia.com.png",
-                tags: ["WordPress", "Personal Brand", "Portfolio"],
-                link: "https://israeldia.com",
-              },
-              {
-                title: "Ravehost",
-                description: "Web hosting and domain registration service with comprehensive hosting center solutions.",
-                image: "/images/ravehost.com.ng23.png",
-                tags: ["Next.js", "Web Services", "UI/UX Design"],
-                link: "https://ravehost.com.ng",
-              },
-              {
-                title: "Land Investigate",
-                description:
-                  "Property verification platform for investigating and validating land ownership in Nigeria.",
-                image: "/images/landinvestiga-min.png",
-                tags: ["WordPress", "Laravel", "Custom Development"],
-                link: "https://landinvestigate.com",
-              },
-              {
-                title: "Bellislux",
-                description: "Luxury real estate platform featuring high-end properties and personalized search.",
-                image: "/images/bellislux11.png",
-                tags: ["WordPress", "Real Estate", "Property Listings"],
-                link: "https://bellislux.com",
-              },
-            ].map((project, index) => (
-              <ProjectCard
-                key={index}
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                tags={project.tags}
-                link={project.link}
-              />
-            ))}
-          </div>
-
-          <div className="mt-16 text-center">
-            <Link href="/projects">
-              <Button variant="outline" className="border-[#0ff] text-[#0ff] hover:bg-[#0ff]/10">
-                View All Projects <ExternalLink className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
