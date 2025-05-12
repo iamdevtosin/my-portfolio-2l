@@ -27,15 +27,16 @@ export default function ProjectsPage() {
     {
       title: "ASO Nigeria",
       description: "Fashion e-commerce platform featuring vibrant African designs and contemporary styles.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/asonigeria.com21-SsxlnDbJBZHq5Plllq8Jg8jJFidvwv.png",
+      image:
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/asonigeria.com21-SsxlnDbJBZHq5Plllq8Jg8jJFidvwv.png",
       tags: ["WordPress", "E-commerce", "Custom Design"],
-      link: "https://asonigeria.com",
+      link: "https://asonigeria.com/select-store/",
       category: "wordpress",
     },
     {
       title: "Tale It Media",
       description: "Digital media agency focused on platform business growth with content strategy implementation.",
-      image: "/images/taleitmedia1.webp",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/taleitmedia1-Pmhmb9i6CptRg8nbsk4WzZa16G5EsK.webp",
       tags: ["WordPress", "Content Strategy", "SEO"],
       link: "https://taleitmedia.com",
       category: "wordpress",
@@ -43,7 +44,8 @@ export default function ProjectsPage() {
     {
       title: "Cetrix",
       description: "Fintech platform for bill payments, airtime, data, and subscription management.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/cetrix.org%20landingpage%20fintech11-rdmWEm0qSmFvNHyw0res2kantKOdo3.png",
+      image:
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/cetrix.org%20landingpage%20fintech11-rdmWEm0qSmFvNHyw0res2kantKOdo3.png",
       tags: ["React", "Fintech", "UI/UX Design"],
       link: "https://cetrix.org",
       category: "react",
@@ -51,23 +53,23 @@ export default function ProjectsPage() {
     {
       title: "LW Digital Z",
       description: "Digital agency website with modern design and comprehensive digital marketing services.",
-      image: "/images/lwdigitalz.com.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/lwdigitalz.com.png",
       tags: ["Next.js", "Digital Marketing", "UI/UX Design"],
       link: "https://lwdigitalz.com",
       category: "nextjs",
     },
     {
-      title: "Vanskere",
-      description: "African luxury menswear brand featuring modern elegance and traditional-inspired designs.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/vanskere.vom-6X9EYgJKQCHWK8TwvU53ObYI9AKg2o.png",
-      tags: ["Shopify", "Fashion", "E-commerce"],
-      link: "https://vanskere.com",
+      title: "Yomi Casual",
+      description: "Fashion brand website featuring stylish men's collections and casual fits.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/yomicasual.africa23.png",
+      tags: ["WordPress", "E-commerce", "Fashion"],
+      link: "https://yomicasual.africa",
       category: "ecommerce",
     },
     {
       title: "Israel Dia",
       description: "Personal brand website for a professional showcasing services and portfolio.",
-      image: "/images/israeldia.com.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/israeldia.com%20%282%29-WsxuzJFr2IoXirG8qNNQWNuh6Or20D.png",
       tags: ["WordPress", "Personal Brand", "Portfolio"],
       link: "https://israeldia.com",
       category: "wordpress",
@@ -75,7 +77,7 @@ export default function ProjectsPage() {
     {
       title: "Ravehost",
       description: "Web hosting and domain registration service with comprehensive hosting center solutions.",
-      image: "/images/ravehost.com.ng23.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/ravehost.com.ng23.png",
       tags: ["Next.js", "Web Services", "UI/UX Design"],
       link: "https://ravehost.com.ng",
       category: "nextjs",
@@ -83,9 +85,18 @@ export default function ProjectsPage() {
     {
       title: "Land Investigate",
       description: "Property verification platform for investigating and validating land ownership in Nigeria.",
-      image: "/images/landinvestiga-min.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/landinvestiga-min.png",
       tags: ["WordPress", "Laravel", "Custom Development"],
       link: "https://landinvestigate.com",
+      category: "wordpress",
+    },
+    {
+      title: "Nuance Nook",
+      description: "Interior design studio showcasing elegant home transformations and design services.",
+      image:
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/nuancenook.ng21-guuRlfTAwetvOE3RY6y0aSAqXAcxmT.png",
+      tags: ["WordPress", "Interior Design", "Portfolio"],
+      link: "https://nuancenook.ng",
       category: "wordpress",
     },
     {
@@ -107,39 +118,34 @@ export default function ProjectsPage() {
     {
       title: "Freak Vault",
       description: "Fashion e-commerce platform featuring timeless elegance in contemporary clothing designs.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/freakvault.com21-MMHwPEhXb3G7ihHwA3uoVA0dxxYyag.png",
+      image:
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/freakvault.com21-MMHwPEhXb3G7ihHwA3uoVA0dxxYyag.png",
       tags: ["Shopify", "E-commerce", "Custom Theme"],
       link: "https://freakvault.com",
       category: "ecommerce",
     },
     {
+      title: "Vanskere",
+      description: "African luxury menswear brand featuring modern elegance and traditional-inspired designs.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/vanskere.vom-6X9EYgJKQCHWK8TwvU53ObYI9AKg2o.png",
+      tags: ["Shopify", "Fashion", "E-commerce"],
+      link: "https://vanskere.com",
+      category: "ecommerce",
+    },
+    {
       title: "Lanre DaSilva Ajayi",
       description: "Fashion designer website showcasing elegant collections and timeless glamour.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/lanredasilva.com.ng21-ubYOw8wNZD2VPBdwt570sWuTbT7r5E.png",
+      image:
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/lanredasilva.com.ng21-ubYOw8wNZD2VPBdwt570sWuTbT7r5E.png",
       tags: ["WordPress", "Fashion", "Portfolio"],
       link: "https://lanredasilvaajayi.com.ng",
       category: "wordpress",
     },
     {
-      title: "Yomi Casual",
-      description: "Fashion brand website featuring stylish men's collections and casual fits.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/yomicasual.africa23.png",
-      tags: ["WordPress", "E-commerce", "Fashion"],
-      link: "https://yomicasual.africa",
-      category: "ecommerce",
-    },
-    {
-      title: "Nuance Nook",
-      description: "Interior design studio showcasing elegant home transformations and design services.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/nuancenook.ng21-guuRlfTAwetvOE3RY6y0aSAqXAcxmT.png",
-      tags: ["WordPress", "Interior Design", "Portfolio"],
-      link: "https://nuancenook.ng",
-      category: "wordpress",
-    },
-    {
       title: "Dipaking Homes",
       description: "Real estate development company featuring property listings and investment opportunities.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/dipakinghomes21-SETsKl5EVGH8RR8liTIyy6DuhXuh0U.png",
+      image:
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/dipakinghomes21-SETsKl5EVGH8RR8liTIyy6DuhXuh0U.png",
       tags: ["WordPress", "Real Estate", "Property Listings"],
       link: "https://dipakinghomes.ng",
       category: "wordpress",
@@ -161,7 +167,7 @@ export default function ProjectsPage() {
       category: "ecommerce",
     },
     {
-      title: "Emma Dube",
+      title: "Emmadube",
       description: "Fashion brand featuring vibrant African prints and contemporary clothing designs.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/emmadube.com-2.png",
       tags: ["WordPress", "Fashion", "E-commerce"],
@@ -171,7 +177,8 @@ export default function ProjectsPage() {
     {
       title: "Ceora Fine Jewelry",
       description: "Luxury jewelry e-commerce store with elegant design showcasing fine gold jewelry collections.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/ceorafinejewelry.com11-NqAEMQoZjFBcoXnFGSPTG0lISaNJhC.png",
+      image:
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/ceorafinejewelry.com11-NqAEMQoZjFBcoXnFGSPTG0lISaNJhC.png",
       tags: ["Shopify", "Jewelry", "Luxury"],
       link: "https://ceorafinejewelry.com",
       category: "ecommerce",
@@ -179,7 +186,7 @@ export default function ProjectsPage() {
     {
       title: "B Style",
       description: "Fashion and lifestyle brand with graceful simplicity and enduring glamour collections.",
-      image: "/images/bstyle23.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/bstyle23.png",
       tags: ["Shopify", "Fashion", "Lifestyle"],
       link: "https://bstyle.com",
       category: "ecommerce",
@@ -187,7 +194,8 @@ export default function ProjectsPage() {
     {
       title: "Fabrique By Fabz",
       description: "Fashion brand offering custom-made and ready-to-wear elegant designs with unique style.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/fabriquebyfabz.com-nq37MYER2kDnG59FuFXSd0vYPP4beF.png",
+      image:
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/fabriquebyfabz.com-nq37MYER2kDnG59FuFXSd0vYPP4beF.png",
       tags: ["Shopify", "Fashion", "Custom Design"],
       link: "https://fabriquebyfabz.com",
       category: "ecommerce",
@@ -195,7 +203,8 @@ export default function ProjectsPage() {
     {
       title: "Dr. Ezekiel Adamu",
       description: "Personal brand website for a visionary entrepreneur and industry leader.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/exekieladamu.com-mMNCZDZpd5ltuNshpQHuyrIvtdOuH0.png",
+      image:
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/exekieladamu.com-mMNCZDZpd5ltuNshpQHuyrIvtdOuH0.png",
       tags: ["WordPress", "Personal Brand", "Professional"],
       link: "https://exekieladamu.com",
       category: "wordpress",

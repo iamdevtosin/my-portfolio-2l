@@ -13,7 +13,7 @@ interface ScrollRevealProps {
   className?: string
 }
 
-export default function ScrollReveal({
+export function ScrollReveal({
   children,
   direction = "up",
   delay = 0,
@@ -70,3 +70,5 @@ export default function ScrollReveal({
     </motion.div>
   )
 }
+
+export default ScrollReveal

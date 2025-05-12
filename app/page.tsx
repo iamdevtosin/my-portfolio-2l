@@ -77,6 +77,9 @@ export default function Home() {
             <Link href="/about" className="text-sm hover:text-[#0ff] transition-colors">
               ABOUT
             </Link>
+            <Link href="/pricing" className="text-sm hover:text-[#0ff] transition-colors">
+              PRICING
+            </Link>
             <Link href="/services" className="text-sm hover:text-[#0ff] transition-colors">
               SERVICES
             </Link>
@@ -98,7 +101,7 @@ export default function Home() {
           </nav>
           <div className="flex items-center gap-2">
             <Button variant="outline" className="border-[#0ff] text-[#0ff] hover:bg-[#0ff]/10 hidden md:flex">
-              <Mail className="mr-2 h-4 w-4" /> Get In Touch
+              <Mail className="mr-2 h-4 w-4" /> Hire Me
             </Button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -265,7 +268,6 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#0ff]/50 to-transparent" />
       </section>
 
-
       {/* Projects Section - MOVED BEFORE SERVICES */}
       <section id="projects" className="py-20 relative">
         <div className="container mx-auto px-4">
@@ -287,66 +289,67 @@ export default function Home() {
                 description: "Fashion e-commerce platform featuring vibrant African designs and contemporary styles.",
                 image: "/images/asonigeria.com21.png",
                 tags: ["WordPress", "E-commerce", "Custom Design"],
-                link: "https://asonigeria.com",
-              },
-              {
-                title: "Tale It Media",
-                description:
-                  "Digital media agency focused on platform business growth with content strategy implementation.",
-                image: "/images/taleitmedia1.webp",
-                tags: ["WordPress", "Content Strategy", "SEO"],
-                link: "https://taleitmedia.com",
+                link: "https://asonigeria.com/select-store/",
               },
               {
                 title: "Cetrix",
                 description: "Fintech platform for bill payments, airtime, data, and subscription management.",
-                image: "/images/cetrix.org-landingpage-fintech11.png",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/cetrix.org%20landingpage%20fintech11-rdmWEm0qSmFvNHyw0res2kantKOdo3.png",
                 tags: ["React", "Fintech", "UI/UX Design"],
                 link: "https://cetrix.org",
-              },
-              {
-                title: "LW Digital Z",
-                description: "Digital agency website with modern design and comprehensive digital marketing services.",
-                image: "/images/lwdigitalz.com.png",
-                tags: ["Next.js", "Digital Marketing", "UI/UX Design"],
-                link: "https://lwdigitalz.com",
-              },
-              {
-                title: "Vanskere",
-                description:
-                  "African luxury menswear brand featuring modern elegance and traditional-inspired designs.",
-                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/vanskere.vom-6X9EYgJKQCHWK8TwvU53ObYI9AKg2o.png",
-                tags: ["Shopify", "Fashion", "E-commerce"],
-                link: "https://vanskere.com",
-              },
-              {
-                title: "Israel Dia",
-                description: "Personal brand website for a professional showcasing services and portfolio.",
-                image: "/images/israeldia.com.png",
-                tags: ["WordPress", "Personal Brand", "Portfolio"],
-                link: "https://israeldia.com",
-              },
-              {
-                title: "Ravehost",
-                description: "Web hosting and domain registration service with comprehensive hosting center solutions.",
-                image: "/images/ravehost.com.ng23.png",
-                tags: ["Next.js", "Web Services", "UI/UX Design"],
-                link: "https://ravehost.com.ng",
               },
               {
                 title: "Land Investigate",
                 description:
                   "Property verification platform for investigating and validating land ownership in Nigeria.",
-                image: "/images/landinvestiga-min.png",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/landinvestiga-min.png",
                 tags: ["WordPress", "Laravel", "Custom Development"],
                 link: "https://landinvestigate.com",
               },
               {
+                title: "LW Digital Z",
+                description: "Digital agency website with modern design and comprehensive digital marketing services.",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/lwdigitalz.com.png",
+                tags: ["Next.js", "Digital Marketing", "UI/UX Design"],
+                link: "https://lwdigitalz.com",
+              },
+              {
+                title: "Tale It Media",
+                description:
+                  "Digital media agency focused on platform business growth with content strategy implementation.",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/taleitmedia1-Pmhmb9i6CptRg8nbsk4WzZa16G5EsK.webp",
+                tags: ["WordPress", "Content Strategy", "SEO"],
+                link: "https://taleitmedia.com",
+              },
+              {
+                title: "Ravehost",
+                description: "Web hosting and domain registration service with comprehensive hosting center solutions.",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/ravehost.com.ng23.png",
+                tags: ["Next.js", "Web Services", "UI/UX Design"],
+                link: "https://ravehost.com.ng",
+              },
+              {
+                title: "Israel Dia",
+                description: "Personal brand website for a professional showcasing services and portfolio.",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/israeldia.com%20%282%29-WsxuzJFr2IoXirG8qNNQWNuh6Or20D.png",
+                tags: ["WordPress", "Personal Brand", "Portfolio"],
+                link: "https://israeldia.com",
+              },
+              {
+                title: "Vanskere",
+                description:
+                  "African luxury menswear brand featuring modern elegance and traditional-inspired designs.",
+                image:
+                  "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/vanskere.vom-6X9EYgJKQCHWK8TwvU53ObYI9AKg2o.png",
+                tags: ["Shopify", "Fashion", "E-commerce"],
+                link: "https://vanskere.com",
+              },
+              {
                 title: "Bellislux",
                 description: "Luxury real estate platform featuring high-end properties and personalized search.",
-                image: "/images/bellislux11.png",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/bellislux11-gZrN4QAm8OKGeCReDXe9oCDvLmvEjg.png",
                 tags: ["WordPress", "Real Estate", "Property Listings"],
-                link: "https://bellislux.com",
+                link: "https://bellisluxerealty.com/home-2/",
               },
             ].map((project, index) => (
               <ProjectCard
@@ -370,7 +373,7 @@ export default function Home() {
         </div>
       </section>
 
-{/* About Section */}
+      {/* About Section */}
       <section id="about" className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-12 items-center">
@@ -709,7 +712,7 @@ export default function Home() {
                     Get Started
                   </Button>
                 </Link>
-                <p className="text-xs mt-3 text-center blink-text">
+                <p className="text-xs mt-3 text-center text-gray-400">
                   *Hosting & Domain billed separately: ₦200,000/year
                 </p>
               </CardContent>
