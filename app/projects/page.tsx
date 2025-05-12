@@ -192,6 +192,14 @@ export default function ProjectsPage() {
       link: "https://fabriquebyfabz.com",
       category: "ecommerce",
     },
+    {
+      title: "Dr. Ezekiel Adamu",
+      description: "Personal brand website for a visionary entrepreneur and industry leader.",
+      image: "/images/exekieladamu.com.png",
+      tags: ["WordPress", "Personal Brand", "Professional"],
+      link: "https://exekieladamu.com",
+      category: "wordpress",
+    },
   ]
 
   const filteredProjects = projects.filter((project) => {
