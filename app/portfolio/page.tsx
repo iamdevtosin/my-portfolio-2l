@@ -35,7 +35,7 @@ export default function PortfolioPage() {
     {
       title: "ASO Nigeria",
       description: "Fashion e-commerce platform featuring vibrant African designs and contemporary styles.",
-      image: "/images/asonigeria.com21.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/asonigeria.com21-SsxlnDbJBZHq5Plllq8Jg8jJFidvwv.png",
       tags: ["WordPress", "E-commerce", "Custom Design"],
       link: "https://asonigeria.com",
       category: "ecommerce",
@@ -59,7 +59,7 @@ export default function PortfolioPage() {
     {
       title: "Freak Vault",
       description: "Fashion e-commerce platform featuring timeless elegance in contemporary clothing designs.",
-      image: "/images/freakvault.com21.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/freakvault.com21-MMHwPEhXb3G7ihHwA3uoVA0dxxYyag.png",
       tags: ["Shopify", "E-commerce", "Custom Theme"],
       link: "https://freakvault.com",
       category: "ecommerce",
@@ -67,7 +67,7 @@ export default function PortfolioPage() {
     {
       title: "Lanre Da Silva Ajayi",
       description: "Fashion designer website showcasing elegant collections and timeless glamour.",
-      image: "/images/lanredasilva.com.ng21.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/lanredasilva.com.ng21-ubYOw8wNZD2VPBdwt570sWuTbT7r5E.png",
       tags: ["WordPress", "Fashion", "Portfolio"],
       link: "https://lanredasilva.com.ng",
       category: "wordpress",
@@ -75,7 +75,7 @@ export default function PortfolioPage() {
     {
       title: "Yomi Casual",
       description: "Fashion brand website featuring stylish men's collections and casual fits.",
-      image: "/yomicasual.africa23.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/yomicasual.africa23.png",
       tags: ["WordPress", "E-commerce", "Fashion"],
       link: "https://yomicasual.africa",
       category: "ecommerce",
@@ -91,7 +91,7 @@ export default function PortfolioPage() {
     {
       title: "Nuance Nook",
       description: "Interior design studio showcasing elegant home transformations and design services.",
-      image: "/images/nuancenook.ng21.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/nuancenook.ng21-guuRlfTAwetvOE3RY6y0aSAqXAcxmT.png",
       tags: ["WordPress", "Interior Design", "Portfolio"],
       link: "https://nuancenook.ng",
       category: "wordpress",
@@ -99,7 +99,7 @@ export default function PortfolioPage() {
     {
       title: "Bellislux",
       description: "Luxury real estate platform featuring high-end properties and personalized search.",
-      image: "/images/bellislux11.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/bellislux11-gZrN4QAm8OKGeCReDXe9oCDvLmvEjg.png",
       tags: ["WordPress", "Real Estate", "Property Listings"],
       link: "https://bellislux.com",
       category: "wordpress",
@@ -115,7 +115,7 @@ export default function PortfolioPage() {
     {
       title: "Dipaking Homes",
       description: "Real estate development company featuring property listings and investment opportunities.",
-      image: "/images/dipakinghomes21.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/dipakinghomes21-SETsKl5EVGH8RR8liTIyy6DuhXuh0U.png",
       tags: ["WordPress", "Real Estate", "Property Listings"],
       link: "https://dipakinghomes.com",
       category: "wordpress",
@@ -123,7 +123,7 @@ export default function PortfolioPage() {
     {
       title: "Obyella",
       description: "Fashion brand featuring vibrant summer collections and African-inspired designs.",
-      image: "/images/obyella.com11.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/obyella.com11-UznX64t1r9YogNfFfjCGzYBpvuAeGJ.png",
       tags: ["WordPress", "Fashion", "E-commerce"],
       link: "https://obyella.com",
       category: "wordpress",
@@ -131,7 +131,7 @@ export default function PortfolioPage() {
     {
       title: "Yedrick",
       description: "Fashion brand featuring classic women's collection with elegant designs.",
-      image: "/images/yedrixk.com11.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/yedrixk.com11-ih5KttwM5FDbnaIXyNccLdnQKvHInZ.png",
       tags: ["Shopify", "Fashion", "E-commerce"],
       link: "https://yedrick.com",
       category: "ecommerce",
@@ -139,15 +139,15 @@ export default function PortfolioPage() {
     {
       title: "Ceora Jewelry",
       description: "Fine jewelry e-commerce store with elegant designs and luxury branding.",
-      image: "/images/ceorafinejewelry.com11.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/ceorafinejewelry.com11-NqAEMQoZjFBcoXnFGSPTG0lISaNJhC.png",
       tags: ["Shopify", "Jewelry", "E-commerce"],
       link: "https://ceorafinejewelry.com",
       category: "ecommerce",
     },
     {
       title: "Cetrix",
-      description: "Fintech platform for bill payments, airtime, data, and subscription management.",
-      image: "/images/cetrix.org-landingpage-fintech11.png",
+      description: "Fintech platform Landing Page, for bill payments, airtime, data, and subscription management.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/cetrix.org%20landingpage%20fintech11-rdmWEm0qSmFvNHyw0res2kantKOdo3.png",
       tags: ["React", "Fintech", "UI/UX Design"],
       link: "https://cetrix.org",
       category: "react",
@@ -155,7 +155,7 @@ export default function PortfolioPage() {
     {
       title: "Vanskere",
       description: "African luxury menswear brand featuring modern elegance and traditional-inspired designs.",
-      image: "/images/vanskere.com.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/vanskere.vom-6X9EYgJKQCHWK8TwvU53ObYI9AKg2o.png",
       tags: ["Shopify", "Fashion", "Menswear"],
       link: "https://vanskere.com",
       category: "ecommerce",
@@ -163,15 +163,23 @@ export default function PortfolioPage() {
     {
       title: "Fabrique By Fabz",
       description: "Fashion brand offering custom-made and ready-to-wear elegant designs with unique style.",
-      image: "/images/fabriquebyfabz.com.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/fabriquebyfabz.com-nq37MYER2kDnG59FuFXSd0vYPP4beF.png",
       tags: ["Shopify", "Fashion", "Custom Design"],
       link: "https://fabriquebyfabz.com",
       category: "ecommerce",
     },
     {
-      title: "Emma Dube",
+      title: "Ezikiel Adamu",
+      description: "Ezikiel Adamu is a visionary leader, entrepreneur, and changemaker dedicated to inspiring growth.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/exekieladamu.com-mMNCZDZpd5ltuNshpQHuyrIvtdOuH0.png",
+      tags: ["Wordpress", "Portfolio", "Custom Design"],
+      link: "https://ezekieladamu.com",
+      category: "wordpress",
+    },
+    {
+      title: "Emmadube",
       description: "Fashion brand featuring vibrant African prints and contemporary designs.",
-      image: "/images/emmadube.com-21.png",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/emmadube.com-2.png",
       tags: ["Shopify", "Fashion", "E-commerce"],
       link: "https://emmadube.com",
       category: "ecommerce",
