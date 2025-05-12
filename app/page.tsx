@@ -380,7 +380,7 @@ export default function Home() {
             <div className="md:w-1/2 relative">
               <div className="relative rounded-lg overflow-hidden border border-[#0ff]/20 shadow-[0_0_15px_rgba(0,255,255,0.3)]">
                 <Image
-                  src="/images/dev-tosin.webp"
+                  src="https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/dev-tosin.webp"
                   alt="Dev Tosin"
                   width={600}
                   height={600}
@@ -808,7 +808,7 @@ export default function Home() {
                   conflicts.
                 </p>
                 <Link href="/blog/wordpress-errors">
-                  <Button variant="link" className="text-[#0ff] p-0 h-auto font-medium">
+                  <Button href="/blog/wordpress-errors" variant="link" className="text-[#0ff] p-0 h-auto font-medium">
                     Read More <ChevronRight className="ml-1 h-4 w-4" />
                   </Button>
                 </Link>
@@ -855,7 +855,7 @@ export default function Home() {
                   orders, and store from the frontend. Learn how to set up and configure WCFM for your multi-vendor
                   marketplace.
                 </p>
-                <Link href="/blog/wcfm-guide">
+                <Link href="/blog/wcfm-guide" className="text-sm hover:text-[#0ff] transition-colors">
                   <Button variant="link" className="text-[#0ff] p-0 h-auto font-medium">
                     Read More <ChevronRight className="ml-1 h-4 w-4" />
                   </Button>

@@ -1,167 +1,184 @@
 "use client"
-
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Check } from "lucide-react"
-import { ScrollReveal } from "@/components/scroll-reveal"
+import { Card, CardContent } from "@/components/ui/card"
+import { ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly")
-
-  const pricingPlans = [
-    {
-      name: "Basic",
-      description: "Essential web development services for small businesses",
-      price: billingCycle === "monthly" ? 499 : 4999,
-      features: [
-        "Custom WordPress Website",
-        "Mobile Responsive Design",
-        "5 Pages Included",
-        "Basic SEO Setup",
-        "Contact Form",
-        "1 Month Support",
-      ],
-      cta: "Get Started",
-      popular: false,
-    },
-    {
-      name: "Professional",
-      description: "Complete solution for growing businesses",
-      price: billingCycle === "monthly" ? 999 : 9999,
-      features: [
-        "Custom WordPress or Next.js Website",
-        "Mobile Responsive Design",
-        "10 Pages Included",
-        "Advanced SEO Setup",
-        "Contact Form & Newsletter",
-        "E-commerce Integration",
-        "3 Months Support",
-        "Weekly Backups",
-      ],
-      cta: "Get Started",
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      description: "Advanced solutions for established businesses",
-      price: billingCycle === "monthly" ? 1999 : 19999,
-      features: [
-        "Custom Next.js Website",
-        "Mobile Responsive Design",
-        "Unlimited Pages",
-        "Advanced SEO & Analytics",
-        "Full E-commerce Solution",
-        "Custom Integrations",
-        "6 Months Support",
-        "Daily Backups",
-        "Performance Optimization",
-        "Security Hardening",
-      ],
-      cta: "Contact Me",
-      popular: false,
-    },
-  ]
-
   return (
-    <div className="container mx-auto px-4 py-24">
-      <ScrollReveal>
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Transparent Pricing Plans</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Choose the perfect plan for your business needs. All plans include consultation, design, development, and
-            deployment.
-          </p>
-        </div>
-      </ScrollReveal>
-
-      <ScrollReveal>
-        <Tabs defaultValue="monthly" className="w-full max-w-5xl mx-auto mb-8">
-          <div className="flex justify-center mb-8">
-            <TabsList>
-              <TabsTrigger value="monthly" onClick={() => setBillingCycle("monthly")}>
-                Monthly
-              </TabsTrigger>
-              <TabsTrigger value="yearly" onClick={() => setBillingCycle("yearly")}>
-                Yearly (Save 15%)
-              </TabsTrigger>
-            </TabsList>
+    <main className="min-h-screen bg-black text-white">
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 relative bg-black/50">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-repeat opacity-10" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
+                Web Care Packages
+              </span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Comprehensive website maintenance and support packages to keep your digital presence running smoothly.
+            </p>
           </div>
 
-          <TabsContent value="monthly" className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan) => (
-                <PricingCard key={plan.name} plan={plan} billingCycle={billingCycle} />
-              ))}
-            </div>
-          </TabsContent>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Standard Plan */}
+            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0ff]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <CardContent className="p-6">
+                <div className="mb-4">
+                  <h3 className="text-xl font-bold mb-2">Standard Plan</h3>
+                  <div className="h-1 w-12 bg-[#0ff] rounded-full" />
+                </div>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold">₦300,000</span>
+                  <span className="text-gray-400">/year</span>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#0ff] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">Domain & hosting renewal</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#0ff] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">Monthly website maintenance</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#0ff] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">Minor text & image edits (5/month)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#0ff] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">Uptime monitoring</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#0ff] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">WhatsApp support</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#0ff] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">48-hour response time</span>
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="w-full bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 border border-[#0ff]/50">
+                    Get Started
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
 
-          <TabsContent value="yearly" className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan) => (
-                <PricingCard key={plan.name} plan={plan} billingCycle={billingCycle} />
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
-      </ScrollReveal>
+            {/* Pro Support Plan */}
+            <Card className="bg-black/60 border border-[#f0f]/30 overflow-hidden relative group transform scale-105 shadow-[0_0_25px_rgba(255,0,255,0.2)]">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#f0f]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-[#0ff] to-[#f0f] text-black text-center text-sm font-bold py-1">
+                MOST POPULAR
+              </div>
+              <CardContent className="p-6 pt-10">
+                <div className="mb-4">
+                  <h3 className="text-xl font-bold mb-2">Pro Support Plan</h3>
+                  <div className="h-1 w-12 bg-[#f0f] rounded-full" />
+                </div>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold">₦500,000</span>
+                  <span className="text-gray-400">/year</span>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#f0f] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">Everything in Standard Plan</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#f0f] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">3 major feature integrations yearly</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#f0f] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">6 priority content updates monthly</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#f0f] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">SEO monitoring & basic reports</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#f0f] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">Priority WhatsApp support</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#f0f] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">Google Meet video calls (2/month)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#f0f] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">Instant response time</span>
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="w-full bg-gradient-to-r from-[#0ff] to-[#f0f] text-black hover:opacity-90">
+                    Get Started
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
 
-      <ScrollReveal>
-        <div className="text-center mt-16 max-w-2xl mx-auto">
-          <h2 className="text-2xl font-bold mb-4">Need a Custom Solution?</h2>
-          <p className="text-muted-foreground mb-6">
-            I offer tailored solutions for unique business requirements. Let's discuss your project and create a custom
-            plan that fits your needs and budget.
-          </p>
-          <Button size="lg">Schedule a Consultation</Button>
+            {/* Premium Plan */}
+            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0ff]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <CardContent className="p-6">
+                <div className="mb-4">
+                  <h3 className="text-xl font-bold mb-2">Premium Plan</h3>
+                  <div className="h-1 w-12 bg-[#0ff] rounded-full" />
+                </div>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold">₦800,000</span>
+                  <span className="text-gray-400">/year</span>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#0ff] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">Everything in Pro Support Plan</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#0ff] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">Unlimited content updates</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#0ff] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">Advanced SEO optimization</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#0ff] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">Monthly performance reports</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#0ff] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">Dedicated account manager</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ChevronRight className="h-5 w-5 text-[#0ff] shrink-0 mt-0.5" />
+                    <span className="text-gray-300">24/7 priority support</span>
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="w-full bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 border border-[#0ff]/50">
+                    Get Started
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-gray-400 mb-4">Need a custom plan? Contact me for a tailored solution.</p>
+            <Link href="/contact">
+              <Button variant="outline" className="border-[#0ff] text-[#0ff] hover:bg-[#0ff]/10">
+                Contact for Custom Plan
+              </Button>
+            </Link>
+          </div>
         </div>
-      </ScrollReveal>
-    </div>
-  )
-}
-
-interface PricingCardProps {
-  plan: {
-    name: string
-    description: string
-    price: number
-    features: string[]
-    cta: string
-    popular: boolean
-  }
-  billingCycle: "monthly" | "yearly"
-}
-
-function PricingCard({ plan, billingCycle }: PricingCardProps) {
-  return (
-    <Card className={`flex flex-col h-full ${plan.popular ? "border-primary shadow-lg" : ""}`}>
-      {plan.popular && (
-        <div className="bg-primary text-primary-foreground text-center py-1 text-sm font-medium">Most Popular</div>
-      )}
-      <CardHeader>
-        <CardTitle>{plan.name}</CardTitle>
-        <CardDescription>{plan.description}</CardDescription>
-      </CardHeader>
-      <CardContent className="flex-grow">
-        <div className="mb-6">
-          <span className="text-4xl font-bold">${(plan.price / 100).toFixed(2)}</span>
-          <span className="text-muted-foreground">/{billingCycle === "monthly" ? "month" : "year"}</span>
-        </div>
-        <ul className="space-y-2">
-          {plan.features.map((feature) => (
-            <li key={feature} className="flex items-start">
-              <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-              <span>{feature}</span>
-            </li>
-          ))}
-        </ul>
-      </CardContent>
-      <CardFooter>
-        <Button className="w-full" variant={plan.popular ? "default" : "outline"}>
-          {plan.cta}
-        </Button>
-      </CardFooter>
-    </Card>
+      </section>
+    </main>
   )
 }
