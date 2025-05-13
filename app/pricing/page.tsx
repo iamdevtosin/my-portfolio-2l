@@ -61,7 +61,9 @@ export default function PricingPage() {
                     <span className="text-gray-300">48-hour response time</span>
                   </li>
                 </ul>
-                <Link href="/contact">
+                <Link
+                  href={`https://wa.me/+2348168522189?text=${encodeURIComponent("I am contacting you from your website, I am interested in the Standard Plan package, how long will it take to design this website?")}`}
+                >
                   <Button className="w-full bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 border border-[#0ff]/50">
                     Get Started
                   </Button>
@@ -114,7 +116,9 @@ export default function PricingPage() {
                     <span className="text-gray-300">Instant response time</span>
                   </li>
                 </ul>
-                <Link href="/contact">
+                <Link
+                  href={`https://wa.me/+2348168522189?text=${encodeURIComponent("I am contacting you from your website, I am interested in the Pro Support Plan package, how long will it take to design this website?")}`}
+                >
                   <Button className="w-full bg-gradient-to-r from-[#0ff] to-[#f0f] text-black hover:opacity-90">
                     Get Started
                   </Button>
@@ -160,7 +164,9 @@ export default function PricingPage() {
                     <span className="text-gray-300">24/7 priority support</span>
                   </li>
                 </ul>
-                <Link href="/contact">
+                <Link
+                  href={`https://wa.me/+2348168522189?text=${encodeURIComponent("I am contacting you from your website, I am interested in the Premium Plan package, how long will it take to design this website?")}`}
+                >
                   <Button className="w-full bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 border border-[#0ff]/50">
                     Get Started
                   </Button>
@@ -171,7 +177,9 @@ export default function PricingPage() {
 
           <div className="mt-12 text-center">
             <p className="text-gray-400 mb-4">Need a custom plan? Contact me for a tailored solution.</p>
-            <Link href="/contact">
+            <Link
+              href={`https://wa.me/+2348168522189?text=${encodeURIComponent("I am contacting you from your website, I am interested in a Custom Plan package, how long will it take to design this website?")}`}
+            >
               <Button variant="outline" className="border-[#0ff] text-[#0ff] hover:bg-[#0ff]/10">
                 Contact for Custom Plan
               </Button>

@@ -34,25 +34,32 @@ export default function AboutPage() {
 
   const experiences = [
     {
-      period: "2021 - Present",
-      title: "Senior WordPress Developer",
+      period: "2025 - Present",
+      title: "Rave AI Chat",
       company: "Freelance",
       description:
-        "Working with clients globally to deliver custom WordPress solutions, e-commerce websites, and web applications. Specializing in performance optimization and custom plugin development.",
+        "Developed an advanced AI chat application with real-time response capabilities and integration with multiple language models.",
     },
     {
-      period: "2019 - 2021",
-      title: "Web Developer",
-      company: "Digital Agency XYZ",
+      period: "2025",
+      title: "Tailore Connect",
+      company: "Freelance",
       description:
-        "Developed and maintained websites for various clients across different industries. Implemented SEO strategies and optimized website performance to improve search rankings.",
+        "Created a platform connecting tailors with customers, featuring appointment scheduling, measurement tracking, and design collaboration tools.",
     },
     {
-      period: "2018 - 2019",
-      title: "Junior Developer",
-      company: "Tech Solutions Ltd",
+      period: "2023",
+      title: "Cetrix",
+      company: "Freelance",
       description:
-        "Assisted in the development of web applications and websites. Gained experience in frontend and backend technologies, as well as project management methodologies.",
+        "Built a comprehensive business management system with CRM, inventory management, and financial reporting capabilities.",
+    },
+    {
+      period: "2023",
+      title: "Landinvestigate",
+      company: "Freelance",
+      description:
+        "Developed a real estate due diligence platform that helps investors verify land ownership and property documentation.",
     },
   ]
 
@@ -156,7 +163,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative rounded-lg overflow-hidden border border-[#0ff]/20 shadow-[0_0_15px_rgba(0,255,255,0.3)]">
                 <Image
-                  src="/images/dev-tosin.webp"
+                  src="https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/dev-tosin.webp"
                   alt="Dev Tosin"
                   width={600}
                   height={600}

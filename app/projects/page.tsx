@@ -34,6 +34,15 @@ export default function ProjectsPage() {
       category: "wordpress",
     },
     {
+      title: "Rave AI",
+      description:
+        "A web app that lets users train their own AI and generate a script to embed a floating chat icon on their website.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/rave-ai.webp",
+      tags: ["React", "Nodejs", "UI/UX Design"],
+      link: "https://ai.ravedev.com.ng",
+      category: "react",
+    },
+    {
       title: "Tale It Media",
       description: "Digital media agency focused on platform business growth with content strategy implementation.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/taleitmedia1-Pmhmb9i6CptRg8nbsk4WzZa16G5EsK.webp",
@@ -46,7 +55,7 @@ export default function ProjectsPage() {
       description: "Fintech platform for bill payments, airtime, data, and subscription management.",
       image:
         "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/cetrix.org%20landingpage%20fintech11-rdmWEm0qSmFvNHyw0res2kantKOdo3.png",
-      tags: ["React", "Fintech", "UI/UX Design"],
+      tags: ["React", "Fintech", "Laravel", "UI/UX Design"],
       link: "https://cetrix.org",
       category: "react",
     },
@@ -54,9 +63,9 @@ export default function ProjectsPage() {
       title: "LW Digital Z",
       description: "Digital agency website with modern design and comprehensive digital marketing services.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/lwdigitalz.com.png",
-      tags: ["Next.js", "Digital Marketing", "UI/UX Design"],
+      tags: ["Wordpress", "Ecommerce", "Laravel"],
       link: "https://lwdigitalz.com",
-      category: "nextjs",
+      category: "wordpress",
     },
     {
       title: "Yomi Casual",
@@ -69,8 +78,9 @@ export default function ProjectsPage() {
     {
       title: "Israel Dia",
       description: "Personal brand website for a professional showcasing services and portfolio.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/israeldia.com%20%282%29-WsxuzJFr2IoXirG8qNNQWNuh6Or20D.png",
-      tags: ["WordPress", "Personal Brand", "Portfolio"],
+      image:
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/israeldia.com%20%282%29-WsxuzJFr2IoXirG8qNNQWNuh6Or20D.png",
+      tags: ["Wordpress", "Ecommerce", "Laravel"],
       link: "https://israeldia.com",
       category: "wordpress",
     },
@@ -78,7 +88,7 @@ export default function ProjectsPage() {
       title: "Ravehost",
       description: "Web hosting and domain registration service with comprehensive hosting center solutions.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/ravehost.com.ng23.png",
-      tags: ["Next.js", "Web Services", "UI/UX Design"],
+      tags: ["Next.js", "Web Hosting", "Laravel"],
       link: "https://ravehost.com.ng",
       category: "nextjs",
     },
@@ -91,11 +101,19 @@ export default function ProjectsPage() {
       category: "wordpress",
     },
     {
+      title: "Xapic Consulting",
+      description: "Xapic Consulting is a modern consulting firm offering digital and business solutions.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/xapic.webp",
+      tags: ["WordPress", "Laravel", "Agency"],
+      link: "https://xapicconsulting.com/",
+      category: "wordpress",
+    },
+    {
       title: "Nuance Nook",
       description: "Interior design studio showcasing elegant home transformations and design services.",
       image:
         "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/nuancenook.ng21-guuRlfTAwetvOE3RY6y0aSAqXAcxmT.png",
-      tags: ["WordPress", "Interior Design", "Portfolio"],
+      tags: ["Wordpress", "Ecommerce", "Fashion"],
       link: "https://nuancenook.ng",
       category: "wordpress",
     },
@@ -113,7 +131,7 @@ export default function ProjectsPage() {
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/bellislux11-gZrN4QAm8OKGeCReDXe9oCDvLmvEjg.png",
       tags: ["WordPress", "Real Estate", "Property Listings"],
       link: "https://bellislux.com",
-      category: "wordpress",
+      category: "real-estate",
     },
     {
       title: "Freak Vault",
@@ -128,7 +146,7 @@ export default function ProjectsPage() {
       title: "Vanskere",
       description: "African luxury menswear brand featuring modern elegance and traditional-inspired designs.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/vanskere.vom-6X9EYgJKQCHWK8TwvU53ObYI9AKg2o.png",
-      tags: ["Shopify", "Fashion", "E-commerce"],
+      tags: ["Wordpress", "Fashion", "E-commerce"],
       link: "https://vanskere.com",
       category: "ecommerce",
     },
@@ -148,7 +166,7 @@ export default function ProjectsPage() {
         "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/dipakinghomes21-SETsKl5EVGH8RR8liTIyy6DuhXuh0U.png",
       tags: ["WordPress", "Real Estate", "Property Listings"],
       link: "https://dipakinghomes.ng",
-      category: "wordpress",
+      category: "real-estate",
     },
     {
       title: "Obyella",
@@ -162,7 +180,7 @@ export default function ProjectsPage() {
       title: "Yedrick",
       description: "Fashion brand showcasing classic women's collections with elegant, contemporary designs.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/yedrixk.com11-ih5KttwM5FDbnaIXyNccLdnQKvHInZ.png",
-      tags: ["Shopify", "Fashion", "E-commerce"],
+      tags: ["Wordpress", "Fashion", "E-commerce"],
       link: "https://yedrick.com",
       category: "ecommerce",
     },
@@ -184,10 +202,10 @@ export default function ProjectsPage() {
       category: "ecommerce",
     },
     {
-      title: "B Style",
+      title: "BStyle",
       description: "Fashion and lifestyle brand with graceful simplicity and enduring glamour collections.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/bstyle23.png",
-      tags: ["Shopify", "Fashion", "Lifestyle"],
+      tags: ["Wordpress", "Fashion", "Lifestyle"],
       link: "https://bstyle.com",
       category: "ecommerce",
     },
@@ -196,7 +214,7 @@ export default function ProjectsPage() {
       description: "Fashion brand offering custom-made and ready-to-wear elegant designs with unique style.",
       image:
         "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/fabriquebyfabz.com-nq37MYER2kDnG59FuFXSd0vYPP4beF.png",
-      tags: ["Shopify", "Fashion", "Custom Design"],
+      tags: ["Wordpress", "Fashion", "Custom Design"],
       link: "https://fabriquebyfabz.com",
       category: "ecommerce",
     },
@@ -377,6 +395,18 @@ export default function ProjectsPage() {
                 E-commerce
               </Button>
               <Button
+                variant={filter === "real-estate" ? "default" : "outline"}
+                size="sm"
+                className={
+                  filter === "real-estate"
+                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black whitespace-nowrap"
+                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10 whitespace-nowrap"
+                }
+                onClick={() => setFilter("real-estate")}
+              >
+                Real Estate
+              </Button>
+              <Button
                 variant={filter === "nextjs" ? "default" : "outline"}
                 size="sm"
                 className={
@@ -465,6 +495,18 @@ export default function ProjectsPage() {
                 onClick={() => setFilter("nextjs")}
               >
                 Next.js
+              </Button>
+              <Button
+                variant={filter === "real-estate" ? "default" : "outline"}
+                size="sm"
+                className={
+                  filter === "real-estate"
+                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black whitespace-nowrap"
+                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10 whitespace-nowrap"
+                }
+                onClick={() => setFilter("real-estate")}
+              >
+                Real Estate
               </Button>
               <Button
                 variant={filter === "react" ? "default" : "outline"}

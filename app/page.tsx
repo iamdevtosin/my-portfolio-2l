@@ -295,7 +295,7 @@ export default function Home() {
                 title: "Rave AI",
                 description: "A web app that lets users train their own AI and generate a script to embed a floating chat icon on their website.",
                 image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/rave-ai.webp",
-                tags: ["React", "Fintech", "UI/UX Design"],
+                tags: ["React", "Node.js", "UI/UX Design"],
                 link: "https://ai.ravedev.com.ng",
               },
               {
@@ -304,6 +304,14 @@ export default function Home() {
                 image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/cetrix.org%20landingpage%20fintech11-rdmWEm0qSmFvNHyw0res2kantKOdo3.png",
                 tags: ["React", "Fintech", "UI/UX Design"],
                 link: "https://cetrix.org",
+              },
+              {
+                title: "Xapic Consulting",
+                description: "Xapic Consulting is a modern consulting firm offering digital and business solutions.",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/xapic.webp",
+                tags: ["WordPress", "Laravel", "Agency"],
+                link: "https://xapicconsulting.com/",
+                category: "wordpress",
               },
               {
                 title: "Land Investigate",
@@ -321,14 +329,6 @@ export default function Home() {
                 link: "https://lwdigitalz.com",
               },
               {
-                title: "Tale It Media",
-                description:
-                  "Digital media agency focused on platform business growth with content strategy implementation.",
-                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/taleitmedia1-Pmhmb9i6CptRg8nbsk4WzZa16G5EsK.webp",
-                tags: ["WordPress", "Content Strategy", "SEO"],
-                link: "https://taleitmedia.com",
-              },
-              {
                 title: "Ravehost",
                 description: "Web hosting and domain registration service with comprehensive hosting center solutions.",
                 image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/ravehost.com.ng23.png",
@@ -341,6 +341,14 @@ export default function Home() {
                 image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/israeldia.com%20%282%29-WsxuzJFr2IoXirG8qNNQWNuh6Or20D.png",
                 tags: ["WordPress", "Personal Brand", "Portfolio"],
                 link: "https://israeldia.com",
+              },
+              {
+                title: "Olivia Rose Media",
+                description: "Media production company specializing in creative content and digital storytelling.",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/oliviarosemedia.webp",
+                tags: ["WordPress", "Media", "Portfolio"],
+                link: "https://oliviarosemedia.com",
+                category: "wordpress",
               },
               {
                 title: "Vanskere",
@@ -357,6 +365,14 @@ export default function Home() {
                 image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/bellislux11-gZrN4QAm8OKGeCReDXe9oCDvLmvEjg.png",
                 tags: ["WordPress", "Real Estate", "Property Listings"],
                 link: "https://bellisluxerealty.com/home-2/",
+              },
+              {
+                title: "Tale It Media",
+                description:
+                  "Digital media agency focused on platform business growth with content strategy implementation.",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/taleitmedia1-Pmhmb9i6CptRg8nbsk4WzZa16G5EsK.webp",
+                tags: ["WordPress", "Content Strategy", "SEO"],
+                link: "https://taleitmedia.com",
               },
             ].map((project, index) => (
               <ProjectCard
