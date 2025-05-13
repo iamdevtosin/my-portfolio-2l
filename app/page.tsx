@@ -294,7 +294,7 @@ export default function Home() {
               {
                 title: "Rave AI",
                 description: "A web app that lets users train their own AI and generate a script to embed a floating chat icon on their website.",
-                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/raveai.webp",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/rave-ai.webp",
                 tags: ["React", "Fintech", "UI/UX Design"],
                 link: "https://ai.ravedev.com.ng",
               },
