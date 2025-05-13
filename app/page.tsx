@@ -292,6 +292,13 @@ export default function Home() {
                 link: "https://asonigeria.com/select-store/",
               },
               {
+                title: "Rave AI",
+                description: "A web app that lets users train their own AI and generate a script to embed a floating chat icon on their website.",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/raveai.webp",
+                tags: ["React", "Fintech", "UI/UX Design"],
+                link: "https://ai.ravedev.com.ng",
+              },
+              {
                 title: "Cetrix",
                 description: "Fintech platform for bill payments, airtime, data, and subscription management.",
                 image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/cetrix.org%20landingpage%20fintech11-rdmWEm0qSmFvNHyw0res2kantKOdo3.png",
