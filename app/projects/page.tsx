@@ -109,6 +109,15 @@ export default function ProjectsPage() {
       category: "wordpress",
     },
     {
+      title: "Myvisaprocess",
+      description:
+        "Comprehensive visa processing platform providing streamlined visa application services and guidance.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/myvisaprocess",
+      tags: ["WordPress", "Visa Services", "Government"],
+      link: "https://myvisaprocess.com/",
+      category: "wordpress",
+    },
+    {
       title: "Nuance Nook",
       description: "Interior design studio showcasing elegant home transformations and design services.",
       image:
@@ -130,7 +139,7 @@ export default function ProjectsPage() {
       description: "Luxury real estate platform featuring high-end properties and personalized search.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/bellislux11-gZrN4QAm8OKGeCReDXe9oCDvLmvEjg.png",
       tags: ["WordPress", "Real Estate", "Property Listings"],
-      link: "https://bellislux.com",
+      link: "https://bellisluxerealty.com/home-2/",
       category: "real-estate",
     },
     {

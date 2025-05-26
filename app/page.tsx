@@ -292,8 +292,25 @@ export default function Home() {
                 link: "https://asonigeria.com/select-store/",
               },
               {
+                title: "Xapic Consulting",
+                description: "Xapic Consulting is a modern consulting firm offering digital and business solutions.",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/xapic.webp",
+                tags: ["WordPress", "Laravel", "Agency"],
+                link: "https://xapicconsulting.com/",
+                category: "wordpress",
+              },
+              {
+                title: "Myvisaprocess",
+                description:
+                  "Comprehensive visa processing platform providing streamlined visa application services and guidance.",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/myvisaprocess",
+                tags: ["WordPress", "Visa Services", "Government"],
+                link: "https://myvisaprocess.com/",
+              },
+              {
                 title: "Rave AI",
-                description: "A web app that lets users train their own AI and generate a script to embed a floating chat icon on their website.",
+                description:
+                  "A web app that lets users train their own AI and generate a script to embed a floating chat icon on their website.",
                 image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/rave-ai.webp",
                 tags: ["React", "Node.js", "UI/UX Design"],
                 link: "https://ai.ravedev.com.ng",
@@ -301,17 +318,10 @@ export default function Home() {
               {
                 title: "Cetrix",
                 description: "Fintech platform for bill payments, airtime, data, and subscription management.",
-                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/cetrix.org%20landingpage%20fintech11-rdmWEm0qSmFvNHyw0res2kantKOdo3.png",
+                image:
+                  "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/cetrix.org%20landingpage%20fintech11-rdmWEm0qSmFvNHyw0res2kantKOdo3.png",
                 tags: ["React", "Fintech", "UI/UX Design"],
                 link: "https://cetrix.org",
-              },
-              {
-                title: "Xapic Consulting",
-                description: "Xapic Consulting is a modern consulting firm offering digital and business solutions.",
-                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/xapic.webp",
-                tags: ["WordPress", "Laravel", "Agency"],
-                link: "https://xapicconsulting.com/",
-                category: "wordpress",
               },
               {
                 title: "Land Investigate",
@@ -338,7 +348,8 @@ export default function Home() {
               {
                 title: "Israel Dia",
                 description: "Personal brand website for a professional showcasing services and portfolio.",
-                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/israeldia.com%20%282%29-WsxuzJFr2IoXirG8qNNQWNuh6Or20D.png",
+                image:
+                  "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/israeldia.com%20%282%29-WsxuzJFr2IoXirG8qNNQWNuh6Or20D.png",
                 tags: ["WordPress", "Personal Brand", "Portfolio"],
                 link: "https://israeldia.com",
               },
@@ -362,7 +373,8 @@ export default function Home() {
               {
                 title: "Bellislux",
                 description: "Luxury real estate platform featuring high-end properties and personalized search.",
-                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/bellislux11-gZrN4QAm8OKGeCReDXe9oCDvLmvEjg.png",
+                image:
+                  "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/bellislux11-gZrN4QAm8OKGeCReDXe9oCDvLmvEjg.png",
                 tags: ["WordPress", "Real Estate", "Property Listings"],
                 link: "https://bellisluxerealty.com/home-2/",
               },
@@ -370,7 +382,8 @@ export default function Home() {
                 title: "Tale It Media",
                 description:
                   "Digital media agency focused on platform business growth with content strategy implementation.",
-                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/taleitmedia1-Pmhmb9i6CptRg8nbsk4WzZa16G5EsK.webp",
+                image:
+                  "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/taleitmedia1-Pmhmb9i6CptRg8nbsk4WzZa16G5EsK.webp",
                 tags: ["WordPress", "Content Strategy", "SEO"],
                 link: "https://taleitmedia.com",
               },
