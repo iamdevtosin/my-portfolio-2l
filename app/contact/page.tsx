@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { Menu, X, Mail, Phone, Globe, Github, Linkedin, Twitter, Instagram } from "lucide-react"
@@ -28,7 +27,7 @@ export default function ContactPage() {
 
   // State for the magnetic repulsion button
   const [buttonPosition, setButtonPosition] = useState({ x: 0, y: 0 })
-  const [isButtonRepelling, setIsButtonRepelling] = useState(false)
+  const [isNearButton, setIsNearButton] = useState(false)
   const buttonRef = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -85,8 +84,8 @@ export default function ContactPage() {
     }, 5000)
   }
 
-  // Magnetic repulsion effect
-  const handleMouseMove = (e: React.MouseEvent) => {
+  // Magnetic repulsion effect - button moves away when cursor gets close
+  const handleContainerMouseMove = (e: React.MouseEvent) => {
     if (!containerRef.current || !buttonRef.current) return
 
     const container = containerRef.current.getBoundingClientRect()
@@ -96,7 +95,7 @@ export default function ContactPage() {
     const mouseX = e.clientX - container.left
     const mouseY = e.clientY - container.top
 
-    // Get button center position
+    // Get button center position relative to container
     const buttonCenterX = buttonPosition.x + button.width / 2
     const buttonCenterY = buttonPosition.y + button.height / 2
 
@@ -106,22 +105,22 @@ export default function ContactPage() {
     const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY)
 
     // Repulsion threshold - button starts moving when cursor is within this distance
-    const repulsionRadius = 120
+    const repulsionRadius = 80
 
     if (distance < repulsionRadius && distance > 0) {
-      setIsButtonRepelling(true)
+      setIsNearButton(true)
 
       // Calculate repulsion force (stronger when closer)
       const force = Math.max(0, (repulsionRadius - distance) / repulsionRadius)
-      const repulsionStrength = 60 * force
+      const repulsionStrength = 30 // Smaller movement, just enough to stay out of reach
 
       // Normalize direction vector
       const directionX = deltaX / distance
       const directionY = deltaY / distance
 
-      // Calculate new position (move away from cursor)
-      let newX = buttonPosition.x + directionX * repulsionStrength * 0.1
-      let newY = buttonPosition.y + directionY * repulsionStrength * 0.1
+      // Calculate new position (move away from cursor, but not too far)
+      let newX = buttonPosition.x + directionX * repulsionStrength * 0.3
+      let newY = buttonPosition.y + directionY * repulsionStrength * 0.3
 
       // Keep button within container bounds with padding
       const padding = 20
@@ -133,32 +132,48 @@ export default function ContactPage() {
 
       setButtonPosition({ x: newX, y: newY })
     } else {
-      setIsButtonRepelling(false)
+      setIsNearButton(false)
     }
   }
 
   // Reset button position when mouse leaves container
-  const handleMouseLeave = () => {
-    setIsButtonRepelling(false)
+  const handleContainerMouseLeave = () => {
+    setIsNearButton(false)
     // Smoothly return to center
     setTimeout(() => {
-      if (containerRef.current && buttonRef.current) {
+      if (containerRef.current) {
         const container = containerRef.current.getBoundingClientRect()
-        const button = buttonRef.current.getBoundingClientRect()
-        const centerX = (container.width - button.width) / 2
-        const centerY = (container.height - button.height) / 2 - 20
+        const centerX = Math.max(0, (container.width - 200) / 2) // Approximate button width
+        const centerY = 60 // Position below text
         setButtonPosition({ x: centerX, y: centerY })
       }
-    }, 1000)
+    }, 800)
   }
 
   // Initialize button position
   useEffect(() => {
-    if (containerRef.current && buttonRef.current) {
-      const container = containerRef.current.getBoundingClientRect()
-      const centerX = (container.width - 200) / 2 // Approximate button width
-      const centerY = 80 // Position below text
-      setButtonPosition({ x: centerX, y: centerY })
+    const initializePosition = () => {
+      if (containerRef.current) {
+        const container = containerRef.current.getBoundingClientRect()
+        const centerX = Math.max(0, (container.width - 200) / 2) // Approximate button width
+        const centerY = 60 // Position below text
+        setButtonPosition({ x: centerX, y: centerY })
+      }
+    }
+
+    // Delay initialization to ensure container is rendered
+    const timer = setTimeout(initializePosition, 200)
+
+    // Also initialize on window resize
+    const handleResize = () => {
+      setTimeout(initializePosition, 100)
+    }
+
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener("resize", handleResize)
     }
   }, [])
 
@@ -194,7 +209,12 @@ export default function ContactPage() {
           </nav>
           <div className="flex items-center gap-2">
             <Link href="/contact">
-              <Button className="bg-gradient-to-r from-[#0ff] to-[#f0f] text-black hover:opacity-90">Hire Me</Button>
+              <Button
+                variant="outline"
+                className="border-[#0ff] text-[#0ff] hover:bg-[#0ff]/10 hidden md:flex bg-transparent"
+              >
+                <Mail className="mr-2 h-4 w-4" /> Hire Me
+              </Button>
             </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -252,6 +272,28 @@ export default function ContactPage() {
               >
                 CONTACT
               </Link>
+              <div className="flex gap-4 pt-2">
+                <Link href="https://github.com/iamdevtosin" target="_blank" className="text-gray-400 hover:text-[#0ff]">
+                  <Github className="h-5 w-5" />
+                </Link>
+                <Link
+                  href="https://linkedin.com/in/devtosin"
+                  target="_blank"
+                  className="text-gray-400 hover:text-[#0ff]"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </Link>
+                <Link href="https://twitter.com/devtosin" target="_blank" className="text-gray-400 hover:text-[#0ff]">
+                  <Twitter className="h-5 w-5" />
+                </Link>
+                <Link
+                  href="https://instagram.com/dev_tosin"
+                  target="_blank"
+                  className="text-gray-400 hover:text-[#0ff]"
+                >
+                  <Instagram className="h-5 w-5" />
+                </Link>
+              </div>
             </div>
           </div>
         )}
@@ -460,13 +502,13 @@ export default function ContactPage() {
             {/* Magnetic Repulsion Schedule Button */}
             <div
               ref={containerRef}
-              className="bg-black/60 border border-[#0ff]/20 p-8 rounded-lg shadow-[0_0_15px_rgba(0,255,255,0.1)] relative overflow-hidden min-h-[200px]"
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
+              className="bg-black/60 border border-[#0ff]/20 p-8 rounded-lg shadow-[0_0_15px_rgba(0,255,255,0.1)] relative overflow-hidden min-h-[180px]"
+              onMouseMove={handleContainerMouseMove}
+              onMouseLeave={handleContainerMouseLeave}
             >
               <h2 className="text-2xl font-bold mb-4">Schedule a Call</h2>
               <p className="text-gray-400 mb-6">
-                Prefer to discuss your project over a call? Try to catch the button if you can! 🧲
+                Prefer to discuss your project over a call? Let's set up a time to chat!
               </p>
               <div
                 ref={buttonRef}
@@ -478,12 +520,12 @@ export default function ContactPage() {
               >
                 <div
                   className={`inline-flex items-center gap-2 bg-gradient-to-r from-[#0ff] to-[#f0f] text-black px-6 py-3 rounded-lg font-medium cursor-pointer select-none transition-all duration-200 ${
-                    isButtonRepelling
-                      ? "scale-110 shadow-[0_0_20px_rgba(0,255,255,0.5)] animate-pulse"
+                    isNearButton
+                      ? "scale-105 shadow-[0_0_15px_rgba(0,255,255,0.4)]"
                       : "hover:scale-105 shadow-[0_0_10px_rgba(0,255,255,0.3)]"
                   }`}
                 >
-                  Schedule a Call {isButtonRepelling ? "🧲" : "📅"}
+                  Schedule a Call {isNearButton ? "😏" : "📅"}
                 </div>
               </div>
             </div>
