@@ -61,9 +61,9 @@ export default function ProjectsPage() {
     },
     {
       title: "LW Digital Z",
-      description: "Digital agency website with modern design and comprehensive digital marketing services.",
+      description: "Fashion e-commerce platform with modern design and comprehensive product catalog.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/lwdigitalz.com.png",
-      tags: ["Wordpress", "Ecommerce", "Laravel"],
+      tags: ["WordPress", "Fashion", "E-commerce"],
       link: "https://lwdigitalz.com",
       category: "wordpress",
     },
@@ -77,10 +77,10 @@ export default function ProjectsPage() {
     },
     {
       title: "Israel Dia",
-      description: "Personal brand website for a professional showcasing services and portfolio.",
+      description: "Fashion e-commerce store featuring contemporary clothing and accessories.",
       image:
         "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/israeldia.com%20%282%29-WsxuzJFr2IoXirG8qNNQWNuh6Or20D.png",
-      tags: ["Wordpress", "Ecommerce", "Laravel"],
+      tags: ["WordPress", "Fashion", "E-commerce"],
       link: "https://israeldia.com",
       category: "wordpress",
     },

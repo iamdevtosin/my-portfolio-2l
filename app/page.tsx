@@ -32,11 +32,14 @@ import ChatBot from "@/components/chat-bot"
 import { useState, useEffect } from "react"
 import ScrollToTop from "@/components/scroll-to-top"
 import Preloader from "@/components/preloader"
+import { useRouter } from "next/navigation"
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
+
+  const router = useRouter()
 
   useEffect(() => {
     const checkMobile = () => {
@@ -100,9 +103,11 @@ export default function Home() {
             </Link>
           </nav>
           <div className="flex items-center gap-2">
-            <Button variant="outline" className="border-[#0ff] text-[#0ff] hover:bg-[#0ff]/10 hidden md:flex">
-              <Mail className="mr-2 h-4 w-4" /> Hire Me
-            </Button>
+            <Link href="/contact">
+              <Button variant="outline" className="border-[#0ff] text-[#0ff] hover:bg-[#0ff]/10 hidden md:flex">
+                <Mail className="mr-2 h-4 w-4" /> Hire Me
+              </Button>
+            </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 text-white hover:text-[#0ff]"
@@ -297,7 +302,6 @@ export default function Home() {
                 image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/xapic.webp",
                 tags: ["WordPress", "Laravel", "Agency"],
                 link: "https://xapicconsulting.com/",
-                category: "wordpress",
               },
               {
                 title: "Myvisaprocess",
@@ -306,14 +310,6 @@ export default function Home() {
                 image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/myvisaprocess",
                 tags: ["WordPress", "Visa Services", "Government"],
                 link: "https://myvisaprocess.com/",
-              },
-              {
-                title: "Rave AI",
-                description:
-                  "A web app that lets users train their own AI and generate a script to embed a floating chat icon on their website.",
-                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/rave-ai.webp",
-                tags: ["React", "Node.js", "UI/UX Design"],
-                link: "https://ai.ravedev.com.ng",
               },
               {
                 title: "Cetrix",
@@ -332,10 +328,18 @@ export default function Home() {
                 link: "https://landinvestigate.com",
               },
               {
+                title: "Rave AI",
+                description:
+                  "A web app that lets users train their own AI and generate a script to embed a floating chat icon on their website.",
+                image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/rave-ai.webp",
+                tags: ["React", "Node.js", "UI/UX Design"],
+                link: "https://ai.ravedev.com.ng",
+              },
+              {
                 title: "LW Digital Z",
-                description: "Digital agency website with modern design and comprehensive digital marketing services.",
+                description: "Fashion e-commerce platform with modern design and comprehensive product catalog.",
                 image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/lwdigitalz.com.png",
-                tags: ["Next.js", "Digital Marketing", "UI/UX Design"],
+                tags: ["WordPress", "Fashion", "E-commerce"],
                 link: "https://lwdigitalz.com",
               },
               {
@@ -347,10 +351,10 @@ export default function Home() {
               },
               {
                 title: "Israel Dia",
-                description: "Personal brand website for a professional showcasing services and portfolio.",
+                description: "Fashion e-commerce store featuring contemporary clothing and accessories.",
                 image:
                   "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/israeldia.com%20%282%29-WsxuzJFr2IoXirG8qNNQWNuh6Or20D.png",
-                tags: ["WordPress", "Personal Brand", "Portfolio"],
+                tags: ["WordPress", "Fashion", "E-commerce"],
                 link: "https://israeldia.com",
               },
               {
@@ -359,7 +363,6 @@ export default function Home() {
                 image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/oliviarosemedia.webp",
                 tags: ["WordPress", "Media", "Portfolio"],
                 link: "https://oliviarosemedia.com",
-                category: "wordpress",
               },
               {
                 title: "Vanskere",
@@ -593,11 +596,13 @@ export default function Home() {
                     <span className="text-gray-300">48-hour response time</span>
                   </li>
                 </ul>
-                <Link href="/contact">
-                  <Button className="w-full bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 border border-[#0ff]/50">
-                    Get Started
-                  </Button>
-                </Link>
+                {/* Standard Plan - Replace the Button */}
+                <div
+                  onClick={() => (window.location.href = "/contact")}
+                  className="w-full bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 border border-[#0ff]/50 px-4 py-2 rounded-md font-medium transition-colors cursor-pointer text-center"
+                >
+                  Get Started
+                </div>
               </CardContent>
             </Card>
 
@@ -646,11 +651,13 @@ export default function Home() {
                     <span className="text-gray-300">Instant response time</span>
                   </li>
                 </ul>
-                <Link href="/contact">
-                  <Button className="w-full bg-gradient-to-r from-[#0ff] to-[#f0f] text-black hover:opacity-90">
-                    Get Started
-                  </Button>
-                </Link>
+                {/* Pro Support Plan - Replace the Button */}
+                <div
+                  onClick={() => (window.location.href = "/contact")}
+                  className="w-full bg-gradient-to-r from-[#0ff] to-[#f0f] text-black hover:opacity-90 px-4 py-2 rounded-md font-medium transition-opacity cursor-pointer text-center"
+                >
+                  Get Started
+                </div>
               </CardContent>
             </Card>
 
@@ -692,11 +699,13 @@ export default function Home() {
                     <span className="text-gray-300">24/7 priority support</span>
                   </li>
                 </ul>
-                <Link href="/contact">
-                  <Button className="w-full bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 border border-[#0ff]/50">
-                    Get Started
-                  </Button>
-                </Link>
+                {/* Premium Plan - Replace the Button */}
+                <div
+                  onClick={() => (window.location.href = "/contact")}
+                  className="w-full bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 border border-[#0ff]/50 px-4 py-2 rounded-md font-medium transition-colors cursor-pointer text-center"
+                >
+                  Get Started
+                </div>
               </CardContent>
             </Card>
 
@@ -743,11 +752,13 @@ export default function Home() {
                     <span className="text-gray-300">Funnel & marketing setup</span>
                   </li>
                 </ul>
-                <Link href="/contact">
-                  <Button className="w-full bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 border border-[#0ff]/50">
-                    Get Started
-                  </Button>
-                </Link>
+                {/* Partner Retainer Plan - Replace the Button */}
+                <div
+                  onClick={() => (window.location.href = "/contact")}
+                  className="w-full bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 border border-[#0ff]/50 px-4 py-2 rounded-md font-medium transition-colors cursor-pointer text-center"
+                >
+                  Get Started
+                </div>
                 <p className="text-xs mt-3 text-center text-gray-400">
                   *Hosting & Domain billed separately: ₦200,000/year
                 </p>
@@ -792,11 +803,13 @@ export default function Home() {
                     <span className="text-gray-300">Partner retainer package</span>
                   </li>
                 </ul>
-                <Link href="/contact">
-                  <Button className="w-full bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 border border-[#0ff]/50">
-                    Contact for Consultation
-                  </Button>
-                </Link>
+                {/* Enterprise Plan - Replace the Button */}
+                <div
+                  onClick={() => (window.location.href = "/contact")}
+                  className="w-full bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 border border-[#0ff]/50 px-4 py-2 rounded-md font-medium transition-colors cursor-pointer text-center"
+                >
+                  Contact for Consultation
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -843,11 +856,13 @@ export default function Home() {
                   WordPress errors including the white screen of death, database connection errors, and plugin
                   conflicts.
                 </p>
-                <Link href="/blog/wordpress-errors">
-                  <Button href="/blog/wordpress-errors" variant="link" className="text-[#0ff] p-0 h-auto font-medium">
-                    Read More <ChevronRight className="ml-1 h-4 w-4" />
-                  </Button>
-                </Link>
+                {/* Blog Post 1 */}
+                <div
+                  onClick={() => (window.location.href = "/blog/wordpress-errors")}
+                  className="inline-flex items-center text-[#0ff] hover:text-[#0ff]/80 font-medium cursor-pointer"
+                >
+                  Read More <ChevronRight className="ml-1 h-4 w-4" />
+                </div>
               </CardContent>
             </Card>
 
@@ -867,11 +882,13 @@ export default function Home() {
                   of creating and configuring a virtual machine on Azure, including selecting the right VM size and
                   setting up networking.
                 </p>
-                <Link href="/blog/azure-vm">
-                  <Button variant="link" className="text-[#f0f] p-0 h-auto font-medium">
-                    Read More <ChevronRight className="ml-1 h-4 w-4" />
-                  </Button>
-                </Link>
+                {/* Blog Post 2 */}
+                <div
+                  onClick={() => (window.location.href = "/blog/azure-vm")}
+                  className="inline-flex items-center text-[#f0f] hover:text-[#f0f]/80 font-medium cursor-pointer"
+                >
+                  Read More <ChevronRight className="ml-1 h-4 w-4" />
+                </div>
               </CardContent>
             </Card>
 
@@ -891,11 +908,13 @@ export default function Home() {
                   orders, and store from the frontend. Learn how to set up and configure WCFM for your multi-vendor
                   marketplace.
                 </p>
-                <Link href="/blog/wcfm-guide" className="text-sm hover:text-[#0ff] transition-colors">
-                  <Button variant="link" className="text-[#0ff] p-0 h-auto font-medium">
-                    Read More <ChevronRight className="ml-1 h-4 w-4" />
-                  </Button>
-                </Link>
+                {/* Blog Post 3 */}
+                <div
+                  onClick={() => (window.location.href = "/blog/wcfm-guide")}
+                  className="inline-flex items-center text-[#0ff] hover:text-[#0ff]/80 font-medium cursor-pointer"
+                >
+                  Read More <ChevronRight className="ml-1 h-4 w-4" />
+                </div>
               </CardContent>
             </Card>
 
@@ -915,11 +934,13 @@ export default function Home() {
                   techniques for editing pages in Elementor, including using templates, creating custom sections, and
                   optimizing for mobile.
                 </p>
-                <Link href="/blog/elementor-editing">
-                  <Button variant="link" className="text-[#f0f] p-0 h-auto font-medium">
-                    Read More <ChevronRight className="ml-1 h-4 w-4" />
-                  </Button>
-                </Link>
+                {/* Blog Post 4 */}
+                <div
+                  onClick={() => (window.location.href = "/blog/elementor-editing")}
+                  className="inline-flex items-center text-[#f0f] hover:text-[#f0f]/80 font-medium cursor-pointer"
+                >
+                  Read More <ChevronRight className="ml-1 h-4 w-4" />
+                </div>
               </CardContent>
             </Card>
 
@@ -939,11 +960,13 @@ export default function Home() {
                   AI development, cloud engineering, cybersecurity, and blockchain technology, and how to position
                   yourself for success.
                 </p>
-                <Link href="/blog/tech-skills-2025">
-                  <Button variant="link" className="text-[#0ff] p-0 h-auto font-medium">
-                    Read More <ChevronRight className="ml-1 h-4 w-4" />
-                  </Button>
-                </Link>
+                {/* Blog Post 5 */}
+                <div
+                  onClick={() => (window.location.href = "/blog/tech-skills-2025")}
+                  className="inline-flex items-center text-[#0ff] hover:text-[#0ff]/80 font-medium cursor-pointer"
+                >
+                  Read More <ChevronRight className="ml-1 h-4 w-4" />
+                </div>
               </CardContent>
             </Card>
 
@@ -963,11 +986,13 @@ export default function Home() {
                   the essential steps, required investments, and strategies for success in the competitive web hosting
                   market.
                 </p>
-                <Link href="https://ravehost.com.ng/start-your-hosting-company.php">
-                  <Button variant="link" className="text-[#f0f] p-0 h-auto font-medium">
-                    Read More & Purchase eBook <ChevronRight className="ml-1 h-4 w-4" />
-                  </Button>
-                </Link>
+                {/* Blog Post 6 */}
+                <div
+                  onClick={() => window.open("https://ravehost.com.ng/start-your-hosting-company.php", "_blank")}
+                  className="inline-flex items-center text-[#f0f] hover:text-[#f0f]/80 font-medium cursor-pointer"
+                >
+                  Read More & Purchase eBook <ChevronRight className="ml-1 h-4 w-4" />
+                </div>
               </CardContent>
             </Card>
           </div>
