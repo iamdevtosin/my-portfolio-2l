@@ -7,45 +7,31 @@ export default function Preloader() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((oldProgress) => {
-        if (oldProgress === 100) {
+      setProgress((prev) => {
+        if (prev >= 100) {
           clearInterval(timer)
           return 100
         }
-        const newProgress = oldProgress + Math.floor(Math.random() * 10) + 5
-        return Math.min(newProgress, 100)
+        return prev + 2
       })
-    }, 200)
+    }, 40)
 
-    return () => {
-      clearInterval(timer)
-    }
+    return () => clearInterval(timer)
   }, [])
 
   return (
-    <div className="fixed inset-0 bg-black flex flex-col items-center justify-center z-50">
-      <div className="w-full max-w-md px-4">
-        <div className="flex items-center justify-center mb-8">
-          <span className="font-bold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
-            DEV<span className="text-white">TOSIN</span>
-          </span>
+    <div className="fixed inset-0 bg-white z-50 flex items-center justify-center">
+      <div className="text-center">
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold text-black mb-2">
+            DEV<span className="text-blue-600">TOSIN</span>
+          </h1>
+          <p className="text-gray-600">Loading...</p>
         </div>
-
-        <div className="w-full bg-gray-900 rounded-full h-2.5 mb-4 overflow-hidden">
-          <div
-            className="bg-gradient-to-r from-[#0ff] to-[#f0f] h-2.5 rounded-full transition-all duration-300 ease-out"
-            style={{ width: `${progress}%` }}
-          ></div>
+        <div className="w-64 h-2 bg-gray-200 rounded-full overflow-hidden">
+          <div className="h-full bg-black transition-all duration-300 ease-out" style={{ width: `${progress}%` }} />
         </div>
-
-        <div className="flex justify-between items-center">
-          <span className="text-xs font-mono text-gray-400">Loading assets...</span>
-          <span className="text-xs font-mono text-[#0ff]">{progress}%</span>
-        </div>
-
-        <div className="mt-8 text-center">
-          <p className="text-gray-500 text-sm animate-pulse">Building digital experiences</p>
-        </div>
+        <p className="text-sm text-gray-500 mt-4">{progress}%</p>
       </div>
     </div>
   )

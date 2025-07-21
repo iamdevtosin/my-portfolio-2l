@@ -22,7 +22,7 @@ export default function ServicesPage() {
 
   const services = [
     {
-      icon: <Globe className="h-12 w-12 text-[#0ff]" />,
+      icon: <Globe className="h-12 w-12 text-black" />,
       title: "WordPress Development",
       description:
         "Custom WordPress websites with responsive design, optimized for performance and SEO. I create tailored solutions that align with your brand identity and business goals.",
@@ -37,7 +37,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      icon: <Code className="h-12 w-12 text-[#f0f]" />,
+      icon: <Code className="h-12 w-12 text-black" />,
       title: "Software Development",
       description:
         "Bespoke software solutions tailored to your specific business requirements. I develop custom applications that streamline your operations and enhance user experience.",
@@ -52,7 +52,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      icon: <Search className="h-12 w-12 text-[#0ff]" />,
+      icon: <Search className="h-12 w-12 text-black" />,
       title: "SEO Optimization",
       description:
         "Improve your search engine rankings and drive organic traffic to your website. I implement proven SEO strategies to increase your online visibility and reach.",
@@ -67,7 +67,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      icon: <ShoppingBag className="h-12 w-12 text-[#f0f]" />,
+      icon: <ShoppingBag className="h-12 w-12 text-black" />,
       title: "Shopify Development",
       description:
         "Custom Shopify stores with seamless checkout experiences and conversion optimization. I create e-commerce solutions that drive sales and enhance customer satisfaction.",
@@ -82,7 +82,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      icon: <Database className="h-12 w-12 text-[#0ff]" />,
+      icon: <Database className="h-12 w-12 text-black" />,
       title: "Website Management",
       description:
         "Comprehensive website maintenance, updates, and security monitoring. I ensure your website remains secure, up-to-date, and performing optimally at all times.",
@@ -97,7 +97,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      icon: <Cloud className="h-12 w-12 text-[#f0f]" />,
+      icon: <Cloud className="h-12 w-12 text-black" />,
       title: "Cloud Engineering",
       description:
         "Microsoft Azure solutions for scalable, secure, and reliable cloud infrastructure. I design and implement cloud architectures that optimize performance and reduce costs.",
@@ -112,7 +112,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      icon: <Cpu className="h-12 w-12 text-[#0ff]" />,
+      icon: <Cpu className="h-12 w-12 text-black" />,
       title: "WordPress Plugin Development",
       description:
         "Custom WordPress plugins to extend functionality and create tailored solutions for specific business needs. I develop plugins that enhance your website's capabilities.",
@@ -129,39 +129,39 @@ export default function ServicesPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/50 border-b border-[#0ff]/20">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/90 border-b border-gray-200 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
-              DEV<span className="text-white">TOSIN</span>
+            <span className="font-bold text-2xl text-black">
+              DEV<span className="text-blue-600">TOSIN</span>
             </span>
           </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-sm hover:text-[#0ff] transition-colors">
+          <nav className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
               HOME
             </Link>
-            <Link href="/about" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/about" className="text-sm font-medium hover:text-blue-600 transition-colors">
               ABOUT
             </Link>
-            <Link href="/services" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/services" className="text-sm font-medium text-blue-600">
               SERVICES
             </Link>
-            <Link href="/projects" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/projects" className="text-sm font-medium hover:text-blue-600 transition-colors">
               PROJECTS
             </Link>
-            <Link href="/terminal" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/terminal" className="text-sm font-medium hover:text-blue-600 transition-colors">
               TERMINAL
             </Link>
-            <Link href="/contact" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/contact" className="text-sm font-medium hover:text-blue-600 transition-colors">
               CONTACT
             </Link>
           </nav>
           <div className="flex items-center gap-2">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-white hover:text-[#0ff]"
+              className="md:hidden p-2 text-black hover:text-blue-600"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -171,46 +171,46 @@ export default function ServicesPage() {
 
         {/* Mobile Menu */}
         {isMenuOpen && isMobile && (
-          <div className="md:hidden bg-black/95 backdrop-blur-md border-b border-[#0ff]/20 py-4">
+          <div className="md:hidden bg-white border-t border-gray-200 py-4">
             <div className="container mx-auto px-4 flex flex-col space-y-4">
               <Link
                 href="/"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 HOME
               </Link>
               <Link
                 href="/about"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 ABOUT
               </Link>
               <Link
                 href="/services"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium text-blue-600 py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 SERVICES
               </Link>
               <Link
                 href="/projects"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 PROJECTS
               </Link>
               <Link
                 href="/terminal"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 TERMINAL
               </Link>
               <Link
                 href="/contact"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 CONTACT
@@ -224,10 +224,8 @@ export default function ServicesPage() {
       <div className="pt-32 pb-16 container mx-auto px-4">
         <ScrollReveal direction="up" delay={0.2}>
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">My Services</span>
-            </h1>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black">My Services</h1>
+            <p className="text-gray-600 max-w-2xl mx-auto">
               I offer a comprehensive range of digital services to help businesses establish and enhance their online
               presence. Each service is tailored to meet your specific needs and goals.
             </p>
@@ -237,32 +235,32 @@ export default function ServicesPage() {
         <div className="space-y-16">
           {services.map((service, index) => (
             <ScrollReveal key={index} direction="up" delay={0.2 + index * 0.1} threshold={0.1}>
-              <div className="bg-black/60 border border-[#0ff]/20 rounded-lg p-8 shadow-[0_0_15px_rgba(0,255,255,0.1)] hover:border-[#0ff]/50 transition-all duration-500">
+              <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-lg hover:border-blue-300 hover:shadow-xl transition-all duration-500">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="md:col-span-1 flex flex-col items-center md:items-start">
-                    <div className="bg-black/60 p-6 rounded-lg border border-[#0ff]/20 mb-6">{service.icon}</div>
-                    <h2 className="text-2xl font-bold mb-4 text-center md:text-left">{service.title}</h2>
-                    <div className="h-1 w-20 bg-gradient-to-r from-[#0ff] to-[#f0f] rounded-full mb-6" />
+                    <div className="bg-gray-100 p-6 rounded-lg border border-gray-200 mb-6 hover:bg-blue-100 transition-colors">
+                      {service.icon}
+                    </div>
+                    <h2 className="text-2xl font-bold mb-4 text-center md:text-left text-black">{service.title}</h2>
+                    <div className="h-1 w-20 bg-blue-600 rounded-full mb-6" />
                   </div>
 
                   <div className="md:col-span-2">
-                    <p className="text-gray-400 mb-6">{service.description}</p>
+                    <p className="text-gray-600 mb-6">{service.description}</p>
 
-                    <h3 className="text-lg font-semibold mb-4 text-[#0ff]">What's Included:</h3>
+                    <h3 className="text-lg font-semibold mb-4 text-black">What's Included:</h3>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start">
-                          <ChevronRight className="h-5 w-5 text-[#0ff] shrink-0 mt-0.5" />
-                          <span className="text-gray-300">{feature}</span>
+                          <ChevronRight className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
+                          <span className="text-gray-600">{feature}</span>
                         </li>
                       ))}
                     </ul>
 
                     <div className="flex justify-end">
                       <Link href="/contact">
-                        <Button className="bg-gradient-to-r from-[#0ff] to-[#f0f] text-black hover:opacity-90">
-                          Inquire About This Service
-                        </Button>
+                        <Button className="bg-black text-white hover:bg-blue-600">Inquire About This Service</Button>
                       </Link>
                     </div>
                   </div>
@@ -274,28 +272,25 @@ export default function ServicesPage() {
 
         <ScrollReveal direction="up" delay={0.3}>
           <div className="mt-16 text-center">
-            <h2 className="text-2xl font-bold mb-4">Ready to Start Your Project?</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+            <h2 className="text-2xl font-bold mb-4 text-black">Ready to Start Your Project?</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
               Let's collaborate to bring your vision to life. Contact me today to discuss your project requirements and
               how I can help you achieve your goals.
             </p>
             <Link href="/contact">
-              <Button className="bg-gradient-to-r from-[#0ff] to-[#f0f] text-black hover:opacity-90 px-8 py-6 text-lg">
-                Get In Touch
-              </Button>
+              <Button className="bg-black text-white hover:bg-blue-600 px-8 py-6 text-lg">Get In Touch</Button>
             </Link>
           </div>
         </ScrollReveal>
       </div>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-[#0ff]/20">
+      <footer className="py-8 border-t border-gray-200">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Dev Tosin. All rights reserved.</p>
+          <p className="text-gray-600 text-sm">© {new Date().getFullYear()} Dev Tosin. All rights reserved.</p>
         </div>
       </footer>
 
-      {/* Scroll to Top Button */}
       <ScrollToTop />
     </div>
   )

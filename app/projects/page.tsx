@@ -29,8 +29,8 @@ export default function ProjectsPage() {
       description: "Fashion e-commerce platform featuring vibrant African designs and contemporary styles.",
       image:
         "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/asonigeria.com21-SsxlnDbJBZHq5Plllq8Jg8jJFidvwv.png",
-      tags: ["WordPress", "E-commerce", "Custom Design"],
-      link: "https://asonigeria.com/select-store/",
+      technologies: ["WordPress", "E-commerce", "Custom Design"],
+      liveUrl: "https://asonigeria.com/select-store/",
       category: "wordpress",
     },
     {
@@ -38,16 +38,16 @@ export default function ProjectsPage() {
       description:
         "A web app that lets users train their own AI and generate a script to embed a floating chat icon on their website.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/rave-ai.webp",
-      tags: ["React", "Nodejs", "UI/UX Design"],
-      link: "https://ai.ravedev.com.ng",
+      technologies: ["React", "Node.js", "UI/UX Design"],
+      liveUrl: "https://ai.ravedev.com.ng",
       category: "react",
     },
     {
       title: "Tale It Media",
       description: "Digital media agency focused on platform business growth with content strategy implementation.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/taleitmedia1-Pmhmb9i6CptRg8nbsk4WzZa16G5EsK.webp",
-      tags: ["WordPress", "Content Strategy", "SEO"],
-      link: "https://taleitmedia.com",
+      technologies: ["WordPress", "Content Strategy", "SEO"],
+      liveUrl: "https://taleitmedia.com",
       category: "wordpress",
     },
     {
@@ -55,24 +55,24 @@ export default function ProjectsPage() {
       description: "Fintech platform for bill payments, airtime, data, and subscription management.",
       image:
         "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/cetrix.org%20landingpage%20fintech11-rdmWEm0qSmFvNHyw0res2kantKOdo3.png",
-      tags: ["React", "Fintech", "Laravel", "UI/UX Design"],
-      link: "https://cetrix.org",
+      technologies: ["React", "Fintech", "Laravel", "UI/UX Design"],
+      liveUrl: "https://cetrix.org",
       category: "react",
     },
     {
       title: "LW Digital Z",
       description: "Fashion e-commerce platform with modern design and comprehensive product catalog.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/lwdigitalz.com.png",
-      tags: ["WordPress", "Fashion", "E-commerce"],
-      link: "https://lwdigitalz.com",
+      technologies: ["WordPress", "Fashion", "E-commerce"],
+      liveUrl: "https://lwdigitalz.com",
       category: "wordpress",
     },
     {
       title: "Yomi Casual",
       description: "Fashion brand website featuring stylish men's collections and casual fits.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/yomicasual.africa23.png",
-      tags: ["WordPress", "E-commerce", "Fashion"],
-      link: "https://yomicasual.africa",
+      technologies: ["WordPress", "E-commerce", "Fashion"],
+      liveUrl: "https://yomicasual.africa",
       category: "ecommerce",
     },
     {
@@ -80,32 +80,32 @@ export default function ProjectsPage() {
       description: "Fashion e-commerce store featuring contemporary clothing and accessories.",
       image:
         "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/israeldia.com%20%282%29-WsxuzJFr2IoXirG8qNNQWNuh6Or20D.png",
-      tags: ["WordPress", "Fashion", "E-commerce"],
-      link: "https://israeldia.com",
+      technologies: ["WordPress", "Fashion", "E-commerce"],
+      liveUrl: "https://israeldia.com",
       category: "wordpress",
     },
     {
       title: "Ravehost",
       description: "Web hosting and domain registration service with comprehensive hosting center solutions.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/ravehost.com.ng23.png",
-      tags: ["Next.js", "Web Hosting", "Laravel"],
-      link: "https://ravehost.com.ng",
+      technologies: ["Next.js", "Web Hosting", "Laravel"],
+      liveUrl: "https://ravehost.com.ng",
       category: "nextjs",
     },
     {
       title: "Land Investigate",
       description: "Property verification platform for investigating and validating land ownership in Nigeria.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/landinvestiga-min.png",
-      tags: ["WordPress", "Laravel", "Custom Development"],
-      link: "https://landinvestigate.com",
+      technologies: ["WordPress", "Laravel", "Custom Development"],
+      liveUrl: "https://landinvestigate.com",
       category: "wordpress",
     },
     {
       title: "Xapic Consulting",
       description: "Xapic Consulting is a modern consulting firm offering digital and business solutions.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/xapic.webp",
-      tags: ["WordPress", "Laravel", "Agency"],
-      link: "https://xapicconsulting.com/",
+      technologies: ["WordPress", "Laravel", "Agency"],
+      liveUrl: "https://xapicconsulting.com/",
       category: "wordpress",
     },
     {
@@ -113,129 +113,71 @@ export default function ProjectsPage() {
       description:
         "Comprehensive visa processing platform providing streamlined visa application services and guidance.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/myvisaprocess",
-      tags: ["WordPress", "Visa Services", "Government"],
-      link: "https://myvisaprocess.com/",
+      technologies: ["WordPress", "Visa Services", "Government"],
+      liveUrl: "https://myvisaprocess.com/",
       category: "wordpress",
     },
     {
       title: "Nuance Nook",
-      description: "Interior design studio showcasing elegant home transformations and design services.",
+      description: "Fashion e-commerce platform featuring contemporary clothing and accessories.",
       image:
-        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/nuancenook.ng21-guuRlfTAwetvOE3RY6y0aSAqXAcxmT.png",
-      tags: ["Wordpress", "Ecommerce", "Fashion"],
-      link: "https://nuancenook.ng",
-      category: "wordpress",
-    },
-    {
-      title: "Olivia Rose Media",
-      description: "Media production company specializing in creative content and digital storytelling.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/oliviarosemedia.webp",
-      tags: ["WordPress", "Media", "Portfolio"],
-      link: "https://oliviarosemedia.com",
-      category: "wordpress",
-    },
-    {
-      title: "Bellislux",
-      description: "Luxury real estate platform featuring high-end properties and personalized search.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/bellislux11-gZrN4QAm8OKGeCReDXe9oCDvLmvEjg.png",
-      tags: ["WordPress", "Real Estate", "Property Listings"],
-      link: "https://bellisluxerealty.com/home-2/",
-      category: "real-estate",
-    },
-    {
-      title: "Freak Vault",
-      description: "Fashion e-commerce platform featuring timeless elegance in contemporary clothing designs.",
-      image:
-        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/freakvault.com21-MMHwPEhXb3G7ihHwA3uoVA0dxxYyag.png",
-      tags: ["Shopify", "E-commerce", "Custom Theme"],
-      link: "https://freakvault.com",
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/nuancenook.ng23-Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8.png",
+      technologies: ["WordPress", "Fashion", "E-commerce"],
+      liveUrl: "https://nuancenook.ng",
       category: "ecommerce",
-    },
-    {
-      title: "Vanskere",
-      description: "African luxury menswear brand featuring modern elegance and traditional-inspired designs.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/vanskere.vom-6X9EYgJKQCHWK8TwvU53ObYI9AKg2o.png",
-      tags: ["Wordpress", "Fashion", "E-commerce"],
-      link: "https://vanskere.com",
-      category: "ecommerce",
-    },
-    {
-      title: "Lanre DaSilva Ajayi",
-      description: "Fashion designer website showcasing elegant collections and timeless glamour.",
-      image:
-        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/lanredasilva.com.ng21-ubYOw8wNZD2VPBdwt570sWuTbT7r5E.png",
-      tags: ["WordPress", "Fashion", "Portfolio"],
-      link: "https://lanredasilvaajayi.com.ng",
-      category: "wordpress",
     },
     {
       title: "Dipaking Homes",
-      description: "Real estate development company featuring property listings and investment opportunities.",
+      description: "Real estate platform showcasing premium properties and investment opportunities.",
       image:
-        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/dipakinghomes21-SETsKl5EVGH8RR8liTIyy6DuhXuh0U.png",
-      tags: ["WordPress", "Real Estate", "Property Listings"],
-      link: "https://dipakinghomes.ng",
-      category: "real-estate",
-    },
-    {
-      title: "Obyella",
-      description: "Fashion brand featuring vibrant summer collections and African-inspired designs.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/obyella.com11-UznX64t1r9YogNfFfjCGzYBpvuAeGJ.png",
-      tags: ["WordPress", "Fashion", "E-commerce"],
-      link: "https://obyella.com",
-      category: "ecommerce",
-    },
-    {
-      title: "Yedrick",
-      description: "Fashion brand showcasing classic women's collections with elegant, contemporary designs.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/yedrixk.com11-ih5KttwM5FDbnaIXyNccLdnQKvHInZ.png",
-      tags: ["Wordpress", "Fashion", "E-commerce"],
-      link: "https://yedrick.com",
-      category: "ecommerce",
-    },
-    {
-      title: "Emmadube",
-      description: "Fashion brand featuring vibrant African prints and contemporary clothing designs.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/emmadube.com-2.png",
-      tags: ["WordPress", "Fashion", "E-commerce"],
-      link: "https://emmadube.com",
-      category: "ecommerce",
-    },
-    {
-      title: "Ceora Fine Jewelry",
-      description: "Luxury jewelry e-commerce store with elegant design showcasing fine gold jewelry collections.",
-      image:
-        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/ceorafinejewelry.com11-NqAEMQoZjFBcoXnFGSPTG0lISaNJhC.png",
-      tags: ["Shopify", "Jewelry", "Luxury"],
-      link: "https://ceorafinejewelry.com",
-      category: "ecommerce",
-    },
-    {
-      title: "BStyle",
-      description: "Fashion and lifestyle brand with graceful simplicity and enduring glamour collections.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/bstyle23.png",
-      tags: ["Wordpress", "Fashion", "Lifestyle"],
-      link: "https://bstyle.com",
-      category: "ecommerce",
-    },
-    {
-      title: "Fabrique By Fabz",
-      description: "Fashion brand offering custom-made and ready-to-wear elegant designs with unique style.",
-      image:
-        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/fabriquebyfabz.com-nq37MYER2kDnG59FuFXSd0vYPP4beF.png",
-      tags: ["Wordpress", "Fashion", "Custom Design"],
-      link: "https://fabriquebyfabz.com",
-      category: "ecommerce",
-    },
-    {
-      title: "Dr. Ezekiel Adamu",
-      description: "Personal brand website for a visionary entrepreneur and industry leader.",
-      image:
-        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/exekieladamu.com-mMNCZDZpd5ltuNshpQHuyrIvtdOuH0.png",
-      tags: ["WordPress", "Personal Brand", "Professional"],
-      link: "https://exekieladamu.com",
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/dipakinghomes.ng-Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8.jpeg",
+      technologies: ["WordPress", "Real Estate", "Property"],
+      liveUrl: "https://dipakinghomes.ng",
       category: "wordpress",
     },
+    {
+      title: "Freak Vault",
+      description: "Digital marketplace for creative assets and design resources.",
+      image:
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/freakvault.com21-Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8.png",
+      technologies: ["WordPress", "Marketplace", "Digital Assets"],
+      liveUrl: "https://freakvault.com",
+      category: "wordpress",
+    },
+    {
+      title: "Exekiel Adamu",
+      description: "Personal portfolio website showcasing creative work and professional achievements.",
+      image:
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/exekieladamu.com-Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8.png",
+      technologies: ["WordPress", "Portfolio", "Personal Brand"],
+      liveUrl: "https://exekieladamu.com",
+      category: "wordpress",
+    },
+    {
+      title: "Fabrique by Fabz",
+      description: "Fashion brand website featuring contemporary designs and custom tailoring services.",
+      image:
+        "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/fabriquebyfabz.com-Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8.png",
+      technologies: ["WordPress", "Fashion", "Custom Tailoring"],
+      liveUrl: "https://fabriquebyfabz.com",
+      category: "wordpress",
+    },
+    {
+      title: "Vanskere",
+      description: "E-commerce platform for premium fashion and lifestyle products.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/vanskere.com-Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8Ej8.png",
+      technologies: ["WordPress", "E-commerce", "Fashion"],
+      liveUrl: "https://vanskere.com",
+      category: "ecommerce",
+    },
+  ]
+
+  const categories = [
+    { id: "all", label: "All Projects" },
+    { id: "wordpress", label: "WordPress" },
+    { id: "react", label: "React" },
+    { id: "nextjs", label: "Next.js" },
+    { id: "ecommerce", label: "E-commerce" },
   ]
 
   const filteredProjects = projects.filter((project) => {
@@ -243,44 +185,44 @@ export default function ProjectsPage() {
     const matchesSearch =
       project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.tags.some((tag) => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      project.technologies.some((tech) => tech.toLowerCase().includes(searchTerm.toLowerCase()))
     return matchesFilter && matchesSearch
   })
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/50 border-b border-[#0ff]/20">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/90 border-b border-gray-200 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
-              DEV<span className="text-white">TOSIN</span>
+            <span className="font-bold text-2xl text-black">
+              DEV<span className="text-blue-600">TOSIN</span>
             </span>
           </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-sm hover:text-[#0ff] transition-colors">
+          <nav className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
               HOME
             </Link>
-            <Link href="/about" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/about" className="text-sm font-medium hover:text-blue-600 transition-colors">
               ABOUT
             </Link>
-            <Link href="/services" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/services" className="text-sm font-medium hover:text-blue-600 transition-colors">
               SERVICES
             </Link>
-            <Link href="/projects" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/projects" className="text-sm font-medium text-blue-600">
               PROJECTS
             </Link>
-            <Link href="/terminal" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/terminal" className="text-sm font-medium hover:text-blue-600 transition-colors">
               TERMINAL
             </Link>
-            <Link href="/contact" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/contact" className="text-sm font-medium hover:text-blue-600 transition-colors">
               CONTACT
             </Link>
           </nav>
           <div className="flex items-center gap-2">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-white hover:text-[#0ff]"
+              className="md:hidden p-2 text-black hover:text-blue-600"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -290,46 +232,46 @@ export default function ProjectsPage() {
 
         {/* Mobile Menu */}
         {isMenuOpen && isMobile && (
-          <div className="md:hidden bg-black/95 backdrop-blur-md border-b border-[#0ff]/20 py-4">
+          <div className="md:hidden bg-white border-t border-gray-200 py-4">
             <div className="container mx-auto px-4 flex flex-col space-y-4">
               <Link
                 href="/"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 HOME
               </Link>
               <Link
                 href="/about"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 ABOUT
               </Link>
               <Link
                 href="/services"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 SERVICES
               </Link>
               <Link
                 href="/projects"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium text-blue-600 py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 PROJECTS
               </Link>
               <Link
                 href="/terminal"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 TERMINAL
               </Link>
               <Link
                 href="/contact"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 CONTACT
@@ -340,209 +282,59 @@ export default function ProjectsPage() {
       </header>
 
       {/* Main Content */}
-      <div className="pt-24 pb-16 container mx-auto px-4">
+      <div className="pt-32 pb-16 container mx-auto px-4">
         <ScrollReveal direction="up" delay={0.2}>
-          <div className="mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">My Projects</span>
-            </h1>
-            <p className="text-gray-400 max-w-2xl">
-              Browse through my projects and see how I've helped businesses establish their online presence. Each
-              project represents a unique challenge and solution.
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black">My Projects</h1>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              A showcase of my recent work spanning WordPress development, custom software solutions, e-commerce
+              platforms, and modern web applications.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Search and Filter (Mobile) */}
-        <ScrollReveal direction="up" delay={0.3} className="mb-8 md:hidden">
-          <div className="flex flex-col gap-4">
+        {/* Filters and Search */}
+        <div className="mb-12">
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <Button
+                  key={category.id}
+                  onClick={() => setFilter(category.id)}
+                  variant={filter === category.id ? "default" : "outline"}
+                  className={
+                    filter === category.id
+                      ? "bg-black text-white hover:bg-blue-600"
+                      : "border-gray-300 text-black hover:bg-blue-600 hover:text-white hover:border-blue-600 bg-transparent"
+                  }
+                >
+                  {category.label}
+                </Button>
+              ))}
+            </div>
             <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
               <input
                 type="text"
                 placeholder="Search projects..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-black/60 border border-[#0ff]/20 rounded-lg px-4 py-2 pl-10 text-white placeholder-gray-400 focus:outline-none focus:border-[#0ff]/50"
+                className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-black"
               />
-              <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
-            </div>
-            <div className="flex items-center gap-2 overflow-x-auto pb-2">
-              <Button
-                variant={filter === "all" ? "default" : "outline"}
-                size="sm"
-                className={
-                  filter === "all"
-                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black whitespace-nowrap"
-                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10 whitespace-nowrap"
-                }
-                onClick={() => setFilter("all")}
-              >
-                All
-              </Button>
-              <Button
-                variant={filter === "wordpress" ? "default" : "outline"}
-                size="sm"
-                className={
-                  filter === "wordpress"
-                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black whitespace-nowrap"
-                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10 whitespace-nowrap"
-                }
-                onClick={() => setFilter("wordpress")}
-              >
-                WordPress
-              </Button>
-              <Button
-                variant={filter === "ecommerce" ? "default" : "outline"}
-                size="sm"
-                className={
-                  filter === "ecommerce"
-                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black whitespace-nowrap"
-                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10 whitespace-nowrap"
-                }
-                onClick={() => setFilter("ecommerce")}
-              >
-                E-commerce
-              </Button>
-              <Button
-                variant={filter === "real-estate" ? "default" : "outline"}
-                size="sm"
-                className={
-                  filter === "real-estate"
-                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black whitespace-nowrap"
-                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10 whitespace-nowrap"
-                }
-                onClick={() => setFilter("real-estate")}
-              >
-                Real Estate
-              </Button>
-              <Button
-                variant={filter === "nextjs" ? "default" : "outline"}
-                size="sm"
-                className={
-                  filter === "nextjs"
-                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black whitespace-nowrap"
-                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10 whitespace-nowrap"
-                }
-                onClick={() => setFilter("nextjs")}
-              >
-                Next.js
-              </Button>
-              <Button
-                variant={filter === "react" ? "default" : "outline"}
-                size="sm"
-                className={
-                  filter === "react"
-                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black whitespace-nowrap"
-                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10 whitespace-nowrap"
-                }
-                onClick={() => setFilter("react")}
-              >
-                React
-              </Button>
             </div>
           </div>
-        </ScrollReveal>
-
-        {/* Search and Filter (Desktop) */}
-        <ScrollReveal direction="up" delay={0.3} className="mb-8 hidden md:block">
-          <div className="flex flex-wrap justify-between items-center">
-            <div className="max-w-md relative">
-              <input
-                type="text"
-                placeholder="Search projects by name, description, or technology..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-black/60 border border-[#0ff]/20 rounded-lg px-4 py-2 pl-10 text-white placeholder-gray-400 focus:outline-none focus:border-[#0ff]/50"
-              />
-              <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
-            </div>
-            <div className="flex gap-2">
-              <Button
-                variant={filter === "all" ? "default" : "outline"}
-                size="sm"
-                className={
-                  filter === "all"
-                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black"
-                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10"
-                }
-                onClick={() => setFilter("all")}
-              >
-                All Projects
-              </Button>
-              <Button
-                variant={filter === "wordpress" ? "default" : "outline"}
-                size="sm"
-                className={
-                  filter === "wordpress"
-                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black"
-                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10"
-                }
-                onClick={() => setFilter("wordpress")}
-              >
-                WordPress
-              </Button>
-              <Button
-                variant={filter === "ecommerce" ? "default" : "outline"}
-                size="sm"
-                className={
-                  filter === "ecommerce"
-                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black"
-                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10"
-                }
-                onClick={() => setFilter("ecommerce")}
-              >
-                E-commerce
-              </Button>
-              <Button
-                variant={filter === "nextjs" ? "default" : "outline"}
-                size="sm"
-                className={
-                  filter === "nextjs"
-                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black"
-                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10"
-                }
-                onClick={() => setFilter("nextjs")}
-              >
-                Next.js
-              </Button>
-              <Button
-                variant={filter === "real-estate" ? "default" : "outline"}
-                size="sm"
-                className={
-                  filter === "real-estate"
-                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black whitespace-nowrap"
-                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10 whitespace-nowrap"
-                }
-                onClick={() => setFilter("real-estate")}
-              >
-                Real Estate
-              </Button>
-              <Button
-                variant={filter === "react" ? "default" : "outline"}
-                size="sm"
-                className={
-                  filter === "react"
-                    ? "bg-gradient-to-r from-[#0ff] to-[#f0f] text-black"
-                    : "border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10"
-                }
-                onClick={() => setFilter("react")}
-              >
-                React
-              </Button>
-            </div>
-          </div>
-        </ScrollReveal>
+        </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <ScrollReveal key={index} direction="up" delay={0.1 + index * 0.05} threshold={0.1}>
+            <ScrollReveal key={index} direction="up" delay={0.1 + (index % 3) * 0.1} threshold={0.1}>
               <ProjectCard
                 title={project.title}
                 description={project.description}
                 image={project.image}
-                tags={project.tags}
-                link={project.link}
+                technologies={project.technologies}
+                liveUrl={project.liveUrl}
               />
             </ScrollReveal>
           ))}
@@ -550,29 +342,31 @@ export default function ProjectsPage() {
 
         {filteredProjects.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-gray-400 text-lg">No projects found matching your criteria.</p>
-            <Button
-              variant="outline"
-              className="mt-4 border-[#0ff]/50 text-[#0ff] hover:bg-[#0ff]/10"
-              onClick={() => {
-                setFilter("all")
-                setSearchTerm("")
-              }}
-            >
-              Reset Filters
-            </Button>
+            <p className="text-gray-600 text-lg">No projects found matching your criteria.</p>
           </div>
         )}
+
+        <ScrollReveal direction="up" delay={0.3}>
+          <div className="mt-16 text-center">
+            <h2 className="text-2xl font-bold mb-4 text-black">Have a Project in Mind?</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+              Let's collaborate to bring your vision to life. Contact me today to discuss your project requirements and
+              how I can help you achieve your goals.
+            </p>
+            <Link href="/contact">
+              <Button className="bg-black text-white hover:bg-blue-600 px-8 py-6 text-lg">Start Your Project</Button>
+            </Link>
+          </div>
+        </ScrollReveal>
       </div>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-[#0ff]/20">
+      <footer className="py-8 border-t border-gray-200">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Dev Tosin. All rights reserved.</p>
+          <p className="text-gray-600 text-sm">© {new Date().getFullYear()} Dev Tosin. All rights reserved.</p>
         </div>
       </footer>
 
-      {/* Scroll to Top Button */}
       <ScrollToTop />
     </div>
   )

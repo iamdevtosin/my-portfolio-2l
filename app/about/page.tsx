@@ -64,39 +64,39 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/50 border-b border-[#0ff]/20">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/90 border-b border-gray-200 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
-              DEV<span className="text-white">TOSIN</span>
+            <span className="font-bold text-2xl text-black">
+              DEV<span className="text-blue-600">TOSIN</span>
             </span>
           </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-sm hover:text-[#0ff] transition-colors">
+          <nav className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
               HOME
             </Link>
-            <Link href="/about" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/about" className="text-sm font-medium text-blue-600">
               ABOUT
             </Link>
-            <Link href="/services" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/services" className="text-sm font-medium hover:text-blue-600 transition-colors">
               SERVICES
             </Link>
-            <Link href="/projects" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/projects" className="text-sm font-medium hover:text-blue-600 transition-colors">
               PROJECTS
             </Link>
-            <Link href="/terminal" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/terminal" className="text-sm font-medium hover:text-blue-600 transition-colors">
               TERMINAL
             </Link>
-            <Link href="/contact" className="text-sm hover:text-[#0ff] transition-colors">
+            <Link href="/contact" className="text-sm font-medium hover:text-blue-600 transition-colors">
               CONTACT
             </Link>
           </nav>
           <div className="flex items-center gap-2">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-white hover:text-[#0ff]"
+              className="md:hidden p-2 text-black hover:text-blue-600"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -106,46 +106,46 @@ export default function AboutPage() {
 
         {/* Mobile Menu */}
         {isMenuOpen && isMobile && (
-          <div className="md:hidden bg-black/95 backdrop-blur-md border-b border-[#0ff]/20 py-4">
+          <div className="md:hidden bg-white border-t border-gray-200 py-4">
             <div className="container mx-auto px-4 flex flex-col space-y-4">
               <Link
                 href="/"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 HOME
               </Link>
               <Link
                 href="/about"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium text-blue-600 py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 ABOUT
               </Link>
               <Link
                 href="/services"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 SERVICES
               </Link>
               <Link
                 href="/projects"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 PROJECTS
               </Link>
               <Link
                 href="/terminal"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 TERMINAL
               </Link>
               <Link
                 href="/contact"
-                className="text-sm hover:text-[#0ff] transition-colors py-2 border-b border-[#0ff]/10"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 CONTACT
@@ -161,7 +161,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
           <ScrollReveal direction="left" delay={0.2}>
             <div className="relative">
-              <div className="relative rounded-lg overflow-hidden border border-[#0ff]/20 shadow-[0_0_15px_rgba(0,255,255,0.3)]">
+              <div className="relative rounded-lg overflow-hidden border border-gray-200 shadow-lg">
                 <Image
                   src="https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/dev-tosin.webp"
                   alt="Dev Tosin"
@@ -171,11 +171,11 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-black p-4 border border-[#0ff]/20 rounded-lg">
-                <div className="text-[#0ff] font-mono text-sm">
+              <div className="absolute -bottom-4 -right-4 bg-white p-4 border border-gray-200 rounded-lg shadow-lg">
+                <div className="text-black font-mono text-sm">
                   <div className="flex items-center gap-2">
-                    <span className="inline-block w-3 h-3 bg-[#0f0] rounded-full animate-pulse" />
-                    <span>Status: Available for Projects</span>
+                    <span className="inline-block w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span>Available for Projects</span>
                   </div>
                 </div>
               </div>
@@ -184,35 +184,36 @@ export default function AboutPage() {
 
           <ScrollReveal direction="right" delay={0.4}>
             <div className="space-y-6">
-              <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 px-4 py-1">About Me</Badge>
+              <Badge className="bg-gray-100 text-black hover:bg-blue-100 px-4 py-1">About Me</Badge>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                <span className="text-white">I'm </span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
-                  Oluwatosin Aladetoyinbo
-                </span>
+                <span className="text-black">I'm </span>
+                <span className="text-blue-600">Oluwatosin Aladetoyinbo</span>
               </h1>
-              <p className="text-gray-400 text-lg">
+              <p className="text-gray-600 text-lg">
                 WordPress Developer • Software Engineer • SEO Specialist • Shopify Expert • Website Manager • Cloud
                 Engineer
               </p>
-              <p className="text-gray-400">
+              <p className="text-gray-600">
                 I'm a versatile web developer and digital specialist based in Nigeria. With expertise spanning
                 WordPress, Shopify, SEO, software development, and cloud engineering with Microsoft Azure, I create
                 digital solutions that help businesses thrive online.
               </p>
-              <p className="text-gray-400">
+              <p className="text-gray-600">
                 My approach combines technical expertise with creative problem-solving to deliver websites and
                 applications that not only look great but also perform exceptionally well. I also build custom WordPress
                 plugins to extend functionality and create tailored solutions for specific business needs.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link href="/contact">
-                  <Button className="bg-gradient-to-r from-[#0ff] to-[#f0f] text-black hover:opacity-90">
+                  <Button className="bg-black text-white hover:bg-blue-600">
                     Get In Touch <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
                 <Link href="/projects">
-                  <Button variant="outline" className="border-[#0ff] text-[#0ff] hover:bg-[#0ff]/10">
+                  <Button
+                    variant="outline"
+                    className="border-black text-black hover:bg-blue-600 hover:text-white hover:border-blue-600 bg-transparent"
+                  >
                     View Projects
                   </Button>
                 </Link>
@@ -224,49 +225,49 @@ export default function AboutPage() {
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
           <ScrollReveal direction="up" delay={0.1}>
-            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group hover:border-[#0ff]/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,255,255,0.2)] transform hover:-translate-y-2">
+            <Card className="bg-white border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 group">
               <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="bg-[#0ff]/10 p-4 rounded-full mb-4">
-                  <Award className="h-8 w-8 text-[#0ff]" />
+                <div className="bg-gray-100 p-4 rounded-full mb-4 group-hover:bg-blue-100 transition-colors">
+                  <Award className="h-8 w-8 text-black group-hover:text-blue-600" />
                 </div>
-                <h3 className="text-[#0ff] font-mono text-sm mb-2">Experience</h3>
-                <p className="text-white font-bold text-3xl">9+ Years</p>
+                <h3 className="text-gray-600 font-mono text-sm mb-2">Experience</h3>
+                <p className="text-black font-bold text-3xl">9+ Years</p>
               </CardContent>
             </Card>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
-            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group hover:border-[#0ff]/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,255,255,0.2)] transform hover:-translate-y-2">
+            <Card className="bg-white border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 group">
               <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="bg-[#0ff]/10 p-4 rounded-full mb-4">
-                  <Briefcase className="h-8 w-8 text-[#0ff]" />
+                <div className="bg-gray-100 p-4 rounded-full mb-4 group-hover:bg-blue-100 transition-colors">
+                  <Briefcase className="h-8 w-8 text-black group-hover:text-blue-600" />
                 </div>
-                <h3 className="text-[#0ff] font-mono text-sm mb-2">Projects</h3>
-                <p className="text-white font-bold text-3xl">100+</p>
+                <h3 className="text-gray-600 font-mono text-sm mb-2">Projects</h3>
+                <p className="text-black font-bold text-3xl">100+</p>
               </CardContent>
             </Card>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.3}>
-            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group hover:border-[#0ff]/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,255,255,0.2)] transform hover:-translate-y-2">
+            <Card className="bg-white border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 group">
               <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="bg-[#0ff]/10 p-4 rounded-full mb-4">
-                  <Users className="h-8 w-8 text-[#0ff]" />
+                <div className="bg-gray-100 p-4 rounded-full mb-4 group-hover:bg-blue-100 transition-colors">
+                  <Users className="h-8 w-8 text-black group-hover:text-blue-600" />
                 </div>
-                <h3 className="text-[#0ff] font-mono text-sm mb-2">Clients</h3>
-                <p className="text-white font-bold text-3xl">67+</p>
+                <h3 className="text-gray-600 font-mono text-sm mb-2">Clients</h3>
+                <p className="text-black font-bold text-3xl">67+</p>
               </CardContent>
             </Card>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.4}>
-            <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group hover:border-[#0ff]/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,255,255,0.2)] transform hover:-translate-y-2">
+            <Card className="bg-white border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 group">
               <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="bg-[#0ff]/10 p-4 rounded-full mb-4">
-                  <CheckCircle2 className="h-8 w-8 text-[#0ff]" />
+                <div className="bg-gray-100 p-4 rounded-full mb-4 group-hover:bg-blue-100 transition-colors">
+                  <CheckCircle2 className="h-8 w-8 text-black group-hover:text-blue-600" />
                 </div>
-                <h3 className="text-[#0ff] font-mono text-sm mb-2">Satisfaction</h3>
-                <p className="text-white font-bold text-3xl">100%</p>
+                <h3 className="text-gray-600 font-mono text-sm mb-2">Satisfaction</h3>
+                <p className="text-black font-bold text-3xl">100%</p>
               </CardContent>
             </Card>
           </ScrollReveal>
@@ -275,10 +276,8 @@ export default function AboutPage() {
         {/* Skills Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">My Skills</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 text-black">My Skills</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
               I've developed a diverse set of skills throughout my career, allowing me to tackle various aspects of web
               development and digital solutions.
             </p>
@@ -286,15 +285,20 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skill, index) => (
-              <Card key={index} className="bg-black/60 border border-[#0ff]/20 overflow-hidden relative group">
+              <Card
+                key={index}
+                className="bg-white border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 group"
+              >
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4 text-[#0ff]">{skill.category}</h3>
+                  <h3 className="text-xl font-bold mb-4 text-black group-hover:text-blue-600 transition-colors">
+                    {skill.category}
+                  </h3>
                   <div className="flex flex-wrap gap-2">
                     {skill.items.map((item, idx) => (
                       <Badge
                         key={idx}
                         variant="outline"
-                        className="bg-black/60 border-[#0ff]/20 text-white text-xs group-hover:bg-[#0ff]/10 transition-colors"
+                        className="bg-gray-100 border-gray-300 text-black text-xs hover:bg-blue-100 hover:border-blue-300 transition-colors"
                       >
                         {item}
                       </Badge>
@@ -309,12 +313,8 @@ export default function AboutPage() {
         {/* Experience Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
-                Work Experience
-              </span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 text-black">Work Experience</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
               My professional journey has equipped me with the expertise to deliver exceptional digital solutions across
               various industries.
             </p>
@@ -322,13 +322,16 @@ export default function AboutPage() {
 
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <div key={index} className="bg-black/60 border border-[#0ff]/20 rounded-lg p-6 relative">
-                <div className="absolute top-6 left-6 w-3 h-3 bg-[#0ff] rounded-full" />
+              <div
+                key={index}
+                className="bg-white border border-gray-200 rounded-lg p-6 relative hover:border-blue-300 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="absolute top-6 left-6 w-3 h-3 bg-blue-600 rounded-full" />
                 <div className="ml-8">
-                  <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 px-4 py-1 mb-2">{exp.period}</Badge>
-                  <h3 className="text-xl font-bold mb-1">{exp.title}</h3>
-                  <p className="text-[#f0f] mb-4">{exp.company}</p>
-                  <p className="text-gray-400">{exp.description}</p>
+                  <Badge className="bg-gray-100 text-black hover:bg-blue-100 px-4 py-1 mb-2">{exp.period}</Badge>
+                  <h3 className="text-xl font-bold mb-1 text-black">{exp.title}</h3>
+                  <p className="text-blue-600 mb-4">{exp.company}</p>
+                  <p className="text-gray-600">{exp.description}</p>
                 </div>
               </div>
             ))}
@@ -338,65 +341,61 @@ export default function AboutPage() {
         {/* Education Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">Education</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 text-black">Education</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
               My educational background and professional certifications that have equipped me with the knowledge and
               skills to excel in the digital space.
             </p>
           </div>
 
           <div className="space-y-8">
-            <div className="bg-black/60 border border-[#0ff]/20 rounded-lg p-6 relative">
-              <div className="absolute top-6 left-6 w-3 h-3 bg-[#0ff] rounded-full" />
+            <div className="bg-white border border-gray-200 rounded-lg p-6 relative hover:border-blue-300 hover:shadow-lg transition-all duration-300">
+              <div className="absolute top-6 left-6 w-3 h-3 bg-blue-600 rounded-full" />
               <div className="ml-8">
-                <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 px-4 py-1 mb-2">2014 - 2018</Badge>
-                <h3 className="text-xl font-bold mb-1">BSc Geography and Planning Science</h3>
-                <p className="text-[#f0f] mb-4">Ekiti State University</p>
-                <p className="text-gray-400">
+                <Badge className="bg-gray-100 text-black hover:bg-blue-100 px-4 py-1 mb-2">2014 - 2018</Badge>
+                <h3 className="text-xl font-bold mb-1 text-black">BSc Geography and Planning Science</h3>
+                <p className="text-blue-600 mb-4">Ekiti State University</p>
+                <p className="text-gray-600">
                   Graduated with a solid foundation in analytical thinking and problem-solving skills.
                 </p>
               </div>
             </div>
 
-            <div className="bg-black/60 border border-[#0ff]/20 rounded-lg p-6 relative">
-              <div className="absolute top-6 left-6 w-3 h-3 bg-[#0ff] rounded-full" />
+            <div className="bg-white border border-gray-200 rounded-lg p-6 relative hover:border-blue-300 hover:shadow-lg transition-all duration-300">
+              <div className="absolute top-6 left-6 w-3 h-3 bg-blue-600 rounded-full" />
               <div className="ml-8">
-                <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 px-4 py-1 mb-2">
-                  Secondary Education
-                </Badge>
-                <h3 className="text-xl font-bold mb-1">Secondary School Certificate</h3>
-                <p className="text-[#f0f] mb-4">Christ School Secondary Ado Ekiti</p>
-                <p className="text-gray-400">
+                <Badge className="bg-gray-100 text-black hover:bg-blue-100 px-4 py-1 mb-2">Secondary Education</Badge>
+                <h3 className="text-xl font-bold mb-1 text-black">Secondary School Certificate</h3>
+                <p className="text-blue-600 mb-4">Christ School Secondary Ado Ekiti</p>
+                <p className="text-gray-600">
                   Received a well-rounded education with focus on sciences and mathematics.
                 </p>
               </div>
             </div>
 
-            <div className="bg-black/60 border border-[#0ff]/20 rounded-lg p-6 relative">
-              <div className="absolute top-6 left-6 w-3 h-3 bg-[#0ff] rounded-full" />
+            <div className="bg-white border border-gray-200 rounded-lg p-6 relative hover:border-blue-300 hover:shadow-lg transition-all duration-300">
+              <div className="absolute top-6 left-6 w-3 h-3 bg-blue-600 rounded-full" />
               <div className="ml-8">
-                <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 px-4 py-1 mb-2">
+                <Badge className="bg-gray-100 text-black hover:bg-blue-100 px-4 py-1 mb-2">
                   Professional Development
                 </Badge>
-                <h3 className="text-xl font-bold mb-1">Cloud Computing</h3>
-                <p className="text-[#f0f] mb-4">Utiva</p>
-                <p className="text-gray-400">
+                <h3 className="text-xl font-bold mb-1 text-black">Cloud Computing</h3>
+                <p className="text-blue-600 mb-4">Utiva</p>
+                <p className="text-gray-600">
                   Specialized training in cloud infrastructure, deployment, and management.
                 </p>
               </div>
             </div>
 
-            <div className="bg-black/60 border border-[#0ff]/20 rounded-lg p-6 relative">
-              <div className="absolute top-6 left-6 w-3 h-3 bg-[#0ff] rounded-full" />
+            <div className="bg-white border border-gray-200 rounded-lg p-6 relative hover:border-blue-300 hover:shadow-lg transition-all duration-300">
+              <div className="absolute top-6 left-6 w-3 h-3 bg-blue-600 rounded-full" />
               <div className="ml-8">
-                <Badge className="bg-[#0ff]/10 text-[#0ff] hover:bg-[#0ff]/20 px-4 py-1 mb-2">
+                <Badge className="bg-gray-100 text-black hover:bg-blue-100 px-4 py-1 mb-2">
                   Professional Development
                 </Badge>
-                <h3 className="text-xl font-bold mb-1">Software Engineering</h3>
-                <p className="text-[#f0f] mb-4">ALT School Africa</p>
-                <p className="text-gray-400">
+                <h3 className="text-xl font-bold mb-1 text-black">Software Engineering</h3>
+                <p className="text-blue-600 mb-4">ALT School Africa</p>
+                <p className="text-gray-600">
                   Comprehensive training in modern software development practices and technologies.
                 </p>
               </div>
@@ -405,28 +404,25 @@ export default function AboutPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-black/60 border border-[#0ff]/20 rounded-lg p-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Work Together?</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center">
+          <h2 className="text-3xl font-bold mb-4 text-black">Ready to Work Together?</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
             Let's collaborate to bring your vision to life. Whether you need a new website, a custom application, or
             digital strategy consulting, I'm here to help.
           </p>
           <Link href="/contact">
-            <Button className="bg-gradient-to-r from-[#0ff] to-[#f0f] text-black hover:opacity-90 px-8 py-6 text-lg">
-              Get In Touch
-            </Button>
+            <Button className="bg-black text-white hover:bg-blue-600 px-8 py-6 text-lg">Get In Touch</Button>
           </Link>
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-[#0ff]/20">
+      <footer className="py-8 border-t border-gray-200">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Dev Tosin. All rights reserved.</p>
+          <p className="text-gray-600 text-sm">© {new Date().getFullYear()} Dev Tosin. All rights reserved.</p>
         </div>
       </footer>
 
-      {/* Scroll to Top Button */}
       <ScrollToTop />
     </div>
   )

@@ -3,144 +3,109 @@
 import type React from "react"
 
 import { useState } from "react"
-import { MessageCircle, X, Send, Loader2 } from "lucide-react"
+import { MessageCircle, X, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-
-type Message = {
-  role: "user" | "bot"
-  content: string
-}
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false)
-  const [messages, setMessages] = useState<Message[]>([
-    { role: "bot", content: "Hi there! I'm Dev Tosin's virtual assistant. How can I help you today?" },
+  const [messages, setMessages] = useState([
+    {
+      id: 1,
+      text: "Hi! I'm Dev Tosin's assistant. How can I help you today?",
+      isBot: true,
+    },
   ])
-  const [input, setInput] = useState("")
-  const [isLoading, setIsLoading] = useState(false)
+  const [inputValue, setInputValue] = useState("")
 
-  const toggleChat = () => {
-    setIsOpen(!isOpen)
-  }
+  const handleSendMessage = () => {
+    if (!inputValue.trim()) return
 
-  const handleSend = () => {
-    if (!input.trim()) return
+    const newMessage = {
+      id: messages.length + 1,
+      text: inputValue,
+      isBot: false,
+    }
 
-    // Add user message
-    const userMessage = { role: "user" as const, content: input }
-    setMessages((prev) => [...prev, userMessage])
-    setInput("")
-    setIsLoading(true)
+    setMessages([...messages, newMessage])
+    setInputValue("")
 
-    // Simulate response delay
+    // Simulate bot response
     setTimeout(() => {
-      const response = generateResponse(input)
-      setMessages((prev) => [...prev, { role: "bot", content: response }])
-      setIsLoading(false)
+      const botResponse = {
+        id: messages.length + 2,
+        text: "Thanks for your message! For immediate assistance, please contact me directly at officialdevtosin@gmail.com or +234 901 157 0271.",
+        isBot: true,
+      }
+      setMessages((prev) => [...prev, botResponse])
     }, 1000)
   }
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault()
-      handleSend()
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      handleSendMessage()
     }
-  }
-
-  const generateResponse = (query: string): string => {
-    const lowerQuery = query.toLowerCase()
-
-    if (lowerQuery.includes("about") || lowerQuery.includes("who are you") || lowerQuery.includes("introduction")) {
-      return "I'm Oluwatosin Aladetoyinbo (Dev Tosin), a WordPress Developer, Software Engineer, SEO Specialist, and Shopify Expert with over 5 years of experience. I create digital solutions that help businesses thrive online."
-    }
-
-    if (lowerQuery.includes("services") || lowerQuery.includes("what do you do")) {
-      return "I offer WordPress development, software development, SEO optimization, Shopify development, website management, and WordPress plugin development. Would you like to know more about any specific service?"
-    }
-
-    if (lowerQuery.includes("project") || lowerQuery.includes("portfolio") || lowerQuery.includes("work")) {
-      return "I've worked on various projects including Tale It Media, MyVisaProcess, Land Investigate, LW Digitalz, and more. You can view my complete portfolio here: <a href='/portfolio' class='text-[#0ff] hover:underline'>View Portfolio</a>"
-    }
-
-    if (lowerQuery.includes("contact") || lowerQuery.includes("reach") || lowerQuery.includes("email")) {
-      return "You can reach me at officialdevtosin@gmail.com or through the contact form on this website. I'd be happy to discuss your project!"
-    }
-
-    if (lowerQuery.includes("price") || lowerQuery.includes("cost") || lowerQuery.includes("package")) {
-      return "I offer various web care packages starting from ₦300,000/year for the Standard Plan. For custom projects, please contact me for a personalized quote."
-    }
-
-    if (lowerQuery.includes("terminal")) {
-      return "You can check out my interactive terminal page here: <a href='/terminal' class='text-[#0ff] hover:underline'>Open Terminal</a>"
-    }
-
-    return "I'm not sure I understand your question. Would you like to know about my services, projects, or how to contact me?"
   }
 
   return (
     <>
-      {isOpen ? (
-        <Card className="fixed bottom-6 right-6 w-80 md:w-96 shadow-lg border border-[#0ff]/20 bg-black/90 z-50">
-          <CardHeader className="bg-gradient-to-r from-[#0ff]/10 to-[#f0f]/10 p-4 flex justify-between items-center border-b border-[#0ff]/20">
-            <h3 className="font-bold text-white">Chat with Dev Tosin</h3>
-            <Button variant="ghost" size="icon" onClick={toggleChat} className="h-8 w-8 text-white">
+      {/* Chat Button */}
+      <Button
+        onClick={() => setIsOpen(true)}
+        className={`fixed bottom-8 left-8 z-50 bg-black text-white hover:bg-blue-600 shadow-lg transition-all duration-300 ${
+          isOpen ? "scale-0" : "scale-100"
+        }`}
+        size="icon"
+        aria-label="Open chat"
+      >
+        <MessageCircle className="h-5 w-5" />
+      </Button>
+
+      {/* Chat Window */}
+      {isOpen && (
+        <Card className="fixed bottom-8 left-8 z-50 w-80 h-96 bg-white border border-gray-200 shadow-xl">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 bg-black text-white">
+            <CardTitle className="text-sm font-medium">Chat with Dev Tosin</CardTitle>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(false)}
+              className="h-6 w-6 text-white hover:bg-gray-800"
+            >
               <X className="h-4 w-4" />
             </Button>
           </CardHeader>
-          <CardContent className="p-4 h-80 overflow-y-auto flex flex-col gap-3">
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={`${
-                  message.role === "user" ? "ml-auto bg-[#0ff]/10" : "mr-auto bg-gray-800/50"
-                } rounded-lg p-3 max-w-[80%]`}
-              >
-                <div
-                  className="text-sm"
-                  dangerouslySetInnerHTML={{
-                    __html: message.content.replace(
-                      /<a href='([^']+)' class='([^']+)'>([^<]+)<\/a>/g,
-                      (_, href, className, text) => `<a href="${href}" class="${className}">${text}</a>`,
-                    ),
-                  }}
-                />
-              </div>
-            ))}
-            {isLoading && (
-              <div className="mr-auto bg-gray-800/50 rounded-lg p-3">
-                <Loader2 className="h-4 w-4 animate-spin text-[#0ff]" />
-              </div>
-            )}
-          </CardContent>
-          <CardFooter className="p-2 border-t border-[#0ff]/20">
-            <div className="flex w-full items-center gap-2">
-              <Input
-                placeholder="Type your message..."
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                className="flex-1 bg-black/60 border-[#0ff]/20 focus:border-[#0ff] focus:ring-[#0ff]/10"
-              />
-              <Button
-                onClick={handleSend}
-                size="icon"
-                disabled={!input.trim() || isLoading}
-                className="bg-[#0ff] text-black hover:bg-[#0ff]/80"
-              >
-                <Send className="h-4 w-4" />
-              </Button>
+          <CardContent className="p-0 flex flex-col h-full">
+            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+              {messages.map((message) => (
+                <div key={message.id} className={`flex ${message.isBot ? "justify-start" : "justify-end"}`}>
+                  <div
+                    className={`max-w-xs px-3 py-2 rounded-lg text-sm ${
+                      message.isBot ? "bg-gray-100 text-black" : "bg-black text-white"
+                    }`}
+                  >
+                    {message.text}
+                  </div>
+                </div>
+              ))}
             </div>
-          </CardFooter>
+            <div className="p-4 border-t border-gray-200">
+              <div className="flex gap-2">
+                <Input
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  placeholder="Type your message..."
+                  className="flex-1 border-gray-300 focus:border-blue-500"
+                />
+                <Button onClick={handleSendMessage} size="icon" className="bg-black text-white hover:bg-blue-600">
+                  <Send className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          </CardContent>
         </Card>
-      ) : (
-        <Button
-          onClick={toggleChat}
-          className="rounded-full h-14 w-14 bg-gradient-to-r from-[#0ff] to-[#f0f] text-black hover:opacity-90 shadow-lg"
-        >
-          <MessageCircle className="h-6 w-6" />
-        </Button>
       )}
     </>
   )

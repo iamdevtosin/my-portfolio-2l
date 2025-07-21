@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import Image from "next/image"
 
 export default function HeroAnimation() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -41,7 +40,7 @@ export default function HeroAnimation() {
       }
 
       getRandomColor() {
-        const colors = ["#0ff", "#f0f", "#0ff", "#fff"]
+        const colors = ["#3b82f6", "#000000", "#6b7280", "#374151"]
         return colors[Math.floor(Math.random() * colors.length)]
       }
 
@@ -66,7 +65,7 @@ export default function HeroAnimation() {
 
     // Create particles
     const particles: Particle[] = []
-    const particleCount = 100
+    const particleCount = 50
 
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle())
@@ -77,7 +76,7 @@ export default function HeroAnimation() {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
       // Draw grid
-      ctx.strokeStyle = "rgba(0, 255, 255, 0.1)"
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.1)"
       ctx.lineWidth = 0.5
 
       const gridSize = 30
@@ -119,7 +118,7 @@ export default function HeroAnimation() {
 
           if (distance < maxDistance) {
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / maxDistance)})`
+            ctx.strokeStyle = `rgba(0, 0, 0, ${0.1 * (1 - distance / maxDistance)})`
             ctx.lineWidth = 0.5
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(particles[j].x, particles[j].y)
@@ -138,22 +137,12 @@ export default function HeroAnimation() {
 
   return (
     <div className="relative w-full h-[500px]">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full rounded-lg border border-[#0ff]/20 shadow-[0_0_15px_rgba(0,255,255,0.3)]"
-      />
+      <canvas ref={canvasRef} className="w-full h-full rounded-lg border border-gray-200 shadow-lg bg-white" />
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-center p-6 backdrop-blur-sm bg-black/50 rounded-lg border border-[#0ff]/20">
-          <h2 className="text-2xl font-bold mb-2">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ff] to-[#f0f]">
-              Full-Stack Developer
-            </span>
-          </h2>
-          <p className="text-gray-300">Transforming ideas into digital reality</p>
+        <div className="text-center p-6 backdrop-blur-sm bg-white/80 rounded-lg border border-gray-200 shadow-lg">
+          <h2 className="text-2xl font-bold mb-2 text-black">Full-Stack Developer</h2>
+          <p className="text-gray-600">Transforming ideas into digital reality</p>
         </div>
-      </div>
-      <div className="absolute inset-0 opacity-10">
-        <Image src="/images/bellisluxe.png" alt="Background" fill className="object-cover opacity-20 z-0" />
       </div>
     </div>
   )

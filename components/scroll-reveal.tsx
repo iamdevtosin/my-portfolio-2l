@@ -1,74 +1,80 @@
 "use client"
 
-import { useRef, type ReactNode } from "react"
-import { motion, useInView } from "framer-motion"
+import type React from "react"
+
+import { useEffect, useRef, useState } from "react"
 
 interface ScrollRevealProps {
-  children: ReactNode
+  children: React.ReactNode
   direction?: "up" | "down" | "left" | "right"
   delay?: number
-  duration?: number
-  distance?: number
   threshold?: number
   className?: string
 }
 
-export function ScrollReveal({
+export default function ScrollReveal({
   children,
   direction = "up",
   delay = 0,
-  duration = 0.5,
-  distance = 50,
   threshold = 0.1,
-  className,
+  className = "",
 }: ScrollRevealProps) {
+  const [isVisible, setIsVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
-  const isInView = useInView(ref, { once: true, amount: threshold })
 
-  const getDirectionVariants = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            setIsVisible(true)
+          }, delay * 1000)
+        }
+      },
+      {
+        threshold,
+      },
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current)
+      }
+    }
+  }, [delay, threshold])
+
+  const getTransform = () => {
+    if (isVisible) return "translate3d(0, 0, 0)"
+
     switch (direction) {
       case "up":
-        return {
-          hidden: { y: distance, opacity: 0 },
-          visible: { y: 0, opacity: 1 },
-        }
+        return "translate3d(0, 40px, 0)"
       case "down":
-        return {
-          hidden: { y: -distance, opacity: 0 },
-          visible: { y: 0, opacity: 1 },
-        }
+        return "translate3d(0, -40px, 0)"
       case "left":
-        return {
-          hidden: { x: distance, opacity: 0 },
-          visible: { x: 0, opacity: 1 },
-        }
+        return "translate3d(40px, 0, 0)"
       case "right":
-        return {
-          hidden: { x: -distance, opacity: 0 },
-          visible: { x: 0, opacity: 1 },
-        }
+        return "translate3d(-40px, 0, 0)"
       default:
-        return {
-          hidden: { y: distance, opacity: 0 },
-          visible: { y: 0, opacity: 1 },
-        }
+        return "translate3d(0, 40px, 0)"
     }
   }
 
-  const variants = getDirectionVariants()
-
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={variants}
-      transition={{ duration, delay, ease: "easeOut" }}
       className={className}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: getTransform(),
+        transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
-
-export default ScrollReveal

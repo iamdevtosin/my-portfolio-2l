@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ExternalLink } from "lucide-react"
+import { ExternalLink, Github } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -8,41 +8,71 @@ interface ProjectCardProps {
   title: string
   description: string
   image: string
-  tags: string[]
-  link: string
+  technologies?: string[]
+  tags?: string[]
+  liveUrl?: string
+  githubUrl?: string
+  link?: string
 }
 
-export default function ProjectCard({ title, description, image, tags, link }: ProjectCardProps) {
+export default function ProjectCard({
+  title,
+  description,
+  image,
+  technologies = [],
+  tags = [],
+  liveUrl,
+  githubUrl,
+  link,
+}: ProjectCardProps) {
+  // Use technologies if provided, otherwise fall back to tags
+  const displayTags = technologies.length > 0 ? technologies : tags
+
   return (
-    <Card className="bg-black/60 border border-[#0ff]/20 overflow-hidden group hover:border-[#0ff]/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,255,255,0.2)] transform hover:-translate-y-2">
+    <Card className="bg-white border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 overflow-hidden group">
       <div className="relative">
-        <div className="w-full h-60 relative">
+        <div className="w-full h-48 relative overflow-hidden">
           <Image
-            src={image || "/placeholder.svg"}
+            src={image || "/placeholder.svg?height=200&width=400"}
             alt={title}
             fill
-            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <Link
-              href={link}
-              target="_blank"
-              className="bg-[#0ff] text-black font-medium px-4 py-2 rounded-full flex items-center gap-2 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
-            >
-              View Project <ExternalLink className="h-4 w-4" />
-            </Link>
+          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+            {(liveUrl || link) && (
+              <Link
+                href={liveUrl || link || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-black px-4 py-2 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition-colors duration-300 flex items-center gap-2"
+              >
+                <ExternalLink className="h-4 w-4" />
+                View Live
+              </Link>
+            )}
+            {githubUrl && (
+              <Link
+                href={githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors duration-300 flex items-center gap-2"
+              >
+                <Github className="h-4 w-4" />
+                Code
+              </Link>
+            )}
           </div>
         </div>
       </div>
       <CardContent className="p-6">
-        <h3 className="text-xl font-bold mb-2 font-inter group-hover:text-[#0ff] transition-colors">{title}</h3>
-        <p className="text-gray-400 text-sm mb-4 font-inter">{description}</p>
+        <h3 className="text-xl font-bold mb-2 text-black group-hover:text-blue-600 transition-colors">{title}</h3>
+        <p className="text-gray-600 text-sm mb-4 line-clamp-3">{description}</p>
         <div className="flex flex-wrap gap-2">
-          {tags.map((tag, index) => (
+          {displayTags.map((tag, index) => (
             <Badge
               key={index}
-              variant="outline"
-              className="bg-black/60 border-[#0ff]/20 text-[#0ff] text-xs group-hover:bg-[#0ff]/10 transition-colors"
+              variant="secondary"
+              className="bg-gray-100 text-black text-xs hover:bg-blue-100 transition-colors"
             >
               {tag}
             </Badge>
