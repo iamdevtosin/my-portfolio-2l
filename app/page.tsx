@@ -13,10 +13,6 @@ import {
   ShoppingBag,
   Database,
   Cloud,
-  Award,
-  Users,
-  CheckCircle2,
-  Briefcase,
   Github,
   Linkedin,
   Twitter,
@@ -150,24 +146,17 @@ export default function HomePage() {
     },
   ]
 
-  const stats = [
-    { icon: <Award className="h-8 w-8 text-black" />, label: "Experience", value: "9+ Years" },
-    { icon: <Briefcase className="h-8 w-8 text-black" />, label: "Projects", value: "100+" },
-    { icon: <Users className="h-8 w-8 text-black" />, label: "Clients", value: "67+" },
-    { icon: <CheckCircle2 className="h-8 w-8 text-black" />, label: "Satisfaction", value: "100%" },
-  ]
-
   return (
     <div className="min-h-screen bg-white text-black font-inter">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/90 border-b border-gray-200 shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="w-full px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between max-w-7xl mx-auto">
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-bold text-2xl text-black">
+            <span className="font-bold text-xl sm:text-2xl text-black">
               DEV<span className="text-blue-600">TOSIN</span>
             </span>
           </Link>
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
             <Link href="/" className="text-sm font-medium text-blue-600">
               HOME
             </Link>
@@ -215,7 +204,7 @@ export default function HomePage() {
         {/* Mobile Menu */}
         {isMenuOpen && isMobile && (
           <div className="md:hidden bg-white border-t border-gray-200 py-4">
-            <div className="container mx-auto px-4 flex flex-col space-y-4">
+            <div className="px-4 flex flex-col space-y-4">
               <Link
                 href="/"
                 className="text-sm font-medium text-blue-600 py-2 border-b border-gray-100"
@@ -311,104 +300,89 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+      <section className="pt-20 sm:pt-24 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="w-full max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-6 sm:space-y-8">
               <div className="space-y-4">
-                <Badge className="bg-gray-100 text-black hover:bg-blue-100 px-4 py-1">Oluwatosin Aladetoyinbo</Badge>
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight text-black">
+                <Badge className="bg-gray-100 text-black hover:bg-blue-100 px-3 sm:px-4 py-1 text-xs sm:text-sm">
+                  Oluwatosin Aladetoyinbo
+                </Badge>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-black">
                   Hi, I'm <span className="text-blue-600">Tosin</span>
                   <br />
                   Full-Stack Developer
                 </h1>
-                <p className="text-lg text-gray-600 max-w-lg">
+                <p className="text-base sm:text-lg text-gray-600 max-w-lg">
                   WordPress Developer • Software Engineer • SEO Specialist • Shopify Expert • Website Manager • Cloud
                   Engineer
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/projects">
-                  <Button className="bg-black text-white hover:bg-blue-600 px-8 py-3 text-lg">
+                <Link href="/projects" className="w-full sm:w-auto">
+                  <Button className="w-full sm:w-auto bg-black text-white hover:bg-blue-600 px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg">
                     View Projects
-                    <ChevronRight className="ml-2 h-5 w-5" />
+                    <ChevronRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                   </Button>
                 </Link>
-                <Link href="/contact">
+                <Link href="/contact" className="w-full sm:w-auto">
                   <Button
                     variant="outline"
-                    className="border-black text-black hover:bg-blue-600 hover:text-white hover:border-blue-600 px-8 py-3 text-lg bg-transparent"
+                    className="w-full sm:w-auto border-black text-black hover:bg-blue-600 hover:text-white hover:border-blue-600 px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg bg-transparent"
                   >
                     Contact Me
-                    <Mail className="ml-2 h-5 w-5" />
+                    <Mail className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                   </Button>
                 </Link>
               </div>
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-4 sm:gap-6">
                 <Link
                   href="https://github.com/iamdevtosin"
                   target="_blank"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
-                  <Github className="h-6 w-6" />
+                  <Github className="h-5 w-5 sm:h-6 sm:w-6" />
                 </Link>
                 <Link
                   href="https://linkedin.com/in/devtosin"
                   target="_blank"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
-                  <Linkedin className="h-6 w-6" />
+                  <Linkedin className="h-5 w-5 sm:h-6 sm:w-6" />
                 </Link>
                 <Link
                   href="https://twitter.com/devtosin"
                   target="_blank"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
-                  <Twitter className="h-6 w-6" />
+                  <Twitter className="h-5 w-5 sm:h-6 sm:w-6" />
                 </Link>
                 <Link
                   href="https://instagram.com/dev_tosin"
                   target="_blank"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
-                  <Instagram className="h-6 w-6" />
+                  <Instagram className="h-5 w-5 sm:h-6 sm:w-6" />
                 </Link>
                 <Link
                   href="mailto:officialdevtosin@gmail.com"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
-                  <Mail className="h-6 w-6" />
+                  <Mail className="h-5 w-5 sm:h-6 sm:w-6" />
                 </Link>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative mt-8 lg:mt-0">
               <HeroAnimation />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gray-50 border-y border-gray-200">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-white p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
-                  {stat.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-black mb-1">{stat.value}</h3>
-                <p className="text-gray-600 text-sm">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* About Section */}
-      <section id="about" className="py-20 relative bg-white">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex flex-col md:flex-row gap-12 items-center">
+      <section id="about" className="py-16 sm:py-20 relative bg-white">
+        <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-8 sm:gap-12 items-center">
             <div className="md:w-1/2 relative">
               <div className="relative rounded-lg overflow-hidden border border-gray-200 shadow-lg">
                 <Image
@@ -420,46 +394,46 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-white p-4 border border-gray-200 rounded-lg shadow-lg">
-                <div className="text-black font-mono text-sm">
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 bg-white p-3 sm:p-4 border border-gray-200 rounded-lg shadow-lg">
+                <div className="text-black font-mono text-xs sm:text-sm">
                   <div className="flex items-center gap-2">
-                    <span className="inline-block w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full animate-pulse" />
                     <span>Available for Projects</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2 space-y-6">
+            <div className="md:w-1/2 space-y-4 sm:space-y-6">
               <div>
-                <h2 className="text-3xl font-bold mb-2 text-black">About Me</h2>
-                <div className="h-1 w-20 bg-blue-600 rounded-full mb-6" />
+                <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-black">About Me</h2>
+                <div className="h-1 w-16 sm:w-20 bg-blue-600 rounded-full mb-4 sm:mb-6" />
               </div>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 I'm Oluwatosin Aladetoyinbo, a versatile web developer and digital specialist based in Nigeria. With
                 expertise spanning WordPress, Shopify, SEO, software development, and cloud engineering with Microsoft
                 Azure, I create digital solutions that help businesses thrive online.
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 My approach combines technical expertise with creative problem-solving to deliver websites and
                 applications that not only look great but also perform exceptionally well. I also build custom WordPress
                 plugins to extend functionality and create tailored solutions for specific business needs.
               </p>
-              <div className="grid grid-cols-2 gap-4 pt-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-4">
                 <div>
-                  <h3 className="text-blue-600 font-mono text-sm mb-2">Experience</h3>
-                  <p className="text-black font-bold text-2xl">9+ Years</p>
+                  <h3 className="text-blue-600 font-mono text-xs sm:text-sm mb-1 sm:mb-2">Experience</h3>
+                  <p className="text-black font-bold text-lg sm:text-2xl">9+ Years</p>
                 </div>
                 <div>
-                  <h3 className="text-blue-600 font-mono text-sm mb-2">Projects</h3>
-                  <p className="text-black font-bold text-2xl">100+</p>
+                  <h3 className="text-blue-600 font-mono text-xs sm:text-sm mb-1 sm:mb-2">Projects</h3>
+                  <p className="text-black font-bold text-lg sm:text-2xl">100+</p>
                 </div>
                 <div>
-                  <h3 className="text-blue-600 font-mono text-sm mb-2">Clients</h3>
-                  <p className="text-black font-bold text-2xl">67+</p>
+                  <h3 className="text-blue-600 font-mono text-xs sm:text-sm mb-1 sm:mb-2">Clients</h3>
+                  <p className="text-black font-bold text-lg sm:text-2xl">67+</p>
                 </div>
                 <div>
-                  <h3 className="text-blue-600 font-mono text-sm mb-2">Satisfaction</h3>
-                  <p className="text-black font-bold text-2xl">100%</p>
+                  <h3 className="text-blue-600 font-mono text-xs sm:text-sm mb-1 sm:mb-2">Satisfaction</h3>
+                  <p className="text-black font-bold text-lg sm:text-2xl">100%</p>
                 </div>
               </div>
             </div>
@@ -468,15 +442,15 @@ export default function HomePage() {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Featured Projects</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="w-full max-w-7xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-black">Featured Projects</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
               A selection of my recent work across various industries and technologies.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {featuredProjects.map((project, index) => (
               <ProjectCard
                 key={index}
@@ -488,11 +462,11 @@ export default function HomePage() {
               />
             ))}
           </div>
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 sm:mt-12">
             <Link href="/projects">
-              <Button className="bg-black text-white hover:bg-blue-600 px-8 py-3">
+              <Button className="bg-black text-white hover:bg-blue-600 px-6 sm:px-8 py-2 sm:py-3">
                 View All Projects
-                <ExternalLink className="ml-2 h-5 w-5" />
+                <ExternalLink className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </Link>
           </div>
@@ -500,16 +474,16 @@ export default function HomePage() {
       </section>
 
       {/* Services */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">My Services</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="w-full max-w-7xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-black">My Services</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
               I offer a comprehensive range of digital services to help businesses establish and enhance their online
               presence.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <ServiceCard
                 key={index}
@@ -520,11 +494,11 @@ export default function HomePage() {
               />
             ))}
           </div>
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 sm:mt-12">
             <Link href="/services">
-              <Button className="bg-black text-white hover:bg-blue-600 px-8 py-3">
+              <Button className="bg-black text-white hover:bg-blue-600 px-6 sm:px-8 py-2 sm:py-3">
                 Explore Services
-                <ChevronRight className="ml-2 h-5 w-5" />
+                <ChevronRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </Link>
           </div>
@@ -532,25 +506,27 @@ export default function HomePage() {
       </section>
 
       {/* Blog Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Latest Blog Posts</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="w-full max-w-7xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-black">Latest Blog Posts</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
               Insights, tutorials, and guides to help you navigate the digital landscape.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <Card className="bg-white border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
-              <div className="h-48 bg-gradient-to-r from-gray-100 to-gray-200 relative">
+              <div className="h-40 sm:h-48 bg-gradient-to-r from-gray-100 to-gray-200 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Globe className="h-16 w-16 text-gray-400" />
+                  <Globe className="h-12 w-12 sm:h-16 sm:w-16 text-gray-400" />
                 </div>
               </div>
-              <CardContent className="p-6">
-                <Badge className="bg-gray-100 text-black hover:bg-blue-100 mb-3">WordPress</Badge>
-                <h3 className="text-xl font-bold mb-2 text-black">Common WordPress Errors and How to Fix Them</h3>
-                <p className="text-gray-600 mb-4">
+              <CardContent className="p-4 sm:p-6">
+                <Badge className="bg-gray-100 text-black hover:bg-blue-100 mb-3 text-xs">WordPress</Badge>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 text-black">
+                  Common WordPress Errors and How to Fix Them
+                </h3>
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                   Encountering errors in WordPress can be frustrating. Learn how to troubleshoot and fix the most common
                   WordPress errors including the white screen of death, database connection errors, and plugin
                   conflicts.
@@ -558,25 +534,27 @@ export default function HomePage() {
                 <Link href="/blog/wordpress-errors">
                   <Button
                     variant="outline"
-                    className="border-black text-black hover:bg-blue-600 hover:text-white hover:border-blue-600 bg-transparent"
+                    className="border-black text-black hover:bg-blue-600 hover:text-white hover:border-blue-600 bg-transparent text-sm"
                   >
                     Read More
-                    <ChevronRight className="ml-2 h-4 w-4" />
+                    <ChevronRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
                   </Button>
                 </Link>
               </CardContent>
             </Card>
 
             <Card className="bg-white border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
-              <div className="h-48 bg-gradient-to-r from-gray-100 to-gray-200 relative">
+              <div className="h-40 sm:h-48 bg-gradient-to-r from-gray-100 to-gray-200 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Cloud className="h-16 w-16 text-gray-400" />
+                  <Cloud className="h-12 w-12 sm:h-16 sm:w-16 text-gray-400" />
                 </div>
               </div>
-              <CardContent className="p-6">
-                <Badge className="bg-gray-100 text-black hover:bg-blue-100 mb-3">Azure</Badge>
-                <h3 className="text-xl font-bold mb-2 text-black">Creating a Virtual Machine on Microsoft Azure</h3>
-                <p className="text-gray-600 mb-4">
+              <CardContent className="p-4 sm:p-6">
+                <Badge className="bg-gray-100 text-black hover:bg-blue-100 mb-3 text-xs">Azure</Badge>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 text-black">
+                  Creating a Virtual Machine on Microsoft Azure
+                </h3>
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                   Microsoft Azure offers powerful cloud computing capabilities. This guide walks you through the process
                   of creating and configuring a virtual machine on Azure, including selecting the right VM size and
                   setting up networking.
@@ -584,25 +562,25 @@ export default function HomePage() {
                 <Link href="/blog/azure-vm">
                   <Button
                     variant="outline"
-                    className="border-black text-black hover:bg-blue-600 hover:text-white hover:border-blue-600 bg-transparent"
+                    className="border-black text-black hover:bg-blue-600 hover:text-white hover:border-blue-600 bg-transparent text-sm"
                   >
                     Read More
-                    <ChevronRight className="ml-2 h-4 w-4" />
+                    <ChevronRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
                   </Button>
                 </Link>
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
-              <div className="h-48 bg-gradient-to-r from-gray-100 to-gray-200 relative">
+            <Card className="bg-white border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 sm:col-span-2 lg:col-span-1">
+              <div className="h-40 sm:h-48 bg-gradient-to-r from-gray-100 to-gray-200 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Code className="h-16 w-16 text-gray-400" />
+                  <Code className="h-12 w-12 sm:h-16 sm:w-16 text-gray-400" />
                 </div>
               </div>
-              <CardContent className="p-6">
-                <Badge className="bg-gray-100 text-black hover:bg-blue-100 mb-3">Tech Skills</Badge>
-                <h3 className="text-xl font-bold mb-2 text-black">Best Selling Tech Skills in 2025</h3>
-                <p className="text-gray-600 mb-4">
+              <CardContent className="p-4 sm:p-6">
+                <Badge className="bg-gray-100 text-black hover:bg-blue-100 mb-3 text-xs">Tech Skills</Badge>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 text-black">Best Selling Tech Skills in 2025</h3>
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                   The tech landscape is constantly evolving. Discover the most in-demand tech skills for 2025, including
                   AI development, cloud engineering, cybersecurity, and blockchain technology, and how to position
                   yourself for success.
@@ -610,20 +588,20 @@ export default function HomePage() {
                 <Link href="/blog/tech-skills-2025">
                   <Button
                     variant="outline"
-                    className="border-black text-black hover:bg-blue-600 hover:text-white hover:border-blue-600 bg-transparent"
+                    className="border-black text-black hover:bg-blue-600 hover:text-white hover:border-blue-600 bg-transparent text-sm"
                   >
                     Read More
-                    <ChevronRight className="ml-2 h-4 w-4" />
+                    <ChevronRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
                   </Button>
                 </Link>
               </CardContent>
             </Card>
           </div>
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 sm:mt-12">
             <Link href="/blog">
-              <Button className="bg-black text-white hover:bg-blue-600 px-8 py-3">
+              <Button className="bg-black text-white hover:bg-blue-600 px-6 sm:px-8 py-2 sm:py-3">
                 View All Posts
-                <ExternalLink className="ml-2 h-5 w-5" />
+                <ExternalLink className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </Link>
           </div>
@@ -631,26 +609,26 @@ export default function HomePage() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Ready to Start Your Project?</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="w-full max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-black">Ready to Start Your Project?</h2>
+          <p className="text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto text-sm sm:text-base">
             Let's discuss how I can help bring your ideas to life with cutting-edge web development solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button className="bg-black text-white hover:bg-blue-600 px-8 py-3 text-lg">
-                <Mail className="mr-2 h-5 w-5" />
+            <Link href="/contact" className="w-full sm:w-auto">
+              <Button className="w-full sm:w-auto bg-black text-white hover:bg-blue-600 px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg">
+                <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Get In Touch
               </Button>
             </Link>
-            <Link href="/pricing">
+            <Link href="/pricing" className="w-full sm:w-auto">
               <Button
                 variant="outline"
-                className="border-black text-black hover:bg-blue-600 hover:text-white hover:border-blue-600 px-8 py-3 text-lg bg-transparent"
+                className="w-full sm:w-auto border-black text-black hover:bg-blue-600 hover:text-white hover:border-blue-600 px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg bg-transparent"
               >
                 View Pricing
-                <ChevronRight className="ml-2 h-5 w-5" />
+                <ChevronRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </Link>
           </div>
@@ -658,84 +636,84 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black text-white py-12 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-4 gap-8">
+      <footer className="bg-black text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             <div className="space-y-4">
-              <h3 className="text-xl font-bold">DEVTOSIN</h3>
-              <p className="text-gray-400">Full-Stack Developer crafting exceptional digital experiences.</p>
+              <h3 className="text-lg sm:text-xl font-bold">DEVTOSIN</h3>
+              <p className="text-gray-400 text-sm">Full-Stack Developer crafting exceptional digital experiences.</p>
               <div className="flex gap-4">
                 <Link
                   href="https://github.com/iamdevtosin"
                   target="_blank"
                   className="text-gray-400 hover:text-blue-400"
                 >
-                  <Github className="h-5 w-5" />
+                  <Github className="h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
                 <Link
                   href="https://linkedin.com/in/devtosin"
                   target="_blank"
                   className="text-gray-400 hover:text-blue-400"
                 >
-                  <Linkedin className="h-5 w-5" />
+                  <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
                 <Link href="https://twitter.com/devtosin" target="_blank" className="text-gray-400 hover:text-blue-400">
-                  <Twitter className="h-5 w-5" />
+                  <Twitter className="h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
                 <Link
                   href="https://instagram.com/dev_tosin"
                   target="_blank"
                   className="text-gray-400 hover:text-blue-400"
                 >
-                  <Instagram className="h-5 w-5" />
+                  <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <h4 className="font-semibold mb-4 text-sm sm:text-base">Quick Links</h4>
               <div className="space-y-2">
-                <Link href="/about" className="block text-gray-400 hover:text-white">
+                <Link href="/about" className="block text-gray-400 hover:text-white text-sm">
                   About
                 </Link>
-                <Link href="/services" className="block text-gray-400 hover:text-white">
+                <Link href="/services" className="block text-gray-400 hover:text-white text-sm">
                   Services
                 </Link>
-                <Link href="/projects" className="block text-gray-400 hover:text-white">
+                <Link href="/projects" className="block text-gray-400 hover:text-white text-sm">
                   Projects
                 </Link>
-                <Link href="/blog" className="block text-gray-400 hover:text-white">
+                <Link href="/blog" className="block text-gray-400 hover:text-white text-sm">
                   Blog
                 </Link>
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Services</h4>
+              <h4 className="font-semibold mb-4 text-sm sm:text-base">Services</h4>
               <div className="space-y-2">
-                <span className="block text-gray-400">Web Development</span>
-                <span className="block text-gray-400">E-commerce Solutions</span>
-                <span className="block text-gray-400">Backend Development</span>
-                <span className="block text-gray-400">Cloud Solutions</span>
+                <span className="block text-gray-400 text-sm">Web Development</span>
+                <span className="block text-gray-400 text-sm">E-commerce Solutions</span>
+                <span className="block text-gray-400 text-sm">Backend Development</span>
+                <span className="block text-gray-400 text-sm">Cloud Solutions</span>
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
+              <h4 className="font-semibold mb-4 text-sm sm:text-base">Contact</h4>
               <div className="space-y-2">
-                <div className="flex items-center gap-2 text-gray-400">
-                  <Mail className="h-4 w-4" />
-                  <span>officialdevtosin@gmail.com</span>
+                <div className="flex items-center gap-2 text-gray-400 text-sm">
+                  <Mail className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+                  <span className="break-all">officialdevtosin@gmail.com</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <Phone className="h-4 w-4" />
+                <div className="flex items-center gap-2 text-gray-400 text-sm">
+                  <Phone className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
                   <span>+234 901 157 0271</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <MapPin className="h-4 w-4" />
+                <div className="flex items-center gap-2 text-gray-400 text-sm">
+                  <MapPin className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
                   <span>Lagos, Nigeria</span>
                 </div>
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-400 text-xs sm:text-sm">
             <p>&copy; {new Date().getFullYear()} Dev Tosin. All rights reserved.</p>
           </div>
         </div>
