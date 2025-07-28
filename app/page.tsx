@@ -107,11 +107,27 @@ export default function HomePage() {
       link: "https://asonigeria.com/select-store/",
     },
     {
+      title: "Keoo AI",
+      description:
+        "AI-powered content creation platform that turns ideas into stunning videos, images, and content with advanced artificial intelligence technology.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/keoo-AI",
+      technologies: ["React", "AI/ML", "Content Creation"],
+      link: "https://keoo.ai",
+    },
+    {
       title: "Xapic Consulting",
       description: "Xapic Consulting is a modern consulting firm offering digital and business solutions.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/xapic.webp",
       technologies: ["WordPress", "Laravel", "Agency"],
       link: "https://xapicconsulting.com/",
+    },
+    {
+      title: "Olivia Rose Media Agency",
+      description:
+        "Professional media agency providing comprehensive digital marketing and content creation services for brands and businesses.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/oliviarosemediaagency",
+      technologies: ["WordPress", "Digital Marketing", "Agency"],
+      link: "https://oliviarosemediaagency.com",
     },
     {
       title: "Myvisaprocess",
@@ -451,7 +467,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {featuredProjects.map((project, index) => (
+            {featuredProjects.slice(0, 6).map((project, index) => (
               <ProjectCard
                 key={index}
                 title={project.title}
