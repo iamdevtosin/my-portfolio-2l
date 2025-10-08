@@ -43,6 +43,14 @@ export default function ProjectsPage() {
       category: "wordpress",
     },
     {
+      title: "Yomi Casual",
+      description: "High-end fashion brand e-commerce platform showcasing luxury African-inspired clothing.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/yomicasual.africa.latest",
+      technologies: ["WordPress", "WooCommerce", "Custom Design", "Inventory Management"],
+      liveUrl: "https://yomicasual.africa",
+      category: "ecommerce",
+    },
+    {
       title: "Olivia Rose Media Agency",
       description:
         "Digital media agency specializing in content creation, social media management, and brand development.",
@@ -74,6 +82,30 @@ export default function ProjectsPage() {
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/landinvestiga-min.png",
       technologies: ["WordPress", "Laravel", "Custom Development"],
       liveUrl: "https://landinvestigate.com/dev/",
+      category: "wordpress",
+    },
+    {
+      title: "Oasis Gem Spa",
+      description: "Luxury spa and wellness center offering premium beauty and relaxation services.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/oasisgemspa.com",
+      technologies: ["WordPress", "E-commerce", "Booking System"],
+      liveUrl: "https://oasisgemspa.com",
+      category: "ecommerce",
+    },
+    {
+      title: "Sunny Shoes",
+      description: "Handmade footwear store specializing in custom and artisan-crafted shoes.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/sunnyshoes.ng",
+      technologies: ["WordPress", "WooCommerce", "Marketplace"],
+      liveUrl: "http://sunnyshoes.ng",
+      category: "ecommerce",
+    },
+    {
+      title: "Timbuktu Hub",
+      description: "Collaborative workspace and innovation hub providing modern coworking solutions.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/timbuktuhub.ca",
+      technologies: ["WordPress", "Custom Design", "Workspace"],
+      liveUrl: "https://timbuktuhub.ca/",
       category: "wordpress",
     },
     {
@@ -117,14 +149,6 @@ export default function ProjectsPage() {
       technologies: ["Next.js", "Web Hosting", "Laravel"],
       liveUrl: "https://ravehost.com.ng",
       category: "nextjs",
-    },
-    {
-      title: "Yomi Casual",
-      description: "Fashion brand website featuring stylish men's collections and casual fits.",
-      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/yomicasual.africa23.png",
-      technologies: ["WordPress", "E-commerce", "Fashion"],
-      liveUrl: "https://yomicasual.africa",
-      category: "ecommerce",
     },
     {
       title: "Israel Dia",

@@ -115,6 +115,13 @@ export default function HomePage() {
       link: "https://keoo.ai",
     },
     {
+      title: "Yomi Casual",
+      description: "High-end fashion brand e-commerce platform showcasing luxury African-inspired clothing.",
+      image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/yomicasual.africa.latest",
+      technologies: ["WordPress", "WooCommerce", "Custom Design", "Inventory Management"],
+      link: "https://yomicasual.africa",
+    },
+    {
       title: "Xapic Consulting",
       description: "Xapic Consulting is a modern consulting firm offering digital and business solutions.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/xapic.webp",
@@ -150,7 +157,7 @@ export default function HomePage() {
       description: "Property verification platform for investigating and validating land ownership in Nigeria.",
       image: "https://jgqdkgzx48jzkhoi.public.blob.vercel-storage.com/landinvestiga-min.png",
       technologies: ["WordPress", "Laravel", "Custom Development"],
-      link: "https://landinvestigate.com",
+      link: "https://landinvestigate.com/dev/",
     },
     {
       title: "Rave AI",
