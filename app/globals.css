@@ -177,10 +177,3 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
-/* Additional styles from updates */
-@layer base {
-  * {
-    @apply border-border;
-  }
-}
